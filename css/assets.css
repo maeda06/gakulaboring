@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/********************
+ボタン
+********************/
+.btn a {
+	color: #fff;
+	background-color: #202020;
+	display: inline-block;
+	height: 90%;
+	font-family: "Dela Gothic One", sans-serif;
+	font-size: 1.6vw;
+	margin-top: 8px;
+	padding: 15px 65px;
+	border-radius: 100vw;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.btn a::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 97%;
+	height: 90%;
+	border: 5px #fff solid;
+	border-radius: 100vw;
+}
+
+.btn button {
+	width: 5.5vw;
+	height: 90%;
+	background-color: #202020;
+	margin-top: 8px;
+	border-radius: 100vw;
+	position: relative;
+}
+
+.btn button::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 5.2vw;
+	height: 90%;
+	border: 5px #fff solid;
+	border-radius: 100vw;
+}
+
+.btn button .line::before,
+.btn button .line::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2.5vw;
+	height: .3vw;
+	background-color: #fff;
+}
+
+.btn button .line::before {
+	top: 35%;
+}
+
+.btn button .line::after {
+	bottom: 35%;
+}

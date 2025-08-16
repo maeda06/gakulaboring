@@ -3,8 +3,63 @@
 /********************
 common
 ********************/
+body {
+	font-family: "Noto Sans JP", sans-serif;
+}
 h1,h2,h3,h4,h5,h6 {
 	font-family: "Dela Gothic One", sans-serif;
+}
+
+h2.heading img {
+	width: 12vw;
+}
+
+h3 {
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: 900;
+}
+
+p {
+	font-size: 1vw;
+}
+
+h2.heading {
+	font-size: 3.2vw;
+	text-shadow:  -3px -3px 0 #fff,
+								0px -3px 0 #fff,
+								3px -3px 0 #fff,
+								-3px 0px 0 #fff,
+								3px 0px 0 #fff,
+								-6px 3px 0 #fff,
+								0px 3px 0 #fff,
+								3px 3px 0 #fff;
+	z-index: 2;
+	position: relative;
+}
+
+h2.heading span {
+	position: absolute;
+	top: 8px;
+	left: 2px;
+	color: #127DFF;
+	font-size: 3.3vw;
+	z-index: -1;
+	text-shadow:  -1px -1px 0 #127DFF,
+								0px -1px 0 #127DFF,
+								1px -1px 0 #127DFF,
+								-1px 0px 0 #127DFF,
+								1px 0px 0 #127DFF,
+								-1px 1px 0 #127DFF,
+								0px 1px 0 #127DFF,
+								1px 1px 0 #127DFF;
+	text-shadow: none;
+}
+
+.lattice--blue {
+	background-image: url(../images/lattice--blue.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
 }
 
 /********************
@@ -43,53 +98,6 @@ header .btn {
 	gap: 8px;
 }
 
-header .btn a {
-	color: #fff;
-	background-color: #202020;
-	display: inline-block;
-	height: 90%;
-	font-family: "Dela Gothic One", sans-serif;
-	font-size: 1.6vw;
-	margin-top: 8px;
-	padding: 15px 65px;
-	border-radius: 100vw;
-	display: flex;
-	align-items: center;
-	position: relative;
-}
-
-header .btn a::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 97%;
-	height: 90%;
-	border: 5px #fff solid;
-	border-radius: 100vw;
-}
-
-header .btn button {
-	width: 6vw;
-	height: 90%;
-	background-color: #202020;
-	margin-top: 8px;
-	border-radius: 100vw;
-	position: relative;
-}
-
-header .btn button .line::before {
-	content: '';
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 50%;
-	height: 8px;
-	background-color: #fff;
-}
-
 /********************
 KV
 ********************/
@@ -100,11 +108,136 @@ KV
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	overflow: hidden;
+}
+
+#kv img:first-child {
+	position: absolute;
+	left: 5%;
+	top: 10%;
+	width: 30%;
+}
+
+#kv img:last-child {
+	position: absolute;
+	right: 5%;
+	bottom: 10%;
+	width: 35%;
 }
 
 #kv .kv-girl {
+	width: 60%;
+	object-fit: contain;
 	position: absolute;
 	bottom: 0;
-	left: 50%;
+	left: 55%;
 	transform: translateX(-50%);
+}
+
+/********************
+news
+********************/
+#news {
+	/* background-image: url(../images/bg-kousi.png);
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat; */
+	position: relative;
+	margin-top: -50px;
+}
+
+#news h2.heading {
+	position: absolute;
+	top: -9%;
+	left: 5%;
+}
+
+#news h2.heading span {
+	position: absolute;
+	top: 4px;
+	left: 2px;
+	font-size: 3.4vw;
+}
+
+#news .news-content {
+	width: 80%;
+	margin: auto;
+	background-color: #FFF;
+	border: 2px solid #202020;
+	border-radius: 2rem;
+	padding: 48px 32px;
+	box-shadow: 8px 8px 0 #127DFF;
+	position: relative;
+}
+
+#news .news-content ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+#news .news-content ul li {
+	padding:  0 32px;
+	border-right: 1px solid #bdbdbd;
+}
+
+#news .news-content ul li:last-child {
+	border: none;
+}
+
+#news .news-content ul li a img {
+	width: 100%;
+	border-radius: 8px;
+	margin-bottom: 24px;
+}
+
+#news .news-content ul li a h3 {
+	margin-bottom: 8px;
+	font-size: 1.25vw;
+}
+
+#news .news-content .btn {
+	width: 25%;
+	position: absolute;
+	bottom: -9%;
+	right: 0;
+}
+
+#news .news-content .btn a {
+	font-size: 1.25vw;
+	padding: 18px 30px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#news .news-content .btn a img {
+	width: 10%;
+}
+
+/********************
+concept
+********************/
+#concept {
+	/* background-image: url(../images/concept-bg.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat; */
+	display: flex;
+	justify-content: center;
+	padding: 135px 0;
+}
+
+#concept .concept-text {
+	width: 40%;
+}
+
+#concept .concept-image {
+	width: 40%;
+}
+
+#concept .concept-text .memo p {
+	font-size: 1.3vw;
+	background-image: url(../images/concept-memo-bg.png);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
 }
