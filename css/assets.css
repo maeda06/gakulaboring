@@ -69,3 +69,45 @@
 .btn button .line::after {
 	bottom: 35%;
 }
+
+#news .news-content .btn {
+	width: 25%;
+	position: absolute;
+	bottom: -9%;
+	right: 0;
+}
+
+#news .news-content .btn a,
+#concept .btn a,
+#about .btn a,
+#contents .btn a {
+	font-size: 1.25vw;
+	padding: 18px 30px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#news .news-content .btn a img,
+#concept .btn a img,
+#about .btn a img,
+#contents .btn a img {
+	width: 1.2vw;
+}
+
+#concept .btn,
+#about .btn,
+#contents .btn {
+	width: 20vw;
+	margin: auto;
+}
+
+#about .btn {
+	margin-right: 5%;
+}
+
+#contents .btn {
+	position: absolute;
+	bottom: -6%;
+	left: 50%;
+	transform: translateX(-50%);
+}
