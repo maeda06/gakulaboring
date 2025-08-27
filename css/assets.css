@@ -80,7 +80,8 @@
 #news .news-content .btn a,
 #concept .btn a,
 #about .btn a,
-#contents .btn a {
+#contents .btn a,
+#help .btn a {
 	font-size: 1.25vw;
 	padding: 18px 30px;
 	display: flex;
@@ -90,13 +91,15 @@
 #news .news-content .btn a img,
 #concept .btn a img,
 #about .btn a img,
-#contents .btn a img {
+#contents .btn a img,
+#help .btn a img {
 	width: 1.2vw;
 }
 
 #concept .btn,
 #about .btn,
-#contents .btn {
+#contents .btn,
+#help .btn {
 	width: 20vw;
 	margin: auto;
 }
@@ -110,4 +113,9 @@
 	bottom: -6%;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+#contents .chatroom .chatroom__list .btn {
+	bottom: -10vw;
+	left: 50%;
 }
