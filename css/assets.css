@@ -7,36 +7,72 @@
 	color: #fff;
 	background-color: #202020;
 	display: inline-block;
-	height: 90%;
+	height: fit-content;
 	font-family: "Dela Gothic One", sans-serif;
 	font-size: 1.6vw;
 	margin-top: 8px;
-	padding: 15px 65px;
+	margin-right: 8px;
+	padding: 1vw 4.5vw;
 	border-radius: 100vw;
 	display: flex;
 	align-items: center;
 	position: relative;
+	transition: all .3s;
 }
 
-.btn a::after {
+.btn a:hover {
+	background-color: var(--orange);
+}
+
+.btn a::before {
 	content: '';
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	width: 97%;
-	height: 90%;
-	border: 5px #fff solid;
+	width: 100%;
+	height: 100%;
+	border: 4px #fff solid;
 	border-radius: 100vw;
 }
 
+.btn a::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	content: "";
+	display: block;
+	width: 104%;
+	height: 110%;
+	border-radius: 100vw;
+	background-color: #202020;
+	z-index: -1;
+}
+
+/* .btn a span {
+	overflow: hidden;
+	position: relative;
+}
+
+.btn a span::before {
+	content: "ログイン";
+	position: absolute;
+	bottom: -100%;
+} */
+
 .btn button {
 	width: 5.5vw;
-	height: 90%;
+	height: 4.4vw;
 	background-color: #202020;
 	margin-top: 8px;
 	border-radius: 100vw;
 	position: relative;
+	transition: all .3s;
+}
+
+.btn button:hover {
+	background-color: var(--orange);
 }
 
 .btn button::after {
@@ -64,10 +100,20 @@
 
 .btn button .line::before {
 	top: 35%;
+	transition: all .3s;
+}
+
+.btn button:hover .line::before {
+	top: 40%;
 }
 
 .btn button .line::after {
 	bottom: 35%;
+	transition: all .3s;
+}
+
+.btn button:hover .line::after {
+	bottom: 40%;
 }
 
 #news .news-content .btn {
