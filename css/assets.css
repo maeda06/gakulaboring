@@ -121,6 +121,7 @@
 	position: absolute;
 	bottom: -9%;
 	right: 0;
+	z-index: 1;
 }
 
 #news .news-content .btn a,

@@ -12,16 +12,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
-
-	<script>
-		$(function(){
-  $(".inview").on("inview", function (event, isInView) {
-    if (isInView) {
-      $(this).stop().addClass("is-show");
-    }
-  });
-});
-	</script>
 </head>
 <body>
 	<header>
@@ -42,7 +32,7 @@
 			<div class="cta"><img src="images/cta.png" alt=""></div>
 		</section>
 		<div class="lattice--blue">
-			<section id="news">
+			<section id="news" class="inview">
 				<div class="news-content">
 					<h2 class="heading heading--blue inview"><span>NEWS</span>NEWS</h2>
 					<ul>
@@ -55,7 +45,7 @@
 				</div>
 			</section>
 			<section id="concept">
-				<div class="concept-text">
+				<div class="concept-text inview">
 					<h2 class="heading heading--blue inview"><span>CONCEPT</span>CONCEPT</h2>
 					<div class="memo inview"">
 						<h3><span class="orange">遊ぶように仕事をする!!</span>って？<br><span class="blue">がくラボりんぐとは？</span></h3>
@@ -73,16 +63,16 @@
 			<span class="tape"></span>
 			<span class="flower"></span>
 			<h2 class="heading heading--orange inview"><span>このサイトについて</span>このサイトについて</h2>
-			<ul class="about-list">
-				<li><img src="images/about--glass.png" alt=""><p>就職に関する<br>情報収集ができる</p></li>
-				<li class="members-only"><img src="images/about--speech-bubble.png" alt=""><p>チャットで話せる</p></li>
-				<li class="members-only"><img src="images/about--book.png" alt=""><p>役に立つ情報を<br>学ぶことが出来る</p></li>
-				<li class="members-only"><img src="images/about--hand.png" alt=""><p>就職のマッチング<br>ができる</p></li>
+			<ul class="about-list inview">
+				<li class="inview"><img src="images/about--glass.png" alt=""><p>就職に関する<br>情報収集ができる</p></li>
+				<li class="members-only inview"><img src="images/about--speech-bubble.png" alt=""><p>チャットで話せる</p></li>
+				<li class="members-only inview"><img src="images/about--book.png" alt=""><p>役に立つ情報を<br>学ぶことが出来る</p></li>
+				<li class="members-only inview"><img src="images/about--hand.png" alt=""><p>就職のマッチング<br>ができる</p></li>
 			</ul>
 			<div class="btn"><a href="#"><span>COMING SOON</span><img src="images/arrow.png" alt=""></a></div>
 		</section>
 		<section id="contents">
-			<div class="contents-list">
+			<div class="contents-list inview">
 				<h2 class="heading heading--white inview">会員限定コンテンツ</h2>
 				<ul>
 					<li>
@@ -109,7 +99,7 @@
 				</ul>
 				<div class="btn"><a href="#"><span>COMING SOON</span><img src="images/arrow.png" alt=""></a></div>
 			</div>
-			<div class="chatroom">
+			<div class="chatroom inview">
 				<img class="chatroom-heading" src="images/contents-chatroom--head.png" alt="">
 				<ul class="chatroom__list">
 					<li>
@@ -147,24 +137,30 @@
 			</div>
 		</section>
 		<section id="can">
-			<h2 class="heading heading--blue"><span>このサイトでは<br>こんなことができる！</span>このサイトでは<br>こんなことができる！</h2>
+			<h2 class="heading heading--blue inview"><span>このサイトでは<br>こんなことができる！</span>このサイトでは<br>こんなことができる！</h2>
 			<ul>
-				<li>
-					<p>気になるあの企業のことを知りたい！</p>
-					<div class="can-list__link"><a href="#">企業の口コミページへ</a></div>
+				<li class="inview">
+					<div class="item-wrap">
+						<p>気になるあの企業のことを知りたい！</p>
+						<div class="can-list__link"><a href="#">企業の口コミページへ</a></div>
+					</div>
 				</li>
-				<li>
-					<p>全国の大学生と交流したい！</p>
-					<div class="can-list__link"><a href="#">チャットページへ</a></div>
+				<li class="inview">
+					<div class="item-wrap">
+						<p>全国の大学生と交流したい！</p>
+						<div class="can-list__link"><a href="#">チャットページへ</a></div>
+					</div>
 				</li>
-				<li>
-					<p>就職情報をいち早くキャッチしたい！</p>
-					<div class="can-list__link"><a href="#">就活情報ページへ</a></div>
+				<li class="inview">
+					<div class="item-wrap">
+						<p>就職情報をいち早くキャッチしたい！</p>
+						<div class="can-list__link"><a href="#">就活情報ページへ</a></div>
+					</div>
 				</li>
 			</ul>
 		</section>
 		<section id="help">
-			<h2 class="heading heading--blue"><span>ヘルプページ</span>ヘルプページ</h2>
+			<h2 class="heading heading--blue inview"><span>ヘルプページ</span>ヘルプページ</h2>
 			<p class="subtitle">よくある質問</p>
 			<div class="help-list">
 				<details class="faq-content">
@@ -249,6 +245,6 @@
 		</div>
 	</footer>
 
-	<!-- <script src="js/main.js"></script> -->
+	<script src="js/main.js"></script>
 </body>
 </html>
