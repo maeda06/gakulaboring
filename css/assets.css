@@ -148,6 +148,8 @@
 #help .btn {
 	width: 20vw;
 	margin: auto;
+	position: relative;
+	z-index: 2;
 }
 
 #about .btn {

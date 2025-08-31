@@ -1,10 +1,4 @@
-$(function(){
-  $(".inview").on("inview", function (event, isInView) {
-    if (isInView) {
-      $(this).stop().addClass("is-show");
-    }
-  });
-});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".faq-content").forEach(function (el) {

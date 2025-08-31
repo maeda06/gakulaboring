@@ -47,26 +47,36 @@ h2.heading {
 								3px 3px 0 #fff;
 	z-index: 2;
 	position: relative;
+	transition: all .5s;
 }
 
 h2.heading span {
 	position: absolute;
 	top: 8px;
-	left: 2px;
+	left: 0;
 	font-size: 3.3vw;
 	z-index: -1;
+	transition: all .5s;
+	transition-delay: .1s;
+	text-shadow: none;
+}
+
+h2.heading.is-show span {
+left: 2px;
+font-size: 5vw;
+font-weight: bold;
 }
 
 h2.heading--blue span {
 	color: var(--blue);
-	text-shadow:  -3px -3px 0 var(--blue),
+	/* text-shadow:  -3px -3px 0 var(--blue),
 								0px -3px 0 var(--blue),
 								3px -3px 0 var(--blue),
 								-3px 0px 0 var(--blue),
 								3px 0px 0 var(--blue),
 								-6px 3px 0 var(--blue),
 								0px 3px 0 var(--blue),
-								3px 3px 0 var(--blue);
+								3px 3px 0 var(--blue); */
 }
 
 h2.heading--orange span {
@@ -284,10 +294,15 @@ concept
 }
 
 #concept .concept-text .heading span {
-	left: 52%;
+	left: 50%;
 	transform: translateX(-52%);
-	top: 5px;
+	top: 0;
 	font-size: 3.2vw;
+}
+
+#concept .concept-text .heading.is-show span {
+	left: 52%;
+	top: 9px;
 }
 
 #concept .concept-image {
@@ -303,6 +318,13 @@ concept
 	background-repeat: no-repeat;
 	padding-bottom: 6vw;
 	margin-bottom: 50px;
+	transition: all .3s;
+	transform: translateY(100px);
+	transition-delay: .1s;
+}
+
+#concept .concept-text .memo.is-show {
+	transform: translateY(0);
 }
 
 #concept .concept-text .memo h3 {
@@ -311,7 +333,16 @@ concept
 	margin: auto;
 	margin-bottom: 24px;
 	padding-top: 6vw;
+	font-family: "Dela Gothic One", sans-serif;
+	font-weight: 500;
+	/* transform: translateY(20px); */
+	/* transition: all .3s;
+	transition-delay: .3s; */
 }
+
+/* #concept .concept-text .memo h3.is-show {
+	transform: translateY(0);
+} */
 
 #concept .concept-text .memo h3 .orange {
 	color: var(--orange);
@@ -416,10 +447,16 @@ about
 
 #about .heading span {
 	padding-top: 53px;
-	left: 51%;
-	transform: translateX(-51%);
-	top: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0;
 	font-size: 3.2vw;
+	text-shadow: none;
+}
+
+#about .heading.inview span {
+	left: 50.6%;
+	top: 7px;
 }
 
 #about .about-list {
