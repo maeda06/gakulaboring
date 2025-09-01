@@ -43,7 +43,7 @@
 	transform: translate(-50%,-50%);
 	content: "";
 	display: block;
-	width: 104%;
+	width: 103%;
 	height: 110%;
 	border-radius: 100vw;
 	background-color: #202020;
@@ -101,10 +101,16 @@
 .btn button .line::before {
 	top: 35%;
 	transition: all .3s;
+	transform-origin: center center;
 }
 
 .btn button:hover .line::before {
 	top: 40%;
+}
+
+.btn button .line.open::before {
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%) rotate(25deg);
 }
 
 .btn button .line::after {
@@ -114,6 +120,11 @@
 
 .btn button:hover .line::after {
 	bottom: 40%;
+}
+
+.btn button .line.open::after {
+	bottom: 50%;
+	transform: translateX(-50%) translateY(50%) rotate(-25deg);
 }
 
 #news .news-content .btn {

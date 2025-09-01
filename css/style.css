@@ -935,6 +935,7 @@ can
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+	transition: all .5s;
 }
 
 /********************
@@ -1209,6 +1210,11 @@ footer .footer-inner .logo img {
 footer .footer-inner nav a {
 	font-size: 1.1vw;
 	font-weight: bold;
+	transition: all .5s;
+}
+
+footer .footer-inner nav a:hover {
+	color: var(--orange);
 }
 
 footer .footer-inner .footer-nav nav {
@@ -1230,9 +1236,14 @@ footer .footer-inner .footer-btn a {
 	display: block;
 	padding: 1vw 4.5vw;
 	background-color: var(--orange);
-	border: 2px solid #FFF;
+	border: 3px solid #FFF;
 	border-radius: 100vh;
 	margin-bottom: 20px;
+	transition: all .5s;
+}
+
+footer .footer-inner .footer-btn a:hover {
+	background-color: #202020;
 }
 
 footer .sns-list {
@@ -1245,6 +1256,11 @@ footer .sns-list {
 footer .sns-list a img {
 	width: 3vw;
 	height: fit-content;
+	transition: all .5s;
+}
+
+footer .sns-list a img:hover {
+	transform: scale(1.2);
 }
 
 footer .footer-bottom {

@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+$('header button').click(function() {
+  $('header button .line').toggleClass("open");
+});
+
   // document.querySelectorAll(".faq-content").forEach(function (el) {
   //   const summary = el.querySelector(".faq-q");
   //   const answer = el.querySelector(".faq-a");
