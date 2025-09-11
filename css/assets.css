@@ -135,22 +135,14 @@
 	z-index: 1;
 }
 
-#news .news-content .btn a,
-#concept .btn a,
-#about .btn a,
-#contents .btn a,
-#help .btn a {
+section .btn a{
 	font-size: 1.25vw;
 	padding: 18px 30px;
 	display: flex;
 	justify-content: space-around;
 }
 
-#news .news-content .btn a img,
-#concept .btn a img,
-#about .btn a img,
-#contents .btn a img,
-#help .btn a img {
+section .btn a img {
 	width: 1.2vw;
 }
 
@@ -178,4 +170,60 @@
 #contents .chatroom .chatroom__list .btn {
 	bottom: -10vw;
 	left: 50%;
+}
+
+@media (max-width: 767px) {
+	.btn a {
+		font-size: 3vw;
+		padding: 1vw 3vw;
+	}
+
+	.btn a::before {
+		border: 3px solid #FFF;
+	}
+
+	.btn button {
+		width: 12.7vw;
+		height: 6.5vw;
+	}
+
+	.btn button::after {
+		width: 90%;
+		height: 90%;
+		border: 3px solid #FFF;
+	}
+
+	.btn button .line::before,
+	.btn button .line::after {
+		width: 7.5vw;
+		height: 0.8vw;
+	}
+
+	.btn button .line::before {
+		top: 30%;
+	}
+
+	.btn button .line::after {
+		bottom: 30%;
+	}
+
+	section .btn {
+		width: 60vw;
+	}
+
+	section .btn a {
+		font-size: 4vw;
+	}
+
+	section .btn a img {
+		width: 3.9vw;
+		margin-left: 3.6vw;
+	}
+
+	#news .news-content .btn {
+		width: 65vw;
+		bottom: -5%;
+		right: 50%;
+		transform: translateX(50%);
+	}
 }

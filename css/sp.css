@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@media (max-width: 767px) {
+  /********************
+  common
+  ********************/
+  h2.heading {
+    font-size: 9vw;
+  }
+
+  h2.heading span {
+    font-size: 9vw!important;
+  }
+
+  p {
+    font-size: 3.4vw;
+  }
+
+  /********************
+  header
+  ********************/
+  header {
+    padding: 0 3.1vw;
+  }
+
+  header .logo {
+    width: 35.2vw;
+    height: 9.5vw;
+    border-radius: 0 0 9vw 9vw;
+  }
+
+  header .logo h1 {
+    font-size: 4.5vw;
+  }
+
+  /********************
+  KV
+  ********************/
+  #kv {
+    overflow: hidden;
+  }
+
+  #kv .asobuyouni,
+  #kv .sigotowosuru {
+    display: none;
+  }
+
+  #kv .kv-girl {
+    max-width: none;
+    width: 233vw;
+    left: 75%;
+  }
+
+  #kv .cta {
+    width: 81.5vw;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /********************
+  news
+  ********************/
+  #news {
+    margin-top: 0;
+    margin-bottom: 256px;
+    position: relative;
+  }
+
+  #news::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 27%;
+    height: 3px;
+    background-color: #000;
+    z-index: 1;
+  }
+
+  #news::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    width: 27%;
+    height: 3px;
+    background-color: #000;
+    z-index: 1;
+  }
+
+  #news h2.heading {
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #news .news-content {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 48px 0;
+    padding-bottom: 0;
+    border-bottom: 3px solid #000;
+  }
+
+  #news .news-content ul {
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 32px;
+  }
+
+  #news .news-content ul li {
+    border-right: none;
+    border-bottom: 1px solid #bdbdbd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #news .news-content ul li a {
+    display: flex;
+    gap: 5.4vw;
+  }
+
+  #news .news-content ul li a img {
+    width: 21.5vw;
+    height: 21.5vw;
+    margin-bottom: 0;
+  }
+
+  #news .news-content ul li a h3 {
+    font-size: 3.4vw;
+  }
+}
