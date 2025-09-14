@@ -10,6 +10,10 @@ common
   --yellow: #FFDA00
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Noto Sans JP", sans-serif;
 	display: none;

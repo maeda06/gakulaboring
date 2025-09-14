@@ -24,6 +24,14 @@ $('header button').click(function() {
   $('header button .line').toggleClass("open");
 });
 
+var topBtn=$('.top-btn');
+
+topBtn.click(function(){
+  $('body,html').animate({
+  scrollTop: 0},500);
+  return false;
+});
+
   // document.querySelectorAll(".faq-content").forEach(function (el) {
   //   const summary = el.querySelector(".faq-q");
   //   const answer = el.querySelector(".faq-a");
