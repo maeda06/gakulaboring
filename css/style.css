@@ -403,6 +403,10 @@ concept
 	color: var(--blue);
 }
 
+#concept .concept-text .memo .text--sp {
+	display: none;
+}
+
 #concept .concept-text .memo p {
 	width: 90%;
 	margin: auto;
@@ -416,6 +420,10 @@ concept
 	color: #FFF;
 	margin-right: 5px;
 	padding: 0 5px;
+}
+
+#concept .concept-text .memo .btn {
+	display: none;
 }
 
 /********************

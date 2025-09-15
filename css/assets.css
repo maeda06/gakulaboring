@@ -220,10 +220,16 @@ section .btn a img {
 		margin-left: 3.6vw;
 	}
 
-	#news .news-content .btn {
+	#news .news-content .btn,
+	#concept .btn {
 		width: 65vw;
 		bottom: -5%;
 		right: 50%;
 		transform: translateX(50%);
+		position: absolute;
+	}
+
+	#concept .btn {
+		bottom: -17vw;
 	}
 }
