@@ -215,4 +215,84 @@
     margin: 9vw auto 0;
   }
 
+  /********************
+  about
+  ********************/
+  #about {
+    background-image: url(../images/about-bg--sp.png);
+    padding-bottom: 0;
+  }
+
+  #about::before {
+    background-image: url(../images/about-bg--cloud-sp.png);
+    background-color: var(--blue);
+    background-position: left;
+    top: 0;
+  }
+
+  #about .about-list {
+    margin-top: 0!important;
+    width: 98%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 8vw;
+  }
+
+  #about .about-list li {
+    width: 48%;
+    border-radius: 3.6vw;
+  }
+
+  #about .about-list.is-show li {
+    margin-top: 0!important;
+  }
+
+  #about .about-list li .list-image {
+    height: 35.45vw;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-radius: 2.7vw 2.7vw 0 0;
+  }
+
+  #about .about-list li p {
+  font-size: 4vw;
+  height: 19.5vw;
+  border-radius: 0 0 2.7vw 2.7vw;
+  }
+
+  #about .about-list li.members-only::before {
+    left: -1vw;
+    right: auto;
+    width: 14vw;
+    height: 14vw;
+  }
+
+  #about::after {
+    display: none;
+  }
+
+  #about .tape::before {
+    width: 100%;
+    height: 85.6vw;
+    background-image: url(../images/about-bg--tape--sp.png);
+    bottom: 0;
+    right: 0;
+  }
+
+  #about .flower::before {
+    background-image: url(../images/about-bg-flower--sp.png);
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 85.6vw;
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
+
+  #about .contents-girl {
+    margin-top: 25.6vw;
+  }
 }

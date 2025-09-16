@@ -525,6 +525,7 @@ about
 #about .heading.is-show span {
 	left: 50.7%;
 	top: 8px;
+	width: 100%;
 }
 
 #about .about-list {
@@ -540,6 +541,7 @@ gap: 1vw;
 #about .about-list li {
 	border: 3px solid #202020;
 	border-radius: 1vw;
+	width: 100%;
 	height: fit-content;
 	position: relative;
 	background-color: var(--orange);
@@ -601,9 +603,23 @@ gap: 1vw;
 	margin-top: 312px;
 }
 
-#about .about-list li img {
-	width: 100%;
+#about .about-list li .list-image {
+	background-color: #FFEED7;
+	padding: 30px 0;
 	border-radius: 1vw 1vw 0 0;
+	border: 1px solid #FFEED7;
+	border-bottom: none;
+}
+
+#about .about-list li .list-image img {
+	display: block;
+	width: 50%;
+	margin: auto;
+	border-radius: 1vw 1vw 0 0;
+}
+
+#about .about-list li:nth-child(1) img {
+	width: 40%;
 }
 
 #about .about-list li p{
