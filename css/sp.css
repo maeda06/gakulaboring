@@ -467,6 +467,7 @@
 
   #help .subtitle {
     font-size: 4.54vw;
+    margin-bottom: 30px;
   }
 
   #help .subtitle::before {
@@ -478,4 +479,96 @@
     width: 4.6vw;
     right: -5.5vw;
   }
+
+  #help .help-list {
+    width: 90%;
+  }
+
+  #help .help-list_wrap--pc {
+    display: none;
+  }
+
+  #help .help-list_wrap--sp {
+    display: block;
+  }
+
+  #help .help-list_wrap--sp .category {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #help .help-list_wrap--sp h3,
+  .help-list .cp_actab label {
+    font-size: 3.63vw;
+  }
+
+  #help .help-list_wrap--sp h3 {
+    text-align: left;
+    padding: 16px 0 0 25px;
+  }
+
+  #help .help-list_wrap--sp h3::before,
+  #help .help-list_wrap--sp h3::after {
+    display: none;
+  }
+
+  #help .help-list_wrap--sp .category {
+    position: relative;
+  }
+
+  #help .help-list_wrap--sp .category span {
+    display: inline-block;
+    width: 6.8vw;
+    height: 6.8vw;
+    border-radius: 100vw;
+    background-color: var(--blue);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    transition: all .3s;
+  }
+
+  #help .help-list_wrap--sp .category span::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0.5vw;
+	transform: translateY(-50%);
+	width: 3.63vw;
+	height: 0.9vw;
+	border-radius: 3px;
+	background-color: #FFF;
+}
+
+#help .help-list_wrap--sp .category span::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0.95vw;
+	transform: translateY(-50%);
+	width: 0.27vw;
+	height: 1.2vw;
+	border-radius: 3px;
+	background-color: #FFF;
+	transition: all .3s;
+}
+
+  .help-list .cp_actab label::before {
+    font-size: 3.63vw;
+  }
+
+  .help-list .cp_actab label span {
+    width: 6.8vw;
+    height: 6.8vw;
+    right: 3.6vw;
+  }
+
+  .help-list .cp_actab label span::before {
+    width: 3.4vw;
+    height: 0.9vw;
+  }
+
 }

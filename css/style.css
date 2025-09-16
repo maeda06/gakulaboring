@@ -971,16 +971,29 @@ help
 #help {
 	text-align: center;
 	position: relative;
-	background-image: url(../images/help-bg.png);
-	background-size: cover;
-	background-position: bottom;
+	background-image: url(../images/help-bg01.png);
+	background-size: 100% auto;
+	background-position: top;
 	background-repeat: no-repeat;
-	padding-bottom: 200px;
+	padding-bottom: 230px;
 }
 
 #help::before {
+	content: "";
 	position: absolute;
-	/* top: -50%; */
+	top: -30%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 55.5vw;
+	height: 70vw;
+	background-image: url(../images/help-cloud--yellow.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* #help::before {
+	position: absolute;
 	bottom: 0;
 	left: 25%;
 	content: "";
@@ -991,7 +1004,7 @@ help
 	background-size: contain;
 	background-position: top;
 	background-repeat: no-repeat;
-}
+} */
 
 #help h2.heading {
 	text-align: center;
@@ -1043,153 +1056,193 @@ help
 }
 
 #help .help-list {
-	width: 80%;
+	width: 50%;
 	margin: auto;
-	display: grid;
-	gap: 15px;
-	grid-template-columns: 32% 32% 32%;
-	/* grid-template-rows: 1fr 1fr 1fr; */
-	margin-bottom: 15px;
+	transform: translateY(100px);
+	opacity: 0;
+	transition: all .5s ease-in-out;
+	transition-delay: .5s;
 }
 
-#help .help-list::before {
+#help .help-list.is-show {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+#help .btn {
+	margin-top: 4.65vw;
+}
+
+#help .help-list h3 {
+	font-size: 1.1vw;
+	color: var(--text-color);
+	margin-bottom: 13px;
+	position: relative;
+}
+
+#help .help-list h3::before {
 	content: "";
-	display: block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 14vw;
+	height: 1vw;
+	border-top: 1px solid var(--text-color);
 }
 
-#help .help-list--large {
-	width: 80%;
-	margin: auto;
-	display: grid;
-	gap: 15px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-	margin-bottom: 80px;
+#help .help-list h3::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 14vw;
+	height: 1vw;
+	border-top: 1px solid var(--text-color);
 }
 
-.faq-content {
-  --accent-color: #3388ff;
-  --v-rythm: 1.6em;
-  --gap: 1em;
+.help-list .cp_actab {
   position: relative;
-  background: #FFF;
-  border-radius: 1em;
-  cursor: pointer;
-  -webkit-user-select: none;
-  user-select: none;
-	border: 1px solid var(--blue);
-	overflow: hidden;
-	transition: all 1s;
-	height: fit-content;
-}
-
-.faq-content::before {
-	position: absolute;
-	top: 50%;
-	right: 10px;
-	transform: translateY(-50%);
-	content: "";
-	display: block;
-	width: 2vw;
-	height: 2vw;
-	background-color: var(--blue);
-	border-radius: 50%;
-}
-/* .faq-content:after {
-  content: "";
-  position: absolute;
-  inset-block-start: 1.25rem;
-  inset-inline-end: 0.75rem;
-  display: block;
-  inline-size: 1rem;
-  aspect-ratio: 1;
-  background: #666;
-  overflow: hidden;
-  rotate: 0deg;
-  transition: rotate 0.4s 0s ease;
-  clip-path: polygon(25% 10%, 25% 90%, 75% 50%);
-}
-.faq-content[open]:after {
-  rotate: 90deg;
-}*/
-.faq-content[open] .faq-q:after {
-	transform: translateY(-50%) translateX(50%) rotate(0deg);
-	/* opacity: 0; */
-} 
-/* Q */
-.faq-q {
-  font-weight: bold;
-  line-height: var(--v-rythm);
-  display: flex;
-  gap: var(--gap);
-  padding: 12px 24px;
-	font-size: 1vw;
-}
-
-.faq-q::before {
-	position: absolute;
-	top: 50%;
-	right: calc(1vw + 10px);
-	transform: translateY(-50%) translateX(50%);
-	content: "";
-	display: block;
-	width: 1.2vw;
-	height: 0.27vw;
+  width: 100%;
+  margin: 0 0 1em 0;
+  color: var(--blue);
+	border: 2px solid var(--blue);
+	border-radius: 0.6vw;
 	background-color: #FFF;
-	border-radius: 100vh;
 }
 
-.faq-q::after {
-	position: absolute;
-	top: 50%;
-	right: calc(1vw + 10px);
-	transform: translateY(-50%) translateX(50%) rotate(90deg);
-	content: "";
-	display: block;
-	width: 1.2vw;
-	height: 0.27vw;
-	background-color: #FFF;
-	border-radius: 100vh;
-	transition: all 0.4s;
+.help-list .cp_actab:hover {
+	border: 2px solid var(--orange);
 }
 
-.faq-q::-webkit-details-marker {
+.help-list .cp_actab input {
   display: none;
 }
-.faq-q:hover {
-  color: var(--accent-color);
-}
-/* A */
-.faq-a {
-  overflow: hidden;
-  margin: 0;
-  display: flex;
-  gap: var(--gap);
-  padding: 0 1.5rem 1rem;
-}
-.faq-a:before {
-  content: "A.";
+/* 質問 */
+.help-list .cp_actab label {
+	text-align: left;
+	font-size: 1.1vw;
   font-weight: bold;
-  color: var(--accent-color);
-  font-size: var(--v-rythm);
+  line-height: 1.6em;
+  position: relative;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 1em 2em 1em 20px;
+  cursor: pointer;
+  border-radius: 0.5em;
+	transition: all .3s;
 }
 
-:root {
-  interpolate-size: allow-keywords;
+.help-list .cp_actab label span {
+	display: inline-block;
+	width: 2.15vw;
+	height: 2.15vw;
+	border-radius: 100vw;
+	background-color: var(--blue);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	transition: all .3s;
 }
 
-details::details-content {
-  height: 0;
-  overflow: clip;
-  opacity: 0;
-  transition: height 0.4s ease, opacity 0.4s ease,
-    content-visibility 0.4s ease allow-discrete;
+.help-list .cp_actab:hover label span {
+	background-color: var(--orange);
 }
 
-details[open]::details-content {
-  height: auto; /* for unsupported browser */
-  height: calc-size(auto, size);
-  opacity: 1;
+.help-list .cp_actab label span::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0.5vw;
+	transform: translateY(-50%);
+	width: 1.2vw;
+	height: 0.27vw;
+	border-radius: 3px;
+	background-color: #FFF;
+}
+
+.help-list .cp_actab label span::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0.95vw;
+	transform: translateY(-50%);
+	width: 0.27vw;
+	height: 1.2vw;
+	border-radius: 3px;
+	background-color: #FFF;
+	transition: all .3s;
+}
+
+.help-list .cp_actab label::before {
+  content: 'Q.';
+	font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.1vw;
+}
+
+/* --質問の＋アイコン */
+/* .help-list .cp_actab label::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '+';
+  font-size: 1.7em;
+  font-weight: bold;
+  line-height: 2em;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  transition: transform 0.3s;
+} */
+/* 答え */
+.help-list .cp_actab .cp_actab-content {
+  position: relative;
+  overflow: hidden;
+  max-height: 0;
+  border-radius: 0 0 0.5em 0.5em;
+	text-align: left;
+	color: var(--orange);
+	transition: all .3s;
+	padding-left: 20px;
+}
+
+.help-list .cp_actab .cp_actab-content p {
+	display: inline;
+	font-weight: bold;
+}
+
+.help-list .cp_actab .cp_actab-content::before {
+  content: 'A.';
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.1vw;
+	font-weight: bold;
+  padding: 0;
+}
+.help-list .cp_actab .cp_actab-content p {
+  /* margin: 1em 1em 1em 0; */
+}
+/* 質問を開いた時の仕様 */
+/* --答えの高さ */
+.help-list .cp_actab input:checked ~ .cp_actab-content {
+  max-height: 40em;
+	padding: 0 2em 1em 20px;
+}
+/* 質問をクリックした時のアイコンの動き */
+.help-list .cp_actab input:checked ~ label {
+  border-radius: 0.5em 0.5em 0 0;
+}
+/* 質問をクリックした時の+の動き */
+.help-list .cp_actab input[type=checkbox]:checked + label span {
+	background-color: var(--orange);
+}
+
+.help-list .cp_actab input[type=checkbox]:checked + label span::after {
+  transform: translateY(-50%) translateX(0);
+  transform-origin: 50% 50%;
+	height: 0.27vw;
+
 }
 
 /********************
