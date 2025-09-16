@@ -220,7 +220,7 @@
   ********************/
   #about {
     background-image: url(../images/about-bg--sp.png);
-    padding-bottom: 0;
+    padding-bottom: 70vw;
   }
 
   #about::before {
@@ -292,7 +292,190 @@
     right: 0;
   }
 
-  #about .contents-girl {
-    margin-top: 25.6vw;
+  /********************
+  contents
+  ********************/
+  #contents {
+    background-image: none;
+  }
+
+  #contents::after {
+    /* display: none; */
+  }
+
+  #contents .contents-list {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding-top: 7.2vw;
+    padding-bottom: 18.1vw;
+    background-image: url(../images/contents-list-bg--sp.png);
+    background-size: cover;
+    margin-bottom: 0;
+    border-bottom: 3px solid #000;
+    z-index: 1;
+  }
+
+  #contents::before {
+    display: none;
+  }
+
+  #contents .contents-list h2 {
+    margin-top: 0;
+  }
+
+  #contents .contents-list::before {
+    width: 93.1vw;
+    height: 52vw;
+    bottom: 97%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #contents .contents-list ul {
+    flex-wrap: wrap;
+  }
+
+  #contents .contents-list ul li {
+    width: 80%;
+    margin: 0 auto 16px;
+  }
+
+  #contents .contents-list ul li .list-text {
+    border-radius: 3.63vw;
+    text-align: left;
+  }
+
+  #contents .contents-list ul li .list-text h4 {
+    font-size: 4vw;
+  }
+
+  #contents .chatroom--pc {
+    /* display: none; */
+  }
+
+  #contents .chatroom {
+    padding-top: 47.2vw;
+    padding-bottom: 109vw;
+    background-image: url(../images/contents-bg--sp.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  #contents .chatroom-heading {
+    width: 98%;
+    margin: auto;
+  }
+
+  #contents .chatroom .chatroom__list {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    position: relative;
+  }
+
+  #contents .chatroom .chatroom__list li {
+    width: 90%;
+    margin: auto;
+    border-radius: 5.45vw;
+  }
+
+  #contents .chatroom .chatroom__list li:nth-child(2),
+  #contents .chatroom .chatroom__list li:nth-child(3) {
+    margin-top: 0;
+  }
+
+  #contents .chatroom .chatroom__list li::before {
+    border-radius: 5.45vw;
+  }
+
+  #contents .chatroom .chatroom__list li h4 {
+    font-size: 5vw;
+    border-radius: 1.8vw;
+  }
+
+  #contents .chatroom .chatroom__list li .chat h5 {
+    font-size: 4vw;
+  }
+
+  #contents .chatroom .chatroom__list li .chat img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  #contents .chatroom .chatroom__list .btn--pc {
+		display: none;
+	}
+
+  #contents .chatroom .chatroom__list .btn--sp {
+    display: block;
+  }
+
+  #contents .chatroom .chatroom__list .btn--sp {
+    transform: translateX(-50%);
+    bottom: -21vw;
+	}
+
+  /********************
+  can
+  ********************/
+  #can {
+    background-image: url(../images/can-bg--sp.png);
+    padding-bottom: 161vw;
+  }
+
+  #can ul {
+    width: 90%;
+  }
+
+  #can ul li .item-wrap {
+    border-radius: 5.45vw;
+  }
+
+  #can ul li .item-wrap::before {
+    border-radius: 5.45vw;
+  }
+
+  #can ul li p {
+    font-size: 5.45vw;
+  }
+
+  #can ul li .can-list__link a {
+    font-size: 3.63vw;
+  }
+
+  #can ul li .can-list__link a::after {
+    width: 6.13vw;
+    height: 5.45vw;
+    right: -4.63vw;
+  }
+
+  #can ul li::after {
+    width: 13vw;
+    height: 13vw;
+    top: -3vw;
+    left: -4vw;
+  }
+
+  /********************
+  help
+  ********************/
+  #help h2.heading {
+    margin-bottom: 13px;
+  }
+
+  #help .subtitle {
+    font-size: 4.54vw;
+  }
+
+  #help .subtitle::before {
+    width: 4.6vw;
+    left: -5.5vw;
+  }
+
+  #help .subtitle::after {
+    width: 4.6vw;
+    right: -5.5vw;
   }
 }

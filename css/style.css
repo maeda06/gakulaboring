@@ -434,7 +434,6 @@ about
 	background-position: top;
 	background-size: contain;
 	background-attachment: fixed;
-
 	position: relative;
 	padding-bottom: 80px;
 	padding-top: 50px;
@@ -461,7 +460,7 @@ about
 	bottom: -28vw;
 	right: 0;
 	content: "";
-	display: block;	
+	display: block;
 	background-image: url(../images/about-cloud--blue.png);
 	background-position: bottom;
 	background-size: contain;
@@ -606,7 +605,7 @@ gap: 1vw;
 #about .about-list li .list-image {
 	background-color: #FFEED7;
 	padding: 30px 0;
-	border-radius: 1vw 1vw 0 0;
+	border-radius: 0.7vw 0.7vw 0 0;
 	border: 1px solid #FFEED7;
 	border-bottom: none;
 }
@@ -858,6 +857,7 @@ can
 }
 
 #can .heading span {
+	width: 100%;
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
@@ -1003,6 +1003,7 @@ help
 	top: 0;
 	transform: translateX(-50%);
 	font-size: 3.2vw;
+	width: 100%;
 }
 
 #help h2.heading.is-show span {

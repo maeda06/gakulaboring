@@ -222,7 +222,8 @@ section .btn a img {
 
 	#news .news-content .btn,
 	#concept .btn,
-	#about .btn {
+	#about .btn,
+	#contents .btn {
 		width: 65vw;
 		bottom: -5%;
 		right: 50%;
@@ -238,5 +239,10 @@ section .btn a img {
 		position: static;
 		transform: none;
 		margin: 2.85vw auto 0;
+	}
+
+	#contents .contents-list .btn {
+		bottom: -8vw;
+		left: auto;
 	}
 }
