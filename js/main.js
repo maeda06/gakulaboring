@@ -32,6 +32,18 @@ topBtn.click(function(){
   return false;
 });
 
+var help_list = $('.cp_actab');
+var help_list_label = $('.cp_actab label');
+
+help_list.click(function() {
+  $(this).toggleClass("is-open");
+})
+
+help_list_label.click(function() {
+  parent = $(this).parent();
+  parent.toggleClass("is-open");
+})
+
   // document.querySelectorAll(".faq-content").forEach(function (el) {
   //   const summary = el.querySelector(".faq-q");
   //   const answer = el.querySelector(".faq-a");

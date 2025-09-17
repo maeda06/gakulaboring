@@ -1225,10 +1225,10 @@ help
 }
 /* 質問を開いた時の仕様 */
 /* --答えの高さ */
-.help-list .cp_actab input:checked ~ .cp_actab-content {
+/* .help-list .cp_actab input:checked ~ .cp_actab-content {
   max-height: 40em;
 	padding: 0 2em 1em 20px;
-}
+} */
 /* 質問をクリックした時のアイコンの動き */
 .help-list .cp_actab input:checked ~ label {
   border-radius: 0.5em 0.5em 0 0;

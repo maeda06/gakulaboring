@@ -495,6 +495,7 @@
   #help .help-list_wrap--sp .category {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   #help .help-list_wrap--sp h3,
@@ -504,7 +505,8 @@
 
   #help .help-list_wrap--sp h3 {
     text-align: left;
-    padding: 16px 0 0 25px;
+    padding: 0 0 0 25px;
+    margin-bottom: 0;
   }
 
   #help .help-list_wrap--sp h3::before,
@@ -529,46 +531,78 @@
     transition: all .3s;
   }
 
+  #help .help-list_wrap--sp .cp_actab.is-open .category span {
+    background-color: var(--orange);
+  }
+
   #help .help-list_wrap--sp .category span::before {
 	content: "";
 	display: block;
 	position: absolute;
 	top: 50%;
-	right: 0.5vw;
-	transform: translateY(-50%);
+	right: 50%;
+	transform: translate3D(50%,-50%,0);
 	width: 3.63vw;
 	height: 0.9vw;
 	border-radius: 3px;
 	background-color: #FFF;
 }
 
-#help .help-list_wrap--sp .category span::after {
+#help .help-list_wrap--sp .cp_actab .category span::after {
 	content: "";
 	display: block;
 	position: absolute;
 	top: 50%;
-	right: 0.95vw;
-	transform: translateY(-50%);
-	width: 0.27vw;
-	height: 1.2vw;
+	right: 50%;
+	transform: translate3D(50%,-50%,0) rotate(90deg);
+	width: 3.63vw;
+	height: 0.9vw;
 	border-radius: 3px;
 	background-color: #FFF;
 	transition: all .3s;
+}
+
+#help .help-list_wrap--sp .cp_actab.is-open .category span::after {
+  transform: translate3d(50%,-50%,0) rotate(0deg);
+}
+
+.help-list .cp_actab {
+  border-radius: 3vw;
+  padding: 16px 0;
+  max-height: 20em;
+  overflow: hidden;
+  transition: all 5s;
+}
+
+.help-list .cp_actab.is-open {
+  max-height: fit-content;
 }
 
   .help-list .cp_actab label::before {
     font-size: 3.63vw;
   }
 
-  .help-list .cp_actab label span {
+  .help-list .cp_actab span {
     width: 6.8vw;
     height: 6.8vw;
     right: 3.6vw;
+    position: relative;
+    top: auto;
+    right: auto;
   }
 
-  .help-list .cp_actab label span::before {
+  .help-list .cp_actab span::before {
     width: 3.4vw;
     height: 0.9vw;
   }
+
+  .help-list .cp_actab.is-open .cp_actab-content {
+  max-height: 40em;
+	padding: 0 20px 1em 20px;
+}
+
+.help-list .cp_actab .cp_actab-content::before {
+  font-size: 3.63vw;
+}
 
 }
