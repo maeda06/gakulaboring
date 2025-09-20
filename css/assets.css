@@ -223,7 +223,8 @@ section .btn a img {
 	#news .news-content .btn,
 	#concept .btn,
 	#about .btn,
-	#contents .btn {
+	#contents .btn,
+	#help .btn {
 		width: 65vw;
 		bottom: -5%;
 		right: 50%;
@@ -244,5 +245,12 @@ section .btn a img {
 	#contents .contents-list .btn {
 		bottom: -8vw;
 		left: auto;
+	}
+
+	#help .btn {
+		position: relative;
+		bottom: auto;
+		right: auto;
+		transform: none;
 	}
 }

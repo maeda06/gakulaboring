@@ -461,6 +461,12 @@
   /********************
   help
   ********************/
+  #help {
+    background-image: url(../images/help-bg--sp.png);
+    background-position: top;
+    background-color: #ffe529;
+  }
+
   #help h2.heading {
     margin-bottom: 13px;
   }
@@ -480,129 +486,68 @@
     right: -5.5vw;
   }
 
-  #help .help-list {
-    width: 90%;
-  }
-
-  #help .help-list_wrap--pc {
+  #help .faq-list.faq-list--pc {
     display: none;
   }
 
-  #help .help-list_wrap--sp {
+  #help .faq-list.faq-list--sp {
     display: block;
   }
 
-  #help .help-list_wrap--sp .category {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  #help .faq-list {
+    width: 90%;
   }
 
-  #help .help-list_wrap--sp h3,
-  .help-list .cp_actab label {
-    font-size: 3.63vw;
-  }
-
-  #help .help-list_wrap--sp h3 {
-    text-align: left;
-    padding: 0 0 0 25px;
-    margin-bottom: 0;
-  }
-
-  #help .help-list_wrap--sp h3::before,
-  #help .help-list_wrap--sp h3::after {
+  .faq-list h3 {
     display: none;
   }
 
-  #help .help-list_wrap--sp .category {
-    position: relative;
+  .faq-list .cp_actab {
+    border-radius: 4em;
   }
 
-  #help .help-list_wrap--sp .category span {
-    display: inline-block;
-    width: 6.8vw;
-    height: 6.8vw;
-    border-radius: 100vw;
-    background-color: var(--blue);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    transition: all .3s;
+  .faq-list label.sp-label h4 {
+    color: var(--text-color);
   }
 
-  #help .help-list_wrap--sp .cp_actab.is-open .category span {
-    background-color: var(--orange);
+  .faq-list label h4 {
+    font-size: 3.63vw;
+    text-align: left;
   }
 
-  #help .help-list_wrap--sp .category span::before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 50%;
-	right: 50%;
-	transform: translate3D(50%,-50%,0);
-	width: 3.63vw;
-	height: 0.9vw;
-	border-radius: 3px;
-	background-color: #FFF;
-}
-
-#help .help-list_wrap--sp .cp_actab .category span::after {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 50%;
-	right: 50%;
-	transform: translate3D(50%,-50%,0) rotate(90deg);
-	width: 3.63vw;
-	height: 0.9vw;
-	border-radius: 3px;
-	background-color: #FFF;
-	transition: all .3s;
-}
-
-#help .help-list_wrap--sp .cp_actab.is-open .category span::after {
-  transform: translate3d(50%,-50%,0) rotate(0deg);
-}
-
-.help-list .cp_actab {
-  border-radius: 3vw;
-  padding: 16px 0;
-  max-height: 20em;
-  overflow: hidden;
-  transition: all 5s;
-}
-
-.help-list .cp_actab.is-open {
-  max-height: fit-content;
-}
-
-  .help-list .cp_actab label::before {
+  .faq-list .cp_actab-content {
     font-size: 3.63vw;
   }
 
-  .help-list .cp_actab span {
+  .faq-list label span {
     width: 6.8vw;
     height: 6.8vw;
-    right: 3.6vw;
-    position: relative;
-    top: auto;
-    right: auto;
   }
 
-  .help-list .cp_actab span::before {
-    width: 3.4vw;
+  .faq-list label span::before,
+  .faq-list label span::after {
+    width: 3.63vw;
     height: 0.9vw;
   }
 
-  .help-list .cp_actab.is-open .cp_actab-content {
-  max-height: 40em;
-	padding: 0 20px 1em 20px;
-}
+  .faq-list .cp_actab-content label {
+		padding: 0;
+    margin-bottom: 15px;
+	}
 
-.help-list .cp_actab .cp_actab-content::before {
-  font-size: 3.63vw;
-}
+	.faq-list .cp_actab-content::before {
+		display: none;
+	}
 
+	.faq-list .cp_actab-content p::before {
+		font-size: 3.63vw;
+    content: 'A.';
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: bold;
+    color: var(--orange);
+	}
+
+  #help .btn {
+    margin-top: 75px;
+  }
 }

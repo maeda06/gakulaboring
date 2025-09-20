@@ -32,19 +32,17 @@ topBtn.click(function(){
   return false;
 });
 
-var help_list = $('.cp_actab');
-var help_list_label = $('.cp_actab label');
+$('.faq-ttl').click(function(){
+  $(this).next('.faq-content').slideToggle();
+  $(this).toggleClass('is-active');
+});
 
-help_list.click(function() {
-  $(this).toggleClass("is-open");
-})
+// help_list_label.click(function() {
+//   parent = $(this).parent();
+//   parent.toggleClass("is-open");
+// })
 
-help_list_label.click(function() {
-  parent = $(this).parent();
-  parent.toggleClass("is-open");
-})
-
-  // document.querySelectorAll(".faq-content").forEach(function (el) {
+  // document.querySelectorAll(".cp_actab").forEach(function (el) {
   //   const summary = el.querySelector(".faq-q");
   //   const answer = el.querySelector(".faq-a");
   //   summary.addEventListener("click", (event) => {
