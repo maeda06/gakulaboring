@@ -1265,12 +1265,14 @@ footer .footer-inner {
 footer .footer-inner .logo {
 	width: 20vw;
 	height: fit-content;
+	margin-bottom: 20px;
 }
 
 footer .footer-inner .footer-nav {
 	display: flex;
 	justify-content: space-between;
 	width: 50%;
+	height: 10.4vw;
 	margin-top: 16px;
 }
 

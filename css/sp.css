@@ -550,4 +550,83 @@
   #help .btn {
     margin-top: 75px;
   }
+
+  /********************
+  footer
+  ********************/
+  footer {
+    padding: 85px 25px 25px;
+  }
+
+  footer .top-btn {
+    width: 73.1vw;
+    top: -28.6vw;
+  }
+
+  footer .footer-inner {
+    flex-direction: column;
+  }
+
+  footer .footer-inner .logo {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+
+  footer .sns-list {
+    margin: auto;
+    width: 70%;
+  }
+
+  footer .sns-list a img {
+    width: 9.09vw;
+    height: 9.09vw;
+  }
+
+  footer .footer-inner .footer-nav {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+  }
+
+  footer .footer-inner nav a {
+    font-size: 3.63vw;
+  }
+
+  footer .footer-inner .footer-nav nav {
+    width: 100%;
+    row-gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  footer .footer-inner .footer-btn {
+		width: 70%;
+		margin: 0 auto 10px;
+	}
+
+  footer .footer-inner .footer-btn a {
+    font-size: 5.45vw;
+    padding: 12px 0;
+  }
+
+  footer .footer-bottom {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  footer .footer-bottom ul {
+    flex-wrap: wrap;
+  }
+
+  footer .footer-bottom ul li {
+    margin-bottom: 10px;
+  }
+
+  footer .footer-bottom ul li a {
+    font-size: 3.63vw;
+  }
+
+  footer .footer-bottom .copyright {
+    margin-top: 20px;
+    font-size: 3.18vw;
+  }
 }
