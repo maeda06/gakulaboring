@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $('header button').click(function() {
   $('header button .line').toggleClass("open");
+  $('header nav').toggleClass("is-open");
 });
 
 var topBtn=$('.top-btn');
