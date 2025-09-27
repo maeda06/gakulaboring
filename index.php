@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>がくラボりんぐ</title>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/reset.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/assets.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/style.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/sp.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
-</head>
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">項目1</a></li>
-				<li><a href="#">項目2</a></li>
-				<li><a href="#">項目3</a></li>
-				<li><a href="#">項目4</a></li>
-				<li><a href="#">項目5</a></li>
-				<li><a href="#">項目6</a></li>
-				<li><a href="#">項目7</a></li>
-				<li><a href="#">項目8</a></li>
-				<li><a href="#">項目9</a></li>
-			</ul>
-		</nav>
-		<div class="logo"><h1>ロゴ</h1></div>
-		<div class="btn">
-			<a href="#"><span>ログイン</span></a>
-			<a href="#"><span>会員登録</span></a>
-			<button type="button">
-				<span class="line"></span>
-			</button>
-		</div>
-	</header>
+<?php get_header(); ?>
 	<main>
 		<section id="kv">
 			<img class="asobuyouni" src="<?php echo get_template_directory_uri() ?>/images/kv-asobuyouni.png" alt="">
@@ -384,44 +345,4 @@
 			<div class="btn"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 		</section>
 	</main>
-	<footer>
-		<div class="top-btn" href="#"><img src="<?php echo get_template_directory_uri() ?>/images/back-to-top.png" alt=""></div>
-		<div class="footer-inner">
-			<div class="icon">
-				<div class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/footer-logo.png" alt=""></div>
-				<ul class="sns-list">
-					<li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/sns_x.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/sns_fb.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/sns_insta.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/sns_youtube.png" alt=""></a></li>
-					<li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/sns_line.png" alt=""></a></li>
-				</ul>
-			</div>
-			<div class="footer-nav">
-				<nav>
-					<a href="#">就職情報</a>
-					<a href="#">社員の口コミ</a>
-					<a href="#">就活支援／企業オファー</a>
-					<a href="#">みんなでスキルアップ</a>
-					<a href="#">チャットルーム</a>
-					<a href="#">ヘルプページ</a>
-				</nav>
-				<div class="footer-btn">
-					<a href="#">ログイン</a>
-					<a href="#">会員登録</a>
-				</div>
-			</div>
-		</div>
-		<div class="footer-bottom">
-			<ul>
-				<li><a href="#">プライバシーポリシー</a></li>
-				<li><a href="#">利用規約／免責事項</a></li>
-				<li><a href="#">運営会社</a></li>
-			</ul>
-			<span class="copyright">© 2025 がくラボりんく All Rights Reserved.</span>
-		</div>
-	</footer>
-
-	<script src="<?php echo get_template_directory_uri() ?>/js/main.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>
