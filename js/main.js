@@ -43,3 +43,21 @@ $('.faq-ttl').click(function(){
 //   duration: 300,
 //   easing: "ease-in-out",
 // };
+
+gsap.fromTo('#features .cloud',
+  {
+    opacity: 0,
+    y: 50,
+  },
+  {
+  opacity: 1,
+  y: 0,
+  stagger: 0.3,
+  scrollTrigger: {
+    markers: true,
+    trigger: '#features',
+    start: 'top center',
+    toggleActions: 'play none none reverse',
+    }
+  }
+)
