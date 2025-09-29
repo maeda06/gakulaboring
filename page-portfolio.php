@@ -31,9 +31,9 @@
 				</li>
 			</ul>
 		</div>
-		<img class="cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/large-cloud--orange.png" alt="">
-		<img class="cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/large-cloud--orange.png" alt="">
-		<img class="cloud cloud--orange-frame" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange-frame.png" alt="">
+		<img class="target cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/large-cloud--orange.png" alt="">
+		<img class="target cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/large-cloud--orange.png" alt="">
+		<img class="target cloud cloud--orange-frame" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange-frame.png" alt="">
   </section>
 
   <section id="howto">

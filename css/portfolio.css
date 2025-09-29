@@ -115,6 +115,7 @@ h2 {
 }
 #features .cloud {
   filter: brightness(0) saturate(100%) invert(87%) sepia(47%) saturate(0%) hue-rotate(277deg) brightness(106%) contrast(101%);
+  opacity: 0;
 }
 #features .cloud--small {
   position: absolute;
