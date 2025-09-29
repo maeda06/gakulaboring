@@ -372,17 +372,6 @@ footer .footer-bottom .copyright {
 	z-index: -1;
 }
 
-/* .btn a span {
-	overflow: hidden;
-	position: relative;
-}
-
-.btn a span::before {
-	content: "ログイン";
-	position: absolute;
-	bottom: -100%;
-} */
-
 .btn button {
 	width: 5.5vw;
 	height: 4.4vw;
