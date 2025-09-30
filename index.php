@@ -10,7 +10,7 @@
 			<section id="news" class="inview">
 				<div class="news-content">
 					<h2 class="heading heading--blue inview"><span>NEWS</span>NEWS</h2>
-					<ul>
+					<!-- <ul>
 						<li>
 							<a href="#">
 								<img src="https://placehold.jp/256x168.png" alt="">
@@ -47,8 +47,8 @@
 								</div>
 							</a>
 						</li>
-					</ul>
-					<div class="btn"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+					</ul> -->
+					<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 				</div>
 			</section>
 			<section id="concept">
@@ -59,9 +59,9 @@
 						<p>▼何ができるの？</p>
 						<p class="text--pc"><span>就職活動を成功に導く！</span>がくラボりんぐの<span>協力サポート</span><br><span>スキルアップ＆新たな挑戦！</span>がくラボりんぐで<span>広がる可能性</span><span>仲間と繋がる！</span>がくラボりんぐコミュニティ<br>企業とのマッチング<span>企業が君を探す⁉<br></span>ポートフォリオ</span>の作成<br>将来の不安を解消！<span>マネーリテラシー向上支援</span></p>
 						<p class="text--sp"><span>就職活動を成功に導く！</span>がくラボりんぐの<span>協力サポート</span><span>スキルアップ＆新たな挑戦！</span>がくラボりんぐで<span>広がる可能性</span><span>仲間と繋がる！</span>がくラボりんぐコミュニティ<br>企業とのマッチング<span>企業が君を探す⁉<br></span>ポートフォリオ</span>の作成<br>将来の不安を解消！<span>マネーリテラシー向上支援</span></p>
-						<div class="btn"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+						<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 					</div>
-					<div class="btn"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+					<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 				</div>
 				<div class="concept-image">
 					<img src="<?php echo get_template_directory_uri() ?>/images/concept-boy.png" alt="">
@@ -78,7 +78,7 @@
 				<li class="members-only inview"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--book.png" alt=""></div><p>役に立つ情報を<br>学ぶことが出来る</p></li>
 				<li class="members-only inview"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--hand.png" alt=""></div><p>就職のマッチング<br>ができる</p></li>
 			</ul>
-			<div class="btn"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+			<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 		</section>
 		<section id="contents">
 			<div class="contents-list inview">
@@ -106,7 +106,7 @@
 						</div>
 					</li>
 				</ul>
-				<div class="btn"><a href="#"><span>COMING SOON</span><img src="images/arrow.png" alt=""></a></div>
+				<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
 			</div>
 			<div class="chatroom chatroom--pc inview">
 				<img class="chatroom-heading" src="<?php echo get_template_directory_uri() ?>/images/contents-chatroom--head.png" alt="">
@@ -130,7 +130,7 @@
 								<p>29卒です！周りがインターンの話をしてて焦ってます💦 みんな、いつ頃から参加し始めてますか...</p>
 							</div>
 						</div>
-						<div class="btn btn--pc"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+						<div class="btn btn--black btn--pc"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 					</li>
 					<li>
 						<h4>まずは模擬面接で場数を踏むのが一番！がくラ...</h4>
@@ -142,7 +142,7 @@
 							</div>
 						</div>
 					</li>
-				<div class="btn btn--sp"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+				<div class="btn btn--black btn--sp"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 				</ul>
 			</div>
 		</section>
@@ -342,7 +342,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="btn"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+			<div class="btn  btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 		</section>
 	</main>
 <?php get_footer(); ?>

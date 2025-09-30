@@ -60,14 +60,14 @@
 			<img class="kv" src="<?php echo get_template_directory_uri(); ?>/images/portfolio-girl.png" alt="">
 			<div class="gallery-content">
 				<h3>先輩のポートフォリオを<br>参考にしよう！</h3>
-				<div class="btn"><a href="#"><span>作品ギャラリーを見る</span></a></div>
+				<div class="btn btn--orange"><a href="#"><span>作品ギャラリーを見る</span></a></div>
 			</div>
 		</div>
 		<!-- アップしてみよう -->
 		<div class="upload">
 			<h1><span>1枚アップ	</span>してみよう</h1>
 			<div class="upload-btn">
-				<div class="btn"><a href="#"><span>今すぐアップロード</span></a></div>
+				<div class="btn btn--orange"><a href="#"><span>今すぐアップロード</span></a></div>
 				<div class="btn btn--blue"><a href="#"><span>下書きから作る</span></a></div>
 			</div>
 		</div>

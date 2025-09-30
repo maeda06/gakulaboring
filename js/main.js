@@ -54,7 +54,7 @@ gsap.fromTo('#features .cloud',
   y: 0,
   stagger: 0.3,
   scrollTrigger: {
-    markers: true,
+    // markers: true,
     trigger: '#features',
     start: 'top center',
     toggleActions: 'play none none reverse',

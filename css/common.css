@@ -197,6 +197,72 @@ header nav ul li a {
 	color: #FFF;
 }
 
+.btn button {
+	width: 5.5vw;
+	height: 4.4vw;
+	background-color: #202020;
+	margin-top: 8px;
+	border-radius: 100vw;
+	position: relative;
+	transition: all .3s;
+}
+
+.btn button:hover {
+	background-color: var(--orange);
+}
+
+.btn button::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 5.2vw;
+	height: 90%;
+	border: 5px #fff solid;
+	border-radius: 100vw;
+}
+
+header .btn button .line::before,
+header .btn button .line::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2.5vw;
+	height: .3vw;
+	background-color: #fff;
+}
+
+header .btn button .line::before {
+	top: 35%;
+	transition: all .3s;
+	transform-origin: center center;
+}
+
+header .btn button:hover .line::before {
+	top: 40%;
+}
+
+header .btn button .line.open::before {
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%) rotate(25deg);
+}
+
+header .btn button .line::after {
+	bottom: 35%;
+	transition: all .3s;
+}
+
+header .btn button:hover .line::after {
+	bottom: 40%;
+}
+
+header .btn button .line.open::after {
+	bottom: 50%;
+	transform: translateX(-50%) translateY(50%) rotate(-25deg);
+}
+
 /********************
 footer
 ********************/
@@ -324,9 +390,14 @@ footer .footer-bottom .copyright {
 /********************
 ボタン
 ********************/
+section .btn {
+	width: 20vw;
+	margin: auto;
+	position: relative;
+	z-index: 2;
+}
+
 .btn a {
-	color: #fff;
-	background-color: #202020;
 	display: inline-block;
 	height: fit-content;
 	font-family: "Dela Gothic One", sans-serif;
@@ -341,7 +412,19 @@ footer .footer-bottom .copyright {
 	transition: all .3s;
 }
 
-.btn a:hover {
+section .btn a{
+	font-size: 1.25vw;
+	padding: 18px 30px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.btn--black a {
+	color: #fff;
+	background-color: #202020;
+}
+
+.btn--black a:hover {
 	background-color: var(--orange);
 }
 
@@ -353,8 +436,11 @@ footer .footer-bottom .copyright {
 	transform: translate(-50%,-50%);
 	width: 100%;
 	height: 100%;
-	border: 4px #fff solid;
 	border-radius: 100vw;
+}
+
+.btn--black a::before {
+	border: 4px #fff solid;
 }
 
 .btn a::after {
@@ -367,119 +453,47 @@ footer .footer-bottom .copyright {
 	width: 103%;
 	height: 110%;
 	border-radius: 100vw;
-	background-color: #202020;
 	z-index: -1;
 }
 
-.btn button {
-	width: 5.5vw;
-	height: 4.4vw;
+.btn--black a::after {
 	background-color: #202020;
-	margin-top: 8px;
-	border-radius: 100vw;
-	position: relative;
-	transition: all .3s;
 }
 
-.btn button:hover {
-	background-color: var(--orange);
-}
-
-.btn button::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 5.2vw;
-	height: 90%;
-	border: 5px #fff solid;
-	border-radius: 100vw;
-}
-
-.btn button .line::before,
-.btn button .line::after {
-	content: '';
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 2.5vw;
-	height: .3vw;
-	background-color: #fff;
-}
-
-.btn button .line::before {
-	top: 35%;
-	transition: all .3s;
-	transform-origin: center center;
-}
-
-.btn button:hover .line::before {
-	top: 40%;
-}
-
-.btn button .line.open::before {
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%) rotate(25deg);
-}
-
-.btn button .line::after {
-	bottom: 35%;
-	transition: all .3s;
-}
-
-.btn button:hover .line::after {
-	bottom: 40%;
-}
-
-.btn button .line.open::after {
-	bottom: 50%;
-	transform: translateX(-50%) translateY(50%) rotate(-25deg);
-}
-
-#news .news-content .btn {
-	width: 25%;
-	position: absolute;
-	bottom: -9%;
-	right: 0;
+section .btn a span {
 	z-index: 1;
-}
-
-section .btn a{
-	font-size: 1.25vw;
-	padding: 18px 30px;
-	display: flex;
-	justify-content: space-around;
 }
 
 section .btn a img {
 	width: 1.2vw;
 }
 
-#concept .btn,
-#about .btn,
-#contents .btn,
-#help .btn {
-	width: 20vw;
-	margin: auto;
-	position: relative;
-	z-index: 2;
+.btn--orange a,
+.btn--blue a {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  padding: 12px 40px;
 }
 
-#about .btn {
-	margin-right: 5%;
+.btn--orange a::before {
+  background-color: var(--orange);
+  z-index: 0;
 }
 
-#contents .btn {
-	position: absolute;
-	bottom: -6%;
-	left: 50%;
-	transform: translateX(-50%);
+.btn--orange a::after {
+  background-color: var(--blue);
+  box-shadow: 5px 5px var(--blue);
 }
 
-#contents .chatroom .chatroom__list .btn {
-	bottom: -10vw;
-	left: 50%;
+.btn--blue a::before {
+  background-color: var(--blue);
+	z-index: 0;
+}
+
+.btn--blue a::after {
+  background-color: var(--orange);
+  box-shadow: 5px 5px var(--orange);
 }
 
 @media (max-width: 767px) {
