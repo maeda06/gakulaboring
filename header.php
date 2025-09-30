@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/common.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/style.css">
 	<?php if( is_page('portfolio') ): ?><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/portfolio.css"><?php endif; ?>
+	<?php if( is_page('kuchikomi') ): ?><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/kuchikomi.css"><?php endif; ?>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/sp.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
