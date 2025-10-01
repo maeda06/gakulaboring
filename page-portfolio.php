@@ -1,4 +1,4 @@
-<? get_header(); ?>
+<?php get_header(); ?>
 <main>
   <!-- メインビジュアル -->
   <section id="hero">
