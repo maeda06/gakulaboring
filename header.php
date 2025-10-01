@@ -8,11 +8,11 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/common.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/style.css">
 	<?php if( is_page('portfolio') ): ?><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/portfolio.css"><?php endif; ?>
-	<?php if( is_page('kuchikomi') ): ?><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/kuchikomi.css"><?php endif; ?>
+	<?php if( is_page('review') ): ?><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/review.css"><?php endif; ?>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/sp.css">
-	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@100..900&display=swap&family=Mochiy+Pop+One&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@100..900&display=swap&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 <body>

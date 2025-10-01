@@ -289,6 +289,27 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
 }
+#howto .btn {
+  position: relative;
+  z-index: 1;
+}
+#howto .btn a {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  padding: 12px 40px;
+}
+#howto .btn a::before {
+  background-color: var(--orange);
+  z-index: 0;
+}
+#howto .btn a span {
+  z-index: 1;
+}
+#howto .btn a::after {
+  background-color: var(--blue);
+  box-shadow: 5px 5px var(--blue);
+}
 #howto .upload {
   background-color: #FFE529;
   padding-top: 250px;
@@ -322,6 +343,13 @@ h2 {
 }
 #howto .upload .upload-btn .btn {
   width: 35%;
+}
+#howto .btn--blue a::before {
+  background-color: var(--blue);
+}
+#howto .btn--blue a::after {
+  background-color: var(--orange);
+  box-shadow: 5px 5px var(--orange);
 }
 
 /* ===============================

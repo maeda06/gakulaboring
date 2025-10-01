@@ -6,7 +6,7 @@ common
   --text-color: #202020;
   --orange: #FF5824;
   --blue: #127DFF;
-  --yellow: #FFDA00
+  --yellow: #FFE529
 }
 
 html{
@@ -101,10 +101,10 @@ h2.heading--orange span {
 
 h2.heading--white {
 	color: #FFF;
-	text-shadow:	1px 1px 0 var(--yellow), -1px -1px 0 var(--yellow),
-              	-1px 1px 0 var(--yellow), 1px -1px 0 var(--yellow),
-              	0px 1px 0 var(--yellow),  0-1px 0 var(--yellow),
-              	-1px 0 0 var(--yellow), 1px 0 0 var(--yellow);
+	text-shadow:	1px 1px 0 #FFDA00, -1px -1px 0 #FFDA00,
+              	-1px 1px 0 #FFDA00, 1px -1px 0 #FFDA00,
+              	0px 1px 0 #FFDA00,  0-1px 0 #FFDA00,
+              	-1px 0 0 #FFDA00, 1px 0 0 #FFDA00;
 }
 
 .lattice--blue {
@@ -462,6 +462,7 @@ section .btn a{
 
 section .btn a span {
 	z-index: 1;
+	color: #FFF;
 }
 
 section .btn a img {
