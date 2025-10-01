@@ -10,7 +10,7 @@
 			<section id="news" class="inview">
 				<div class="news-content">
 					<h2 class="heading heading--blue inview"><span>NEWS</span>NEWS</h2>
-					<!-- <ul>
+					<ul>
 						<li>
 							<a href="#">
 								<img src="https://placehold.jp/256x168.png" alt="">
@@ -47,7 +47,7 @@
 								</div>
 							</a>
 						</li>
-					</ul> -->
+					</ul>
 					<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 				</div>
 			</section>
