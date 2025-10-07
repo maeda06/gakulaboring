@@ -50,8 +50,8 @@ h2.heading {
 								3px 3px 0 #fff;
 	z-index: 2;
 	position: relative;
-	transition: all .5s ease-in-out;
-	opacity: 0;
+	/* transition: all .5s ease-in-out; */
+	/* opacity: 0; */
 }
 
 h2.heading.is-show {
@@ -64,12 +64,11 @@ h2.heading span {
 	left: 0;
 	font-size: 3.3vw;
 	z-index: -1;
-	transition: all 1s;
-	transition-delay: .5s;
+	transition-duration: 2s;
 	text-shadow: none;
 }
 
-h2.heading.is-show span {
+h2.heading.inview span {
 	left: 2px;
 	font-size: 5vw;
 	font-weight: bold;
@@ -117,11 +116,64 @@ h2.heading--white {
 
 
 /********************
+オープニングアニメーション
+********************/
+.loading {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  height: 100svh;
+  background-color: var(--blue);
+	background-image: url(../images/kv-bg.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.loading__inner {
+  width: 100%;
+  height: inherit;
+  display: grid;
+  place-content: center;
+  row-gap: 10px;
+}
+
+.loading__text {
+  font-size: max(12px, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  line-height: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.loading_subtitle {
+	width: 11.8vw;
+	object-fit: contain;
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.loading__logo {
+  margin: 0 auto;
+  width: min(200px, 100%);
+}
+
+.contents {
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  font-size: max(22px, 3vw);
+}
+
+/********************
 header
 ********************/
 header {
 	position: fixed;
-	bottom: 100%;
+	top: 0;
 	width: 100%;
 	z-index: 100;
 	padding: 0 48px;
@@ -145,7 +197,7 @@ header .logo {
 	justify-content: center;
 }
 
-header .logo h1 {
+header .logo h1 a {
 	text-align: center;
 	font-size: 24px;
 }

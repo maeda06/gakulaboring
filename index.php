@@ -2,7 +2,8 @@
 	<main>
 		<section id="kv">
 			<img class="asobuyouni" src="<?php echo get_template_directory_uri() ?>/images/kv-asobuyouni.png" alt="">
-			<img class="kv-girl" src="<?php echo get_template_directory_uri() ?>/images/kv-girl.png" alt="">
+			<img class="kv-girl" src="<?php echo get_template_directory_uri() ?>/images/portfolio-girl.png" alt="">
+			<img class="subtitle" src="<?php echo get_template_directory_uri(); ?>/images/kv-subtitle.png" alt="">
 			<img class="sigotowosuru" src="<?php echo get_template_directory_uri() ?>/images/kv-sigotowosuru.png" alt="">
 			<div class="cta"><img src="<?php echo get_template_directory_uri() ?>/images/cta.png" alt=""></div>
 		</section>
@@ -52,9 +53,9 @@
 				</div>
 			</section>
 			<section id="concept">
-				<div class="concept-text inview">
+				<div class="concept-text">
 					<h2 class="heading heading--blue inview"><span>CONCEPT</span>CONCEPT</h2>
-					<div class="memo inview">
+					<div class="memo">
 						<h3><span class="orange">遊ぶように仕事をする!!</span>って？<br><span class="blue">がくラボりんぐとは？</span></h3>
 						<p>▼何ができるの？</p>
 						<p class="text--pc"><span>就職活動を成功に導く！</span>がくラボりんぐの<span>協力サポート</span><br><span>スキルアップ＆新たな挑戦！</span>がくラボりんぐで<span>広がる可能性</span><span>仲間と繋がる！</span>がくラボりんぐコミュニティ<br>企業とのマッチング<span>企業が君を探す⁉<br></span>ポートフォリオ</span>の作成<br>将来の不安を解消！<span>マネーリテラシー向上支援</span></p>
@@ -69,14 +70,28 @@
 			</section>
 		</div>
 		<section id="about">
-			<span class="tape"></span>
+			<span class="tape">MEMBER ONRY</span>
+			<div class="loop-wrap">
+				<ul>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+					<li>MEMBER ONRY</li>
+				</ul>
+			</div>
 			<span class="flower"></span>
 			<h2 class="heading heading--orange inview"><span>このサイトについて</span>このサイトについて</h2>
 			<ul class="about-list inview">
-				<li class="inview"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--glass.png" alt=""></div><p>就職に関する<br>情報収集ができる</p></li>
-				<li class="members-only inview"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--speech-bubble.png" alt=""></div><p>チャットで話せる</p></li>
-				<li class="members-only inview"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--book.png" alt=""></div><p>役に立つ情報を<br>学ぶことが出来る</p></li>
-				<li class="members-only inview"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--hand.png" alt=""></div><p>就職のマッチング<br>ができる</p></li>
+				<li><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--glass.png" alt=""></div><p>就職に関する<br>情報収集ができる</p></li>
+				<li class="members-only"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--speech-bubble.png" alt=""></div><p>チャットで話せる</p></li>
+				<li class="members-only"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--book.png" alt=""></div><p>役に立つ情報を<br>学ぶことが出来る</p></li>
+				<li class="members-only"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--hand.png" alt=""></div><p>就職のマッチング<br>ができる</p></li>
 			</ul>
 			<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 		</section>
