@@ -192,7 +192,7 @@
 			<div class="faq-list faq-list--pc">
 				<h3>登録・ログイン・アカウントについて</h3>
 				<div class="cp_actab">
-					<input id="cp_tabfour1" type="checkbox" name="tabs" checked="checked">
+					<input id="cp_tabfour1" type="checkbox" name="tabs">
 					<label for="cp_tabfour1"><h4>登録したメールアドレスを変更したいです。</h4><span></span></label>
 					<div class="cp_actab-content">はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</div>
 				</div>
@@ -269,7 +269,7 @@
 			<div class="faq-list faq-list--sp">
 				<h3>登録・ログイン・アカウントについて</h3>
 				<div class="cp_actab">
-					<input id="cp_tabfour14" type="checkbox" name="tabs" checked="checked">
+					<input id="cp_tabfour14" type="checkbox" name="tabs">
 					<label for="cp_tabfour14" class="sp-label"><h4>会員登録について</h4><span></span></label>
 					<div class="cp_actab-content">
 						<label for="cp_tabfour14"><h4>登録したメールアドレスを変更したいです。</h4></label>
