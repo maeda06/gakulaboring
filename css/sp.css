@@ -61,6 +61,13 @@
     transform: translateX(-50%);
   }
 
+  #kv .subtitle {
+    width: 32.7vw;
+    height: 124.5vw;
+    top: 10%;
+    bottom: auto;
+  }
+
   /********************
   news
   ********************/
@@ -68,6 +75,7 @@
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
+    z-index: 3;
   }
 
   #news::before {
@@ -136,6 +144,14 @@
 
   #news .news-content ul li a h3 {
     font-size: 3.4vw;
+  }
+
+  #news .news-content .btn {
+    width: 65vw;
+    bottom: -5%;
+    right: 50%;
+    transform: translateX(50%);
+    position: absolute;
   }
 
   /********************
@@ -220,20 +236,43 @@
   ********************/
   #about {
     background-image: url(../images/about-bg--sp.png);
+    background-color: var(--blue);
     padding-bottom: 70vw;
+    padding-top: 0;
   }
 
   #about::before {
-    background-image: url(../images/about-bg--cloud-sp.png);
+    display: none;
+  }
+
+  #about .cloud--sp {
+    display: block;
     background-color: var(--blue);
-    background-position: left;
-    top: 0;
+  }
+
+  #about .cloud--sp img {
+    width: 60%;
+  }
+
+  #about h2.heading {
+    padding-top: 0;
+    position: absolute;
+    top: 44.7vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  #about h2.heading span {
+    padding-top: 0;
+    width: 100%;
+    left: 52%;
+    top: 9px;
   }
 
   #about .about-list {
-    margin-top: 0!important;
+    margin-top: 17px!important;
     width: 98%;
-    margin: auto;
     flex-wrap: wrap;
     justify-content: space-around;
     row-gap: 8vw;
@@ -244,7 +283,7 @@
     border-radius: 3.6vw;
   }
 
-  #about .about-list.is-show li {
+  #about .about-list li {
     margin-top: 0!important;
   }
 
@@ -269,6 +308,10 @@
     height: 14vw;
   }
 
+  #about .btn {
+    margin-right: auto;
+  }
+
   #about::after {
     display: none;
   }
@@ -281,7 +324,7 @@
     right: 0;
   }
 
-  #about .flower::before {
+  #about .flower {
     background-image: url(../images/about-bg-flower--sp.png);
     background-size: cover;
     background-position: top;
@@ -290,6 +333,24 @@
     top: auto;
     bottom: 0;
     right: 0;
+  }
+
+  .loop-wrap.loop-wrap--left {
+    transform: rotate(-33deg) translateX(-50%);
+    bottom: 53%;
+  }
+
+    .loop-wrap.loop-wrap--right {
+      transform: rotate(30deg) translateX(-50%);
+      bottom: 53%;
+    }
+
+  .loop-wrap ul li {
+    font-size: 9vw;
+  }
+
+  .btn {
+    margin: 12px auto 0;
   }
 
   /********************
@@ -329,8 +390,18 @@
     height: 52vw;
     bottom: 97%;
     left: 50%;
-    transform: translateX(-50%);
+    transform-origin: left;
+    animation: 3s rotate--center infinite;
   }
+
+  @keyframes rotate--center {
+	0%,100%{
+		transform: rotate(-5deg) translateX(-50%);
+	}
+	50%{
+		transform: rotate(5deg) translateX(-50%);
+	}
+}
 
   #contents .contents-list ul {
     flex-wrap: wrap;
@@ -350,6 +421,11 @@
     font-size: 4vw;
   }
 
+  #contents .contents-list .btn {
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%);
+  }
+
   #contents .chatroom--pc {
     /* display: none; */
   }
@@ -364,21 +440,50 @@
     width: 100%;
   }
 
+  #contents .chatroom .loop-wrap {
+    display: block;
+  }
+
+  #contents .chatroom .loop-wrap ul li {
+	font-size: 7rem;
+  padding: 10px 22px;
+}
+
+  #contents .chatroom .loop-wrap.loop-wrap--right {
+    top: 15%;
+    bottom: auto;
+    transform: rotate(30deg) translateX(-20%);
+    z-index: 0;
+  }
+
+  #contents .chatroom .loop-wrap.loop-wrap--left {
+    transform: rotate(-20deg) translateX(-20%);
+    bottom: -2%;
+    z-index: 0;
+  }
+
   #contents .chatroom-heading {
     width: 98%;
     margin: auto;
+    position: relative;
+    z-index: 2;
   }
 
   #contents .chatroom .chatroom__list {
     flex-wrap: wrap;
     row-gap: 20px;
     position: relative;
+    z-index: -1;
   }
 
-  #contents .chatroom .chatroom__list li {
+  #contents .chatroom .chatroom__list > li {
     width: 90%;
     margin: auto;
     border-radius: 5.45vw;
+  }
+
+  #contents .chatroom .chatroom__list li:last-child {
+    z-index: 1;
   }
 
   #contents .chatroom .chatroom__list li:nth-child(2),
@@ -388,6 +493,10 @@
 
   #contents .chatroom .chatroom__list li::before {
     border-radius: 5.45vw;
+  }
+
+  #contents .chatroom .chatroom__list li::before:last-child {
+    z-index: 1;
   }
 
   #contents .chatroom .chatroom__list li h4 {
@@ -423,6 +532,11 @@
   #can {
     background-image: url(../images/can-bg--sp.png);
     padding-bottom: 161vw;
+  }
+
+  #can .heading span {
+    top: 8px;
+    left: 52%;
   }
 
   #can ul {

@@ -70,13 +70,8 @@
 			</section>
 		</div>
 		<section id="about">
-			<span class="tape">MEMBER ONRY</span>
-			<div class="loop-wrap">
+			<div class="loop-wrap loop-wrap--left">
 				<ul>
-					<li>MEMBER ONRY</li>
-					<li>MEMBER ONRY</li>
-					<li>MEMBER ONRY</li>
-					<li>MEMBER ONRY</li>
 					<li>MEMBER ONRY</li>
 					<li>MEMBER ONRY</li>
 					<li>MEMBER ONRY</li>
@@ -86,6 +81,7 @@
 				</ul>
 			</div>
 			<span class="flower"></span>
+			<div class="cloud--sp"><img src="<?php echo get_template_directory_uri(); ?>/images/about-bg--cloud-sp.png" alt=""></div>
 			<h2 class="heading heading--orange inview"><span>このサイトについて</span>このサイトについて</h2>
 			<ul class="about-list inview">
 				<li><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--glass.png" alt=""></div><p>就職に関する<br>情報収集ができる</p></li>
@@ -124,6 +120,16 @@
 				<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
 			</div>
 			<div class="chatroom chatroom--pc inview">
+				<div class="loop-wrap loop-wrap--right">
+					<ul>
+						<li>HOT CHAT</li>
+						<li>HOT CHAT</li>
+						<li>HOT CHAT</li>
+						<li>HOT CHAT</li>
+						<li>HOT CHAT</li>
+						<li>HOT CHAT</li>
+					</ul>
+				</div>
 				<img class="chatroom-heading" src="<?php echo get_template_directory_uri() ?>/images/contents-chatroom--head.png" alt="">
 				<ul class="chatroom__list">
 					<li>
@@ -146,6 +152,19 @@
 							</div>
 						</div>
 						<div class="btn btn--black btn--pc"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+						<div class="loop-wrap loop-wrap--left">
+							<ul>
+								<li>HOT CHAT</li>
+								<li>HOT CHAT</li>
+								<li>HOT CHAT</li>
+								<li>HOT CHAT</li>
+								<li>HOT CHAT</li>
+								<li>HOT CHAT</li>
+								<li>HOT CHAT</li>
+								<li>HOT CHAT</li>
+								<li>HOT CHAT</li>
+							</ul>
+						</div>
 					</li>
 					<li>
 						<h4>まずは模擬面接で場数を踏むのが一番！がくラ...</h4>

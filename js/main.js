@@ -75,7 +75,6 @@ window.addEventListener("load", () => {
 });
 
 
-
 gsap.utils.toArray(".inview").forEach((target) => {
 gsap.set(target,{autoAlpha: 0, y: 100})
 
@@ -140,6 +139,14 @@ gsap.to(
     }
   }
 )
+
+// フラワースクロール量操作
+// jQuery( window ).bind( 'scroll', function() {
+// 	scrolled = jQuery( window ).scrollTop();
+// 	weight1 = 0.5;
+// 	weight2 = 0.12;
+// 	jQuery( '.flower' ).css( 'top', 1200 - scrolled * weight1 + 'px' );
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
 //   $(window).on("load", function() {
