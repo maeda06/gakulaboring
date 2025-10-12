@@ -120,10 +120,10 @@
 				<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
 			</div>
 			<div class="chatroom chatroom--pc inview">
-				<img class="chatroom-bg chatroom-bg--tv" src="<?php echo get_template_directory_uri(); ?>/images/tv.png" alt="">
-				<img class="chatroom-bg chatroom-bg--sakura" src="<?php echo get_template_directory_uri(); ?>/images/sakura.png" alt="">
-				<img class="chatroom-bg chatroom-bg--bike" src="<?php echo get_template_directory_uri(); ?>/images/bike.png" alt="">
-				<img class="chatroom-bg chatroom-bg--doll" src="<?php echo get_template_directory_uri(); ?>/images/doll.png" alt="">
+				<img class="chatroom-bg chatroom-bg--tv rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/tv.png" alt="">
+				<img class="chatroom-bg chatroom-bg--sakura rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/sakura.png" alt="">
+				<img class="chatroom-bg chatroom-bg--bike rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/bike.png" alt="">
+				<img class="chatroom-bg chatroom-bg--doll rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/doll.png" alt="">
 				<div class="loop-wrap loop-wrap--right">
 					<ul>
 						<li>HOT CHAT</li>
