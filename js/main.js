@@ -140,6 +140,8 @@ gsap.to(
   }
 )
 
+var rellax = new Rellax('.rellax');
+
 // フラワースクロール量操作
 // jQuery( window ).bind( 'scroll', function() {
 // 	scrolled = jQuery( window ).scrollTop();

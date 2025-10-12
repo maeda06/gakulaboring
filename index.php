@@ -80,7 +80,7 @@
 					<li>MEMBER ONRY</li>
 				</ul>
 			</div>
-			<span class="flower"></span>
+			<span class="flower rellax" data-rellax-speed="3"></span>
 			<div class="cloud--sp"><img src="<?php echo get_template_directory_uri(); ?>/images/about-bg--cloud-sp.png" alt=""></div>
 			<h2 class="heading heading--orange inview"><span>このサイトについて</span>このサイトについて</h2>
 			<ul class="about-list inview">
@@ -120,6 +120,10 @@
 				<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
 			</div>
 			<div class="chatroom chatroom--pc inview">
+				<img class="chatroom-bg chatroom-bg--tv" src="<?php echo get_template_directory_uri(); ?>/images/tv.png" alt="">
+				<img class="chatroom-bg chatroom-bg--sakura" src="<?php echo get_template_directory_uri(); ?>/images/sakura.png" alt="">
+				<img class="chatroom-bg chatroom-bg--bike" src="<?php echo get_template_directory_uri(); ?>/images/bike.png" alt="">
+				<img class="chatroom-bg chatroom-bg--doll" src="<?php echo get_template_directory_uri(); ?>/images/doll.png" alt="">
 				<div class="loop-wrap loop-wrap--right">
 					<ul>
 						<li>HOT CHAT</li>

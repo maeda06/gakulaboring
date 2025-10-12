@@ -415,7 +415,7 @@ about
 
 #about .flower {
 	position: absolute;
-	top: -30px;
+	top: 30%;
 	right: 0;
 	content: "";
 	display: block;
@@ -693,6 +693,17 @@ contents
 	transform: translateY(100px);
 	transition: all .5s ease-in-out;
 	transition-delay: .3s;
+}
+
+#contents .chatroom .chatroom-bg {
+	position: absolute;
+}
+
+#contents .chatroom .chatroom-bg.chatroom-bg--tv {
+	top: -10.83vw;
+	left: 41.6vw;
+	width: 20.83vw;
+	transform: translateX(-50%) translateY(-100%);
 }
 
 #contents .chatroom .loop-wrap.loop-wrap--right {
