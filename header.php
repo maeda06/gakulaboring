@@ -35,7 +35,7 @@
 				<li><a href="#">項目9</a></li>
 			</ul>
 		</nav>
-		<div class="logo"><h1><a href="<?php echo home_url(); ?>">ロゴ</h1></a></div>
+		<div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo/logo04.png" alt=""></a></div>
 		<div class="btn btn--black">
 			<a href="#"><span>ログイン</span></a>
 			<a href="#"><span>会員登録</span></a>

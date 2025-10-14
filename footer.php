@@ -2,7 +2,7 @@
 		<div class="top-btn" href="#"><img src="<?php echo get_template_directory_uri() ?>/images/back-to-top.png" alt=""></div>
 		<div class="footer-inner">
 			<div class="icon">
-				<div class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/footer-logo.png" alt=""></div>
+				<div class="logo"><img src="<?php echo get_template_directory_uri() ?>/images/logo/logo03.png" alt=""></div>
 				<ul class="sns-list">
 					<li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/sns_x.png" alt=""></a></li>
 					<li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/sns_fb.png" alt=""></a></li>
