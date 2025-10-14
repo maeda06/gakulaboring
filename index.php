@@ -80,7 +80,7 @@
 					<li>MEMBER ONRY</li>
 				</ul>
 			</div>
-			<span class="flower rellax" data-rellax-speed="3"></span>
+			<span class="flower rellax" data-rellax-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0" data-rellax-desktop-speed="3"></span>
 			<div class="cloud--sp"><img src="<?php echo get_template_directory_uri(); ?>/images/about-bg--cloud-sp.png" alt=""></div>
 			<h2 class="heading heading--orange inview"><span>このサイトについて</span>このサイトについて</h2>
 			<ul class="about-list inview">
@@ -93,7 +93,7 @@
 		</section>
 		<section id="contents">
 			<div class="contents-list inview">
-				<h2 class="heading heading--white inview">会員限定コンテンツ</h2>
+				<h2 class="heading heading--white">会員限定コンテンツ</h2>
 				<ul>
 					<li>
 						<img src="<?php echo get_template_directory_uri() ?>/images/contents--exchange.png" alt="">
@@ -118,12 +118,12 @@
 					</li>
 				</ul>
 				<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
+				<img class="chatroom-bg chatroom-bg--tv rellax" data-rellax-speed="2" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/tv.png" alt="">
+				<img class="chatroom-bg chatroom-bg--sakura rellax" data-rellax-speed="1" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/sakura.png" alt="">
+				<img class="chatroom-bg chatroom-bg--bike rellax" data-rellax-speed="2" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/bike.png" alt="">
+				<img class="chatroom-bg chatroom-bg--doll rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/doll.png" alt="">
 			</div>
 			<div class="chatroom chatroom--pc inview">
-				<img class="chatroom-bg chatroom-bg--tv rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/tv.png" alt="">
-				<img class="chatroom-bg chatroom-bg--sakura rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/sakura.png" alt="">
-				<img class="chatroom-bg chatroom-bg--bike rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/bike.png" alt="">
-				<img class="chatroom-bg chatroom-bg--doll rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/doll.png" alt="">
 				<div class="loop-wrap loop-wrap--right">
 					<ul>
 						<li>HOT CHAT</li>

@@ -624,10 +624,6 @@ contents
 	padding-bottom: 64px;
 	margin-bottom: 485px;
 	position: relative;
-	opacity: 0;
-	transform: translateY(100px);
-	transition: all .5s;
-	transition-delay: .5s;
 }
 
 #contents .contents-list.is-show {
@@ -695,44 +691,53 @@ contents
 	transition-delay: .3s;
 }
 
-#contents .chatroom .chatroom-bg {
+#contents .chatroom-bg {
 	position: absolute;
 }
 
-#contents .chatroom .chatroom-bg.chatroom-bg--tv {
+#contents .chatroom-bg.chatroom-bg--tv {
 	/* top: -10.83vw;
 	left: 41.6vw; */
-	top: -33.83vw;
+	bottom: -23.83vw;
 	left: 29.6vw;
-	width: 20.83vw;
+	width: 19.83vw;
 	/* transform: translateX(-50%) translateY(-100%); */
+	animation: 3s anime_fuwafuwa infinite;
+
 }
 
-#contents .chatroom .chatroom-bg.chatroom-bg--sakura {
-	/* top: -7.5vw;
+#contents .chatroom-bg.chatroom-bg--sakura {
+	/* bottom: -7.5vw;
 	left: 15.55vw; */
-	top: -23.5vw;
+	bottom: -23.5vw;
 	left: 2.55vw;
 	width: 23.26vw;
 	/* transform: translateX(-50%) translateY(-100%); */
+	animation: 5s anime_fuwafuwa infinite;
+
 }
 
-#contents .chatroom .chatroom-bg.chatroom-bg--bike {
-	top: -9.72vw;
+#contents .chatroom-bg.chatroom-bg--bike {
+	bottom: -40.72vw;
 	/* left: 29.16vw; */
 	left: 20.16vw;
-	width: 23.75vw;
+	width: 22.75vw;
 	/* transform: translateX(-50%); */
 	z-index: -1;
+	/* animation-delay: 2.5s;
+	animation: 2.5s anime_fuwafuwa infinite; */
+
 }
 
-#contents .chatroom .chatroom-bg.chatroom-bg--doll {
-	/* top: -5.972vw;
+#contents .chatroom-bg.chatroom-bg--doll {
+	/* bottom: -5.972vw;
 	right: 16.94vw; */
-	top: 1.028vw;
+	bottom: -42.028vw;
 	right: 5.94vw;
 	width: 10.9vw;
 	/* transform: translateX(100%) translateY(50%); */
+	/* animation: 4s anime_fuwafuwa infinite; */
+
 }
 
 #contents .chatroom .loop-wrap.loop-wrap--right {

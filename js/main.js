@@ -82,7 +82,7 @@ gsap.set(target,{autoAlpha: 0, y: 100})
       scrollTrigger: {
       trigger: target,
       start: "top bottom",
-      // end: "bottom top",
+      end: "bottom top",
       // toggleActions: "play none none reverse",
       // markers: true,
       toggleClass: {
@@ -95,6 +95,31 @@ gsap.set(target,{autoAlpha: 0, y: 100})
   .to(target,{
     autoAlpha: 1,
     y: 0,
+  })
+});
+
+gsap.utils.toArray(".inview-scale").forEach((target) => {
+gsap.set(target,{autoAlpha: 0, scale: 0.5})
+
+  gsap.timeline({
+      scrollTrigger: {
+      trigger: target,
+      start: "top bottom",
+      // end: "bottom top",
+      // toggleActions: "play none none reverse",
+      // markers: true,
+      toggleClass: {
+        targets: target,
+        start: "top center",
+        className: "is-active",
+    },
+    }
+  })
+  .to(target,{
+    ease: 'elastic.out(1.2,0.5)',
+    // duration: 1,
+    autoAlpha: 1,
+    scale: 1
   })
 });
 
@@ -135,12 +160,14 @@ gsap.to(
       targets: ".concept-image", // クラスを切り替える対象の要素
       className: "fuwafuwa", // クラス名 "active" を切り替える
     },
-      toggleActions: 'play pause resume reset',
+      // toggleActions: 'play pause resume reset',
     }
   }
 )
 
-var rellax = new Rellax('.rellax');
+var rellax = new Rellax('.rellax' , {
+  breakpoints: [767, 768, 1201],
+});
 
 // フラワースクロール量操作
 // jQuery( window ).bind( 'scroll', function() {

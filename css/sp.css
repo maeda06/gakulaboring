@@ -430,6 +430,10 @@
     /* display: none; */
   }
 
+  #contents .chatroom-bg {
+    display: none;
+  }
+
   #contents .chatroom {
     padding-top: 47.2vw;
     padding-bottom: 109vw;
@@ -458,8 +462,13 @@
 
   #contents .chatroom .loop-wrap.loop-wrap--left {
     transform: rotate(-20deg) translateX(-20%);
-    bottom: -2%;
+    bottom: 60%;
     z-index: 0;
+  }
+
+  #contents .chatroom .loop-wrap.loop-wrap--left ul li {
+    font-size: 8.5rem;
+    padding: 1.8vw 12.59vw;
   }
 
   #contents .chatroom-heading {
