@@ -2,6 +2,16 @@
 /********************
 common
 ********************/
+.cta,
+header .btn a,
+.footer-btn {
+	display: none!important;
+}
+
+.btn a {
+	pointer-events: none;
+}
+
 :root {
   --text-color: #202020;
   --orange: #FF5824;
