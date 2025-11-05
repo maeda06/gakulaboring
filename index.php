@@ -8,50 +8,40 @@
 			<div class="cta"><img src="<?php echo get_template_directory_uri() ?>/images/cta.png" alt=""></div>
 		</section>
 		<div class="lattice--blue">
-			<section id="news" class="inview">
-				<div class="news-content">
-					<h2 class="heading heading--blue inview"><span>NEWS</span>NEWS</h2>
-					<ul>
-						<li>
-							<a href="#">
-								<img src="https://placehold.jp/256x168.png" alt="">
-								<div class="list-text">
-									<h3>がくラボりんぐサービス先行公開！</h3>
-									<p>学生の皆さん、お待たせしました！就職活動からキャリア形成まで、あなたの未来を多角的にサポート...</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="https://placehold.jp/256x168.png" alt="">
-								<div class="list-text">
-									<h3>就活生、フリーランスの登録募集開始！</h3>
-									<p>がくラボりんぐのサービス開始に伴い、会員登録募集を開始しました！無料登録で、就活お役立ち記事...</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="https://placehold.jp/256x168.png" alt="">
-								<div class="list-text">
-									<h3>チャットルームオープン！全国の仲間と繋がろう</h3>
-									<p>前億の学生と繋がれるチャットサービスが「がくラボりんぐ」にオープンしました！就活のお悩みやリア...</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="https://placehold.jp/256x168.png" alt="">
-								<div class="list-text">
-									<h3>公式Instagram公開まであと少し！</h3>
-									<p>がくラボりんぐの公式Instagramアカウント開設準備が最終段階に入りました！日々の情報、限定コン...</p>
-								</div>
-							</a>
-						</li>
-					</ul>
-					<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
-				</div>
-			</section>
+			<?php
+			$args = array(
+				'post_type' => 'post',
+				'post_per_page' => 4,
+			);
+			$the_query =new WP_Query( $args );
+			if( $the_query->have_posts() ):
+			?>
+				<section id="news" class="inview">
+					<div class="news-content">
+						<h2 class="heading heading--blue inview"><span>NEWS</span>NEWS</h2>
+						<ul>
+							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+							<li>
+								<a href="#">
+									<?php
+									if(has_post_thumbnail()):
+										the_post_thumbnail();
+									else:
+									?>
+									<img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="" />
+									<?php endif; ?>
+									<div class="list-text">
+										<h3><?php echo get_the_title(); ?></h3>
+										<p><?php the_excerpt(); ?></p>
+									</div>
+								</a>
+							</li>
+							<?php endwhile; ?>
+						</ul>
+						<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+					</div>
+				</section>
+				<?php wp_reset_postdata(); endif; ?>
 			<section id="concept">
 				<div class="concept-text">
 					<h2 class="heading heading--blue inview"><span>CONCEPT</span>CONCEPT</h2>

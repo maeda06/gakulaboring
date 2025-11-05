@@ -135,10 +135,11 @@ news
 
 #news .news-content ul {
 	display: flex;
-	justify-content: space-between;
+	justify-content: start;
 }
 
 #news .news-content ul li {
+	max-width: 25%;
 	padding:  0 32px;
 	border-right: 1px solid #bdbdbd;
 }
@@ -899,7 +900,6 @@ can
 	opacity: 0;
 	transform: translateY(100px);
 	transition: all .5s ease-in-out;
-	transition-delay: .5s;
 }
 
 #can ul li .item-wrap {

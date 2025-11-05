@@ -141,7 +141,7 @@ gsap.to(
     scrollTrigger: {
       trigger: '#concept',
       start: 'top center',
-      toggleActions: 'play pause resume reset'
+      // toggleActions: 'play pause resume reset'
     }
   }
 )

@@ -3,7 +3,7 @@
 common
 ********************/
 .cta,
-header .btn a,
+header .btn,
 .footer-btn {
 	display: none!important;
 }
