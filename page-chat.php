@@ -60,7 +60,7 @@
     </section>
 
     <section class="flow">
-      <img class="tiger" src="images/flow-tiger.png" alt="">
+      <img class="tiger" src="<?php echo get_template_directory_uri(); ?>/images/flow-tiger.png" alt="">
       <div class="flow__inner">
         <h2 class="section-title section-title--white">ご利用の流れ</h2>
         <div class="flow__list">
