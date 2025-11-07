@@ -585,13 +585,4 @@ body {
 
 .login-cta__button {
   display: inline-block;
-  font-family: var(--font-mochiy);
-  font-size: 36px;
-  color: var(--color-white);
-  background-color: var(--color-orange);
-  border-radius: 100px;
-  padding: 30px 80px;
-  text-decoration: none;
-  border: 2px solid var(--color-black);
-  box-shadow: 5px 5px 0px 0px var(--color-black);
 }

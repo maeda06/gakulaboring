@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>しゃべり場</title>
-  <link rel="stylesheet" href="css/page-chat.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Mochiy+Pop+One&family=Noto+Sans+JP:wght@400;700;900&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
+<?php get_header(); ?>
   <main>
     <section class="kv">
       <div class="kv__inner">
@@ -22,7 +7,7 @@
           <p>モヤモヤ、不安、ちょっとした気づき。<br>つぶやくだけで、きっと誰かとつながれる。</p>
         </div>
         <div class="kv__cta">
-          <p class="kv__cta-text">就活のグチ、ここで言ってこ<img src="images/subtitle-icon.png" alt=""></p>
+          <p class="kv__cta-text">就活のグチ、ここで言ってこ<img src="<?php echo get_template_directory_uri(); ?>/images/subtitle-icon.png" alt=""></p>
           <a href="#" class="kv__button">みんなの投稿をみてみる</a>
         </div>
       </div>
@@ -48,25 +33,25 @@
         <div class="points__list">
           <div class="point-card">
             <div class="point-card__icon-wrapper">
-              <img src="images/point-icon-01.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/point-icon-01.svg" alt="">
             </div>
             <p>ログイン前でも<br>一部閲覧OK！</p>
           </div>
           <div class="point-card">
             <div class="point-card__icon-wrapper">
-              <img src="images/point-icon-02.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/point-icon-02.svg" alt="">
             </div>
             <p>登録すると、全ての投稿が読めて書き込みもできる</p>
           </div>
           <div class="point-card">
             <div class="point-card__icon-wrapper">
-              <img src="images/point-icon-03.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/point-icon-03.svg" alt="">
             </div>
             <p>本音トークだから<br>「あるある」がいっぱい</p>
           </div>
           <div class="point-card">
             <div class="point-card__icon-wrapper">
-              <img src="images/point-icon-04.svg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/point-icon-04.svg" alt="">
             </div>
             <p>質問も雑談も大歓迎。<br>匿名で気軽に使えるから安心</p>
           </div>
@@ -130,10 +115,8 @@
             <li>マイページから企業フォロー・保存も可能！</li>
           </ul>
         </div>
-        <a href="#" class="login-cta__button"><img src="images/cta-btn--sub.png" alt=""></a>
+        <a href="#" class="login-cta__button"><img src="<?php echo get_template_directory_uri(); ?>/images/cta-btn--sub.png" alt=""></a>
       </div>
     </section>
   </main>
-</body>
-
-</html>
+<?php get_footer(); ?>
