@@ -16,7 +16,14 @@ header .btn,
   --text-color: #202020;
   --orange: #FF5824;
   --blue: #127DFF;
-  --yellow: #FFE529
+  --yellow: #FFE529;
+}
+
+:root {
+  --black: #202020;
+  --orange: #FF5824;
+  --blue: #127DFF;
+  --yellow: #FFE529;
 }
 
 html{
@@ -197,7 +204,7 @@ header.is-show {
 }
 
 header .logo {
-	background-color: var(--text-color);
+	background-color: var(--black);
 	color: #fff;
 	width: 20vw;
 	height: 5vw;
@@ -231,7 +238,7 @@ header nav {
 	right: 48px;
 	width: 22.4vw;
 	padding: 120px 30px 90px;
-	background-color: var(--text-color);
+	background-color: var(--black);
 	border-radius: 32px;
 	transition: all .3s;
 }
@@ -337,7 +344,7 @@ footer {
 	width: 100%;
 	margin-top: -60px;
 	padding: 48px 64px 0 64px;
-	background-color: #000;
+	background-color: var(--black);
 	border-radius: 2.2vw 2.2vw 0 0;
 	position: relative;
 	color: #FFF;
@@ -355,6 +362,7 @@ footer .top-btn {
 footer .footer-inner {
 	display: flex;
 	justify-content: space-between;
+	margin-top: 50px;
 }
 
 footer .footer-inner .logo {
@@ -365,7 +373,7 @@ footer .footer-inner .logo {
 
 footer .footer-inner .footer-nav {
 	display: flex;
-	justify-content: space-between;
+	justify-content: end;
 	width: 50%;
 	height: 10.4vw;
 	margin-top: 16px;

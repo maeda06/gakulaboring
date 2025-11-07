@@ -616,7 +616,7 @@ contents
 #contents .contents-list {
 	width: 80%;
 	margin: auto;
-	border: 3px solid var(--text-color);
+	border: 3px solid var(--black);
 	border-radius: 2vw;
 	background-image: url(../images/contents-list-bg.png);
 	background-size: cover;
@@ -773,7 +773,7 @@ contents
 }
 
 #contents .chatroom .chatroom__list > li {
-	border: 3px solid var(--text-color);
+	border: 3px solid var(--black);
 	border-radius: 1vw;
 	background-color: #FFF;
 	padding: 24px 32px;
@@ -904,7 +904,7 @@ can
 
 #can ul li .item-wrap {
 	margin-bottom: 40px;
-	border: 3px solid var(--text-color);
+	border: 3px solid var(--black);
 	border-radius: 1vw;
 	background-color: #FFF;
 	padding: 16px 30px;
@@ -1086,7 +1086,7 @@ help
 	left: -2.5vw;
 	width: 1.6vw;
 	height: 1px;
-	background-color: var(--text-color);
+	background-color: var(--black);
 }
 
 #help .subtitle::after {
@@ -1097,7 +1097,7 @@ help
 	right: -2.5vw;
 	width: 1.6vw;
 	height: 1px;
-	background-color: var(--text-color);
+	background-color: var(--black);
 }
 
 .faq-list {
@@ -1113,7 +1113,7 @@ help
 	font-size: 1.1vw;
 	font-family: "Noto Sans JP", sans-serif;
 	font-weight: bold;
-	color: var(--text-color);
+	color: var(--black);
 	margin-bottom: 13px;
 	position: relative;
 }
@@ -1125,7 +1125,7 @@ help
 	left: 0;
 	width: 14vw;
 	height: 1px;
-	background-color: var(--text-color);
+	background-color: var(--black);
 }
 
 .faq-list h3::after {
@@ -1135,7 +1135,7 @@ help
 	right: 0;
 	width: 14vw;
 	height: 1px;
-	background-color: var(--text-color);
+	background-color: var(--black);
 }
 
 .faq-list .cp_actab input[type=checkbox] {

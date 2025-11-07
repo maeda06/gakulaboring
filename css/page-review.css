@@ -78,7 +78,7 @@
   what
 ================================ */
 #what {
-  background-color: var(--text-color);
+  background-color: var(--black);
   background-image: url(../images/preview-what-bg.png);
   background-size: cover;
   background-position: top;
@@ -268,7 +268,7 @@
   gap: 45px;
 }
 #flow ul li {
-  background-color: var(--text-color);
+  background-color: var(--black);
   width: 16.25vw;
   color: var(--yellow);
 }/*# sourceMappingURL=review.css.map */

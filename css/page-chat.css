@@ -612,4 +612,5 @@ body {
 
 .login-cta__button {
   display: inline-block;
+  width: 60%;
 }
