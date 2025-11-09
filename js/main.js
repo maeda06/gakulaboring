@@ -90,6 +90,7 @@ gsap.set(target,{autoAlpha: 0, y: 100})
         start: "top center",
         className: "is-active",
     },
+    once: true
     }
   })
   .to(target,{
