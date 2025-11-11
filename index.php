@@ -22,7 +22,7 @@
 						<ul>
 							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 							<li>
-								<a href="#">
+								<a href="<?php echo get_permalink(); ?>">
 									<?php
 									if(has_post_thumbnail()):
 										the_post_thumbnail();

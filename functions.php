@@ -19,7 +19,9 @@ add_filter( 'excerpt_more', function( $more ){
 /*----------------------------------------------------------*/
 function my_styles() {
     if ( is_front_page() ) {
-        wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array() );
+      wp_enqueue_style( 'front-page', get_template_directory_uri() . '/css/front-page.css', array() );
+    }elseif( is_single() ){
+      wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', array() );
     }elseif( is_page('portfolio') ) {
       wp_enqueue_style( 'portfolio', get_template_directory_uri() . '/css/page-portfolio.css', array() );
     }elseif( is_page('review') ) {

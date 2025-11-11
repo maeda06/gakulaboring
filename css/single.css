@@ -1,0 +1,112 @@
+/* ===============================
+  head
+================================ */
+#head {
+  background-color: var(--blue);
+  background-image: url(../images/single__head-bg.png);
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 150px 0 75px;
+  margin-bottom: 60px;
+}
+#head h1 {
+  color: var(--black);
+  text-align: center;
+  font-size: 65px;
+  position: relative;
+  z-index: 1;
+}
+#head h1 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #FFF;
+  -webkit-text-stroke: 12px #FFF;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  #head {
+    padding: 74px 0 37px;
+    margin-bottom: 30px;
+  }
+  #head h1 {
+    font-size: 40px;
+  }
+  #head h1 span {
+    -webkit-text-stroke: 7px #FFF;
+  }
+}
+/* ===============================
+  contens
+================================ */
+#contents {
+  width: 80%;
+  margin: auto;
+  padding: 0 0 500px;
+}
+#contents h1, #contents h2, #contents h3, #contents h4, #contents h5, #contents h6 {
+  background-color: var(--orange);
+  padding: 10px;
+  color: #FFF;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 5px;
+  margin-top: 65px;
+}
+#contents .is-layout-flex {
+  margin-top: 65px;
+}
+#contents .is-layout-flex h1, #contents .is-layout-flex h2, #contents .is-layout-flex h3, #contents .is-layout-flex h4, #contents .is-layout-flex h5, #contents .is-layout-flex h6 {
+  margin-top: 0;
+}
+#contents h2 {
+  font-size: 24px;
+}
+#contents p {
+  font-size: 16px;
+  line-height: 180%;
+}
+#contents p strong {
+  font-weight: bold;
+}
+#contents p a {
+  color: var(--orange);
+  font-weight: bold;
+  margin-top: 14px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+#contents p a:hover {
+  color: var(--blue);
+}
+#contents .title {
+  font-size: 32px;
+  text-align: center;
+  color: #000;
+  background: none;
+  padding: 0;
+  margin: 0 auto 16px;
+}
+#contents ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+#contents ul li {
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  #contents {
+    width: 90%;
+  }
+  #contents .title {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=single.css.map */
