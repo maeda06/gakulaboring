@@ -1,8 +1,16 @@
 <?php get_header(); ?>
 	<main>
 		<section id="kv">
-			<img class="asobuyouni" src="<?php echo get_template_directory_uri() ?>/images/kv-asobuyouni.png" alt="">
+			<div class="kv-title kv-title--left">
+				<p class="title-text row01">遊ぶ</p>
+				<p class="title-text row02">ように</p>
+			</div>
 			<img class="kv-girl" src="<?php echo get_template_directory_uri() ?>/images/portfolio-girl.png" alt="">
+			<div class="kv-title kv-title--right">
+				<p class="title-text row01">仕事を</p>
+				<p class="title-text row02">する</p>
+			</div>
+			<img class="asobuyouni" src="<?php echo get_template_directory_uri() ?>/images/kv-asobuyouni.png" alt="">
 			<img class="subtitle" src="<?php echo get_template_directory_uri(); ?>/images/kv-subtitle.png" alt="">
 			<img class="sigotowosuru" src="<?php echo get_template_directory_uri() ?>/images/kv-sigotowosuru.png" alt="">
 			<div class="cta"><img src="<?php echo get_template_directory_uri() ?>/images/cta.png" alt=""></div>

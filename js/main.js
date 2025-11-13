@@ -6,72 +6,129 @@ const header = document.querySelector('header');
 const asobuyouni = document.querySelector('.asobuyouni');
 const sigotowosuru = document.querySelector('.sigotowosuru')
 const cta = document.querySelector('.cta')
+const kvTitle = document.querySelector('.kv-title--left');
 
 const text = document.querySelector('[data-opening-animation="text"]');
 const logo = document.querySelector('[data-opening-animation="logo"]');
 
-// 初期状態の設定
-gsap.set(title, { autoAlpha: 0, y: 30 }); // テキストを非表示に/下に配置
+gsap.set(title, { autoAlpha: 0 });
 gsap.set(header, { y: -100 });
 gsap.set(girl, { autoAlpha: 0 });
 gsap.set(asobuyouni, { autoAlpha: 0, scale: 0.8 });
 gsap.set(sigotowosuru, { autoAlpha: 0, scale: 0.8 });
-gsap.set(logo, { autoAlpha: 0 }); // ロゴを非表示に
+gsap.set(logo, { autoAlpha: 0 });
 
 // ページ読み込み完了時にアニメーションを開始
-window.addEventListener("load", () => {
-  // GSAPタイムラインを作成
-  const tl = gsap.timeline();
+document.addEventListener('DOMContentLoaded', function (event) {
 
-  tl.to(
-    title, // titleのアニメーションを指定
-    {
-      autoAlpha: 1, // autoAlphaを1に
-      y: 0,
-      duration: 1.5, // 1.33秒かけて
-      ease: "power2.inOut", // イージングを指定
-    }
-  )
-  tl.to(
-    girl,
-    {
-      autoAlpha: 1,
-      duration: 1.33,
-      ease: "power2.inOut",
-    },
-    "+=1"
-    )
-    .to(
-      asobuyouni,
-      {
-        autoAlpha: 1,
-        scale: 1,
-        duration: 0.6,
-        ease: "bounce.out",
-      }
-    )
-    .to(
-      sigotowosuru,
-      {
-        autoAlpha: 1,
-        scale: 1,
-        duration: 0.6,
-        ease: "bounce.out",
-      },
-    "+=0.33"
-    )
-    .to(
-      header,
-      {
-        y: 0,
-      }
-    )
-    .to(
-      cta,
-      {
-        autoAlpha: 1,
-      }
-    )
+  // js-textというクラスを取得し、elementsという変数を宣言
+  let elements = document.getElementsByClassName('title-text');
+  // animateTextという関数を、elementsの文字数の回数繰り返す
+  for (var i = 0; i < elements.length; i++) {
+    animateText(elements[i]);
+  }
+
+function animateText(element) {
+  // elementの文字情報のみをtextという変数に代入
+  let text = element.innerText;
+  element.innerText = '';
+
+  // textの一文字ずつをspanタグで囲う
+  for (var i = 0; i < text.length; i++) {
+    var span = document.createElement('span');
+    span.innerText = text[i];
+    element.appendChild(span);
+  }
+}
+
+const tl = gsap.timeline();
+const titleLeft = document.querySelector('.kv-title--left')
+const titleRight = document.querySelector('.kv-title--right')
+
+tl.to(
+  titleLeft, {
+}).add(() => {
+    titleLeft.classList.add('is-active');
+})
+.to(
+  titleRight, {
+  delay: 0.5,
+}).add(() => {
+    titleRight.classList.add('is-active');
+})
+.to(
+  title, {
+  delay: 0.5,
+  duration: 1.33,
+  autoAlpha: 1,
+}
+)
+.to(
+  girl, {
+  delay: 0,
+  duration: 1,
+  autoAlpha: 1,
+}
+)
+.to(
+  header, {
+  duration: 1,
+  y: 0,
+}
+);
+
+  // GSAPタイムラインを作成
+  // const tl = gsap.timeline();
+
+  // tl.to(
+  //   title, // titleのアニメーションを指定
+  //   {
+  //     autoAlpha: 1, // autoAlphaを1に
+  //     y: 0,
+  //     duration: 1.5, // 1.33秒かけて
+  //     ease: "power2.inOut", // イージングを指定
+  //   }
+  // )
+  // tl.to(
+  //   girl,
+  //   {
+  //     autoAlpha: 1,
+  //     duration: 1.33,
+  //     ease: "power2.inOut",
+  //   },
+  //   "+=1"
+  //   )
+  //   .to(
+  //     asobuyouni,
+  //     {
+  //       autoAlpha: 1,
+  //       scale: 1,
+  //       duration: 0.6,
+  //       ease: "bounce.out",
+  //     }
+  //   )
+  //   .to(
+  //     sigotowosuru,
+  //     {
+  //       autoAlpha: 1,
+  //       scale: 1,
+  //       duration: 0.6,
+  //       ease: "bounce.out",
+  //     },
+  //   "+=0.33"
+  //   )
+  //   .to(
+  //     header,
+  //     {
+  //       y: 0,
+  //     }
+  //   )
+  //   .to(
+  //     cta,
+  //     {
+  //       autoAlpha: 1,
+  //     }
+  //   )
 });
 
 gsap.utils.toArray(".inview-title").forEach((target) => {

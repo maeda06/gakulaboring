@@ -13,6 +13,132 @@ KV
   position: relative;
   overflow: hidden;
 
+  .is-active {
+        span {
+          animation: titleAnim 1s ease-out forwards;
+        }
+      }
+
+  .kv-title {
+    position: absolute;
+    font-size: 15.277vw;
+    line-height: 1;
+
+    &.kv-title--left {
+      .row01 {
+        span {
+          &:nth-child(1) {
+            animation-delay: 0s;
+          }
+          &:nth-child(2) {
+            animation-delay: 0.075s;
+          }
+        }
+      }
+      .row02 {
+        span {
+          &:nth-child(1) {
+            animation-delay: 0.15s;
+          }
+          &:nth-child(2) {
+            animation-delay: 0.225s;
+          }
+          &:nth-child(3) {
+            animation-delay: 0.3s;
+          }
+        }
+      }
+    }
+
+    &.kv-title--right {
+      .row01 {
+        span {
+          &:nth-child(1) {
+            animation-delay: 0s;
+          }
+          &:nth-child(2) {
+            animation-delay: 0.075s;
+          }
+          &:nth-child(3) {
+            font-size: 6.944vw;
+            animation-delay: 0.15s;
+          }
+        }
+      }
+      .row02 {
+        span {
+          &:nth-child(1) {
+            animation-delay: 0.225s;
+          }
+          &:nth-child(2) {
+            animation-delay: 0.3s;
+          }
+        }
+      }
+    }
+
+    .title-text {
+      span {
+        opacity: 0;
+        display: inline-block;
+        transform: scale(2);
+        font-family: "Dela Gothic One", sans-serif;
+        -webkit-text-stroke-width: 5px;
+        -webkit-text-stroke-color: var(--black);
+        text-shadow: 4px 5px 0px var(--black);
+        }
+      }
+    }
+
+    @keyframes titleAnim {
+      0% {
+        transform: perspective(7em) rotateX(90deg) scale(3.7);
+        opacity: 0;
+      }
+
+      10% {
+        transform: perspective(7em) rotateX(0) scale(1.05);
+        opacity: 1;
+      }
+
+      100% {
+        transform: perspective(7em) rotateX(0) scale(1);
+        opacity: 1;
+      }
+    }
+  }
+
+  .kv-title--left {
+    top: 15%;
+    left: 5%;
+
+    .row01 {
+      font-size: 13.277vw;
+      color: var(--orange);
+    }
+
+    .row02 {
+      font-size: 4.944vw;
+      color: #FFCE00;
+    }
+  }
+
+  .kv-title--right {
+    bottom: 15%;
+    right: 3%;
+
+    .row01 {
+      font-size: 13.277vw;
+      color: var(--blue);
+    }
+
+    .row02 {
+      text-align: end;
+      font-size: 4.944vw;
+      color: #FFCE00;
+    }
+  }
+
   .asobuyouni {
     opacity: 0;
     position: absolute;
@@ -42,15 +168,15 @@ KV
   .subtitle {
     position: absolute;
     object-fit: contain;
-    width: 11.8vw;
+    width: 10.8vw;
     height: 45vw;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .kv-girl {
-    width: 68vw;
+    width: 60vw;
     object-fit: contain;
     position: absolute;
     bottom: 0;
@@ -74,7 +200,6 @@ KV
       width: 100%;
     }
   }
-}
 
 @keyframes sequence-bounce {
   0% {

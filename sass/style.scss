@@ -115,10 +115,6 @@ h2 {
       transition: transform 0.25s ease-out;
       color: var(--black);
       position: relative;
-
-      &::before{
-        
-      }
     }
 
     // span {
@@ -229,8 +225,9 @@ header
 ********************/
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 100;
   padding: 0 48px;
