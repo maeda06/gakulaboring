@@ -18,7 +18,13 @@
 			?>
 				<section id="news" class="inview">
 					<div class="news-content">
-						<h2 class="heading heading--blue inview"><span>NEWS</span>NEWS</h2>
+						<div class="heading-wrap">
+							<div class="heading">
+								<span class="inview-title">NEWS</span>
+								<h2 class="inview-title" data-text="NEWS">NEWS</h2>
+							</div>
+						</div>
+						<!-- <h2 class="heading heading--blue"><span class="inview-title">NEWS</span></h2> -->
 						<ul>
 							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 							<li>
@@ -44,7 +50,12 @@
 				<?php wp_reset_postdata(); endif; ?>
 			<section id="concept">
 				<div class="concept-text">
-					<h2 class="heading heading--blue inview"><span>CONCEPT</span>CONCEPT</h2>
+					<div class="heading-wrap">
+						<div class="heading">
+							<span class="inview-title">CONCEPT</span>
+							<h2 class="inview-title" data-text="CONCEPT">CONCEPT</h2>
+						</div>
+					</div>
 					<div class="memo">
 						<h3><span class="orange">遊ぶように仕事をする!!</span>って？<br><span class="blue">がくラボりんぐとは？</span></h3>
 						<p>▼何ができるの？</p>
@@ -72,7 +83,12 @@
 			</div>
 			<span class="flower rellax" data-rellax-speed="0" data-rellax-mobile-speed="0" data-rellax-tablet-speed="0" data-rellax-desktop-speed="3"></span>
 			<div class="cloud--sp"><img src="<?php echo get_template_directory_uri(); ?>/images/about-bg--cloud-sp.png" alt=""></div>
-			<h2 class="heading heading--orange inview"><span>このサイトについて</span>このサイトについて</h2>
+			<div class="heading-wrap">
+				<div class="heading">
+					<span class="inview-title">このサイトについて</span>
+					<h2 class="inview-title" data-text="このサイトについて">このサイトについて</h2>
+				</div>
+			</div>
 			<ul class="about-list inview">
 				<li><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--glass.png" alt=""></div><p>就職に関する<br>情報収集ができる</p></li>
 				<li class="members-only"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--speech-bubble.png" alt=""></div><p>チャットで話せる</p></li>
@@ -175,7 +191,18 @@
 			</div>
 		</section>
 		<section id="can">
-			<h2 class="heading heading--blue inview"><span>このサイトでは<br>こんなことができる！</span>このサイトでは<br>こんなことができる！</h2>
+			<div class="heading-wrap">
+				<div class="heading">
+					<span class="inview-title">このサイトでは</span>
+					<h2 class="inview-title" data-text="このサイトでは">このサイトでは</h2>
+				</div>
+			</div>
+			<div class="heading-wrap">
+				<div class="heading">
+					<span class="inview-title">こんなことができる！</span>
+					<h2 class="inview-title" data-text="こんなことができる！">こんなことができる！</h2>
+				</div>
+			</div>
 			<ul>
 				<li class="inview">
 					<div class="item-wrap">
@@ -199,7 +226,12 @@
 		</section>
 		<section id="help">
 			<img class="bg" src="<?php echo get_template_directory_uri() ?>/images/help-bg01.png" alt="">
-			<h2 class="heading heading--blue inview"><span>ヘルプページ</span>ヘルプページ</h2>
+			<div class="heading-wrap">
+				<div class="heading">
+					<span class="inview-title">ヘルプページ</span>
+					<h2 class="inview-title" data-text="ヘルプページ">ヘルプページ</h2>
+				</div>
+			</div>
 			<p class="subtitle">よくある質問</p>
 
 			<div class="faq-list faq-list--pc">

@@ -74,6 +74,23 @@ window.addEventListener("load", () => {
     )
 });
 
+gsap.utils.toArray(".inview-title").forEach((target) => {
+gsap.set(target,{autoAlpha: 0, y: 100})
+
+  gsap.timeline({
+      scrollTrigger: {
+      trigger: target,
+      start: "top center",
+      end: "bottom top",
+      once: true
+    }
+  })
+  .to(target,{
+    autoAlpha: 1,
+    y: 0,
+  })
+});
+
 
 gsap.utils.toArray(".inview").forEach((target) => {
 gsap.set(target,{autoAlpha: 0, y: 100})

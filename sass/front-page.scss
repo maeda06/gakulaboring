@@ -108,15 +108,21 @@ news
     transform: translateY(0);
   }
 
-  h2.heading {
+  .heading-wrap {
     position: absolute;
     top: -11%;
     left: 5%;
+  }
+
+  h2.heading {
+    // position: absolute;
+    // top: -11%;
+    // left: 5%;
 
     span {
-      position: absolute;
-      top: 0;
-      left: 0;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
       font-size: 3.2vw;
     }
 
@@ -220,21 +226,8 @@ concept
       transform: translateY(0);
     }
 
-    .heading {
-      text-align: center;
+    .heading-wrap {
       margin-bottom: 30px;
-
-      span {
-        left: 50%;
-        transform: translateX(-52%);
-        top: 0;
-        font-size: 3.2vw;
-      }
-
-      &.is-active span {
-        left: 52%;
-        top: 9px;
-      }
     }
   }
 
@@ -476,23 +469,30 @@ about
     }
   }
 
-  .heading {
+  .heading-wrap {
     span {
-      padding-top: 53px;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-      font-size: 3.2vw;
-      text-shadow: none;
-      transition-duration: 2s;
-    }
-
-    &.is-active span {
-      left: 50.7%;
-      top: 8px;
-      width: 100%;
+      color: var(--orange);
+      -webkit-text-stroke-color: var(--orange)
     }
   }
+
+  // .heading {
+  //   span {
+  //     padding-top: 53px;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     top: 0;
+  //     font-size: 3.2vw;
+  //     text-shadow: none;
+  //     transition-duration: 2s;
+  //   }
+
+  //   &.is-active span {
+  //     left: 50.7%;
+  //     top: 8px;
+  //     width: 100%;
+  //   }
+  // }
 
   .about-list {
     display: flex;
@@ -917,29 +917,10 @@ can
     margin-bottom: 50px;
   }
 
-  .heading {
-    text-align: center;
-
-    span {
-      width: 100%;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 3.2vw;
-      transition: all .5s ease-in-out;
-      transition-delay: .5s;
-    }
-
-    &.is-active span {
-      top: 9px;
-      left: 51%;
-    }
-  }
-
   ul {
     position: relative;
     width: 50%;
-    margin: auto;
+    margin: 50px auto 0;
 
     li {
       opacity: 0;
@@ -1037,11 +1018,6 @@ help
 #help {
   text-align: center;
   position: relative;
-
-  /* background-image: url(../images/help-bg01.png);
-  background-size:  100% auto;
-  background-position: bottom;
-  background-repeat: no-repeat; */
   padding-bottom: 230px;
 
   &::before {
@@ -1070,22 +1046,8 @@ help
     max-block-size: none;
   }
 
-  h2.heading {
-    text-align: center;
-    margin-bottom: 18px;
-
-    span {
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      font-size: 3.2vw;
-      width: 100%;
-    }
-
-    &.is-active span {
-      top: 8px;
-      left: 50.5%;
-    }
+  .heading-wrap {
+    margin-bottom: 20px;
   }
 
   .subtitle {
@@ -1119,35 +1081,6 @@ help
     }
   }
 }
-
-/* #help::after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate3d(-50%,-50%,0);
-	width: 100%;
-	height: 100%;
-	background-image: url(../images/help-bg01.png);
-	background-size: 100%;
-	background-position: bottom;
-	background-repeat: no-repeat;
-	z-index: -1;
-} */
-
-/* #help::before {
-	position: absolute;
-	bottom: 0;
-	left: 25%;
-	content: "";
-	display: block;
-	width: 80%;
-	height: 150%;
-	background-image: url(../images/help-cloud--yellow.png);
-	background-size: contain;
-	background-position: top;
-	background-repeat: no-repeat;
-} */
 
 .faq-list {
   width: 50%;

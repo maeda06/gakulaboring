@@ -51,12 +51,56 @@ p {
   font-size: 1vw;
 }
 
+.heading-wrap {
+  .heading {
+    overflow: hidden;
+    position: relative;
+    padding-left: 4px;
+    padding-right: 12px;
+    width: fit-content;
+    margin: auto;
+
+    span {
+      font-size: 3.2vw;
+      color: var(--blue);
+      position: absolute;
+      top: 8px;
+      left: 12px;
+      font-family: "Dela Gothic One", sans-serif;
+      -webkit-text-stroke-width: 8px;
+      -webkit-text-stroke-color: var(--blue);
+      transition: transform 0.25s ease-out;
+    }
+
+    h2 {
+      color: var(--black);
+      font-size: 3.2vw;
+      position: relative;
+      transition: transform 0.25s ease-out;
+
+      &::after {
+        content: attr(data-text)"";
+        color: #FFF;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        -webkit-text-stroke-width: 8px;
+        -webkit-text-stroke-color: #FFF;
+        z-index: -1;
+      }
+    }
+  }
+}
+
 h2 {
   &.heading {
     font-size: 3.2vw;
     text-shadow: -3px -3px 0 #fff, 0px -3px 0 #fff, 3px -3px 0 #fff, -3px 0px 0 #fff, 3px 0px 0 #fff, -6px 3px 0 #fff, 0px 3px 0 #fff, 3px 3px 0 #fff;
     z-index: 2;
     position: relative;
+    line-height: 1.5;
+    overflow: hidden;
 
     /* transition: all .5s ease-in-out; */
     /* opacity: 0; */
@@ -66,14 +110,26 @@ h2 {
     }
 
     span {
-      position: absolute;
-      top: 8px;
-      left: 0;
-      font-size: 3.3vw;
-      z-index: -1;
-      transition-duration: 2s;
-      text-shadow: none;
+      display: block;
+      transform: translateY(100%);
+      transition: transform 0.25s ease-out;
+      color: var(--black);
+      position: relative;
+
+      &::before{
+        
+      }
     }
+
+    // span {
+    //   position: absolute;
+    //   top: 8px;
+    //   left: 0;
+    //   font-size: 3.3vw;
+    //   z-index: -1;
+    //   transition-duration: 2s;
+    //   text-shadow: none;
+    // }
 
     &.inview span {
       left: 2px;
@@ -83,16 +139,16 @@ h2 {
   }
 
   &.heading--blue span {
-    color: var(--blue);
+    // color: var(--blue);
 
-    /* text-shadow:  -3px -3px 0 var(--blue),
-    							0px -3px 0 var(--blue),
-    							3px -3px 0 var(--blue),
-    							-3px 0px 0 var(--blue),
-    							3px 0px 0 var(--blue),
-    							-6px 3px 0 var(--blue),
-    							0px 3px 0 var(--blue),
-    							3px 3px 0 var(--blue); */
+    text-shadow:  -3px -3px 0 var(#FFF),
+    							0px -3px 0 var(#FFF),
+    							3px -3px 0 var(#FFF),
+    							-3px 0px 0 var(#FFF),
+    							3px 0px 0 var(#FFF),
+    							-6px 3px 0 var(#FFF),
+    							0px 3px 0 var(#FFF),
+    							3px 3px 0 var(#FFF);
   }
 
   &.heading--orange span {
