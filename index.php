@@ -10,9 +10,7 @@
 				<p class="title-text row01">仕事を</p>
 				<p class="title-text row02">する</p>
 			</div>
-			<img class="asobuyouni" src="<?php echo get_template_directory_uri() ?>/images/kv-asobuyouni.png" alt="">
 			<img class="subtitle" src="<?php echo get_template_directory_uri(); ?>/images/kv-subtitle.png" alt="">
-			<img class="sigotowosuru" src="<?php echo get_template_directory_uri() ?>/images/kv-sigotowosuru.png" alt="">
 			<div class="cta"><img src="<?php echo get_template_directory_uri() ?>/images/cta.png" alt=""></div>
 		</section>
 		<div class="lattice--blue">
@@ -137,7 +135,7 @@
 				<img class="chatroom-bg chatroom-bg--bike rellax" data-rellax-speed="2" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/bike.png" alt="">
 				<img class="chatroom-bg chatroom-bg--doll rellax" data-rellax-speed="3" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/doll.png" alt="">
 			</div>
-			<div class="chatroom chatroom--pc inview">
+			<div class="chatroom chatroom--pc">
 				<div class="loop-wrap loop-wrap--right">
 					<ul>
 						<li>HOT CHAT</li>
@@ -148,8 +146,8 @@
 						<li>HOT CHAT</li>
 					</ul>
 				</div>
-				<img class="chatroom-heading" src="<?php echo get_template_directory_uri() ?>/images/contents-chatroom--head.png" alt="">
-				<ul class="chatroom__list">
+				<img class="chatroom-heading inview" src="<?php echo get_template_directory_uri() ?>/images/contents-chatroom--head.png" alt="">
+				<ul class="chatroom__list inview">
 					<li>
 						<h4>〇〇は『学生時代に最も打ち込んだこと』を深...</h4>
 						<div class="chat">

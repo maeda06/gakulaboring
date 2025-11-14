@@ -132,6 +132,23 @@ h2.heading--white {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 767px) {
+  p {
+    font-size: 3.4vw;
+  }
+  .lattice--blue {
+    background-image: none;
+  }
+  .heading-wrap .heading {
+    padding-bottom: 3px;
+  }
+  .heading-wrap .heading h2 {
+    font-size: 9.0909vw;
+  }
+  .heading-wrap .heading span {
+    font-size: 9.0909vw;
+  }
+}
 /********************
 オープニングアニメーション
 ********************/
@@ -263,6 +280,15 @@ header nav ul li a {
   color: #FFF;
 }
 
+#fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
 .btn button {
   width: 5.5vw;
   height: 4.4vw;
@@ -320,6 +346,22 @@ header .btn button .line.open::after {
   transform: translateX(-50%) translateY(50%) rotate(-25deg);
 }
 
+@media (max-width: 767px) {
+  header {
+    padding: 0 3.1vw;
+  }
+  header .logo {
+    width: 35.2vw;
+    height: 9.5vw;
+    border-radius: 0 0 9vw 9vw;
+  }
+  header .logo h1 {
+    font-size: 4.5vw;
+  }
+  header .btn {
+    margin-top: 0;
+  }
+}
 /********************
 footer
 ********************/
@@ -338,7 +380,7 @@ footer .top-btn {
   position: absolute;
   top: -9vw;
   left: 50%;
-  transform: translateX(-50%) translateY(2.5vw);
+  transform: translateX(-58%) translateY(2.5vw);
 }
 footer .footer-inner {
   display: flex;
@@ -428,6 +470,68 @@ footer .footer-bottom .copyright {
   font-size: 1vw;
 }
 
+@media (max-width: 767px) {
+  footer {
+    padding: 85px 25px 25px;
+  }
+  footer .top-btn {
+    width: 73.1vw;
+    top: -28.6vw;
+  }
+  footer .footer-inner {
+    flex-direction: column;
+  }
+  footer .footer-inner .logo {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+  footer .sns-list {
+    margin: auto;
+    width: 70%;
+  }
+  footer .sns-list a img {
+    width: 9.09vw;
+    height: 9.09vw;
+  }
+  footer .footer-inner .footer-nav {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+  }
+  footer .footer-inner nav a {
+    font-size: 3.63vw;
+  }
+  footer .footer-inner .footer-nav nav {
+    width: 100%;
+    row-gap: 25px;
+    margin-bottom: 40px;
+  }
+  footer .footer-inner .footer-btn {
+    width: 70%;
+    margin: 0 auto 10px;
+  }
+  footer .footer-inner .footer-btn a {
+    font-size: 5.45vw;
+    padding: 12px 0;
+  }
+  footer .footer-bottom {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+  footer .footer-bottom ul {
+    flex-wrap: wrap;
+  }
+  footer .footer-bottom ul li {
+    margin-bottom: 10px;
+  }
+  footer .footer-bottom ul li a {
+    font-size: 3.63vw;
+  }
+  footer .footer-bottom .copyright {
+    margin-top: 20px;
+    font-size: 3.18vw;
+  }
+}
 /********************
 ボタン
 ********************/

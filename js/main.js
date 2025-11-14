@@ -12,7 +12,7 @@ const text = document.querySelector('[data-opening-animation="text"]');
 const logo = document.querySelector('[data-opening-animation="logo"]');
 
 gsap.set(title, { autoAlpha: 0 });
-gsap.set(header, { y: -100 });
+// gsap.set(header, { y: -100 });
 gsap.set(girl, { autoAlpha: 0 });
 gsap.set(asobuyouni, { autoAlpha: 0, scale: 0.8 });
 gsap.set(sigotowosuru, { autoAlpha: 0, scale: 0.8 });
@@ -69,12 +69,6 @@ tl.to(
   duration: 1,
   autoAlpha: 1,
 }
-)
-.to(
-  header, {
-  duration: 1,
-  y: 0,
-}
 );
 
   // GSAPタイムラインを作成
@@ -129,6 +123,31 @@ tl.to(
   //       autoAlpha: 1,
   //     }
   //   )
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const mainHeader = document.getElementById('main-header');
+  const fixedHeader = document.getElementById('fixed-header');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', function() {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+          // スクロールダウン時
+          if (scrollTop > mainHeader.clientHeight) {
+              fixedHeader.style.transform = 'translateY(0)';
+              fixedHeader.style.opacity = '1';
+          }
+      } else {
+          // スクロールアップ時
+          if (scrollTop <= mainHeader.clientHeight) {
+              fixedHeader.style.transform = 'translateY(-100%)';
+              fixedHeader.style.opacity = '0';
+          }
+      }
+      lastScrollTop = scrollTop;
+  });
 });
 
 gsap.utils.toArray(".inview-title").forEach((target) => {
