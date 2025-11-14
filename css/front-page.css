@@ -369,10 +369,18 @@ concept
   font-size: 2.2vw;
   width: 90%;
   margin: auto;
-  margin-bottom: 24px;
-  padding-top: 6vw;
   font-family: "Dela Gothic One", sans-serif;
   font-weight: 500;
+  overflow: hidden;
+}
+#concept .concept-text .memo h3:first-child {
+  padding-top: 6vw;
+}
+#concept .concept-text .memo h3:nth-child(2) {
+  margin-bottom: 24px;
+}
+#concept .concept-text .memo h3 .slide-up {
+  display: block;
 }
 #concept .concept-text .memo h3 .orange {
   color: var(--orange);
@@ -389,8 +397,12 @@ concept
   font-size: 1.38vw;
   line-height: 2;
   font-weight: 600;
+  overflow: hidden;
 }
-#concept .concept-text .memo p span {
+#concept .concept-text .memo p .slide-up {
+  display: block;
+}
+#concept .concept-text .memo p .bg-orange {
   background-color: var(--orange);
   color: #FFF;
   margin-right: 5px;
@@ -429,7 +441,7 @@ concept
     margin-bottom: 40px;
   }
   #concept .concept-text .memo {
-    padding-top: 15.2vw;
+    padding-top: 10.2vw;
     background-image: none;
     position: relative;
   }

@@ -63,10 +63,26 @@
 						</div>
 					</div>
 					<div class="memo">
-						<h3><span class="orange">遊ぶように仕事をする!!</span>って？<br><span class="blue">がくラボりんぐとは？</span></h3>
-						<p>▼何ができるの？</p>
-						<p class="text--pc"><span>就職活動を成功に導く！</span>がくラボりんぐの<span>協力サポート</span><br><span>スキルアップ＆新たな挑戦！</span>がくラボりんぐで<span>広がる可能性</span><span>仲間と繋がる！</span>がくラボりんぐコミュニティ<br>企業とのマッチング<span>企業が君を探す⁉<br></span>ポートフォリオ</span>の作成<br>将来の不安を解消！<span>マネーリテラシー向上支援</span></p>
-						<p class="text--sp"><span>就職活動を成功に導く！</span>がくラボりんぐの<span>協力サポート</span><span>スキルアップ＆新たな挑戦！</span>がくラボりんぐで<span>広がる可能性</span><span>仲間と繋がる！</span>がくラボりんぐコミュニティ<br>企業とのマッチング<span>企業が君を探す⁉<br></span>ポートフォリオ</span>の作成<br>将来の不安を解消！<span>マネーリテラシー向上支援</span></p>
+						<h3><span class="slide-up"><span class="orange">遊ぶように仕事をする!!</span>って？</span></h3>
+						<h3><span class="slide-up"><span class="blue">がくラボりんぐとは？</span></span></h3>
+						<div class="text--pc">
+							<p><span class="slide-up">▼何ができるの？</span></p>
+							<p><span class="slide-up"><span class="bg-orange">就職活動を成功に導く！</span>がくラボりんぐの<span class="bg-orange">協力サポート</span></span></p>
+							<p><span class="slide-up"><span class="bg-orange">スキルアップ＆新たな挑戦！</span>がくラボりんぐで<span class="bg-orange">広がる可能性</span></span></p>
+							<p><span class="slide-up"><span class="bg-orange">仲間と繋がる！</span>がくラボりんぐコミュニティ</span></p>
+							<p><span class="slide-up">企業とのマッチング<span class="bg-orange">企業が君を探す⁉</span></span></p>
+							<p><span class="slide-up"><span class="bg-orange">ポートフォリオ</span>の作成</span></p>
+							<p><span class="slide-up">将来の不安を解消！<span class="bg-orange">マネーリテラシー向上支援</span></span></p>
+						</div>
+						<div class="text--sp">
+							<p><span class="slide-up"><span class="slide-up">▼何ができるの？</span></span></p>
+							<p><span class="slide-up"><span class="bg-orange">就職活動を成功に導く！</span>がくラボりんぐの<span class="bg-orange">協力サポート</span></span></p>
+							<p><span class="slide-up"><span class="bg-orange">スキルアップ＆新たな挑戦！</span>がくラボりんぐで<span class="bg-orange">広がる可能性</span></span></p>
+							<p><span class="slide-up"><span class="bg-orange">仲間と繋がる！</span>がくラボりんぐコミュニティ</span></p>
+							<p><span class="slide-up">企業とのマッチング<span class="bg-orange">企業が君を探す⁉<br></span></span></p>
+							<p><span class="slide-up"><span class="bg-orange">ポートフォリオ</span>の作成</span></p>
+							<p><span class="slide-up">将来の不安を解消！<span class="bg-orange">マネーリテラシー向上支援</span></span></p>
+						</div>
 						<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 					</div>
 					<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>

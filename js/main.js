@@ -156,9 +156,25 @@ gsap.set(target,{autoAlpha: 0, y: 100})
   gsap.timeline({
       scrollTrigger: {
       trigger: target,
-      start: "top center",
+      start: "center bottom",
       end: "bottom top",
       once: true
+    }
+  })
+  .to(target,{
+    autoAlpha: 1,
+    y: 0,
+  })
+});
+
+gsap.utils.toArray(".slide-up").forEach((target) => {
+gsap.set(target,{autoAlpha: 0, y: 100})
+
+  gsap.timeline({
+      scrollTrigger: {
+      trigger: target,
+      start: "center bottom",
+      end: "bottom top",
     }
   })
   .to(target,{
@@ -176,8 +192,6 @@ gsap.set(target,{autoAlpha: 0, y: 100})
       trigger: target,
       start: "top bottom",
       end: "bottom top",
-      // toggleActions: "play none none reverse",
-      // markers: true,
       toggleClass: {
         targets: target,
         start: "top center",
