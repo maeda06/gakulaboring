@@ -1,39 +1,26 @@
-// オープニングアニメーション用の要素を取得
 const loading = document.querySelector(".loading");
 const title = document.querySelector('.subtitle');
 const girl = document.querySelector('.kv-girl');
 const header = document.querySelector('header');
-const asobuyouni = document.querySelector('.asobuyouni');
-const sigotowosuru = document.querySelector('.sigotowosuru')
 const cta = document.querySelector('.cta')
 const kvTitle = document.querySelector('.kv-title--left');
-
 const text = document.querySelector('[data-opening-animation="text"]');
 const logo = document.querySelector('[data-opening-animation="logo"]');
 
 gsap.set(title, { autoAlpha: 0 });
-// gsap.set(header, { y: -100 });
 gsap.set(girl, { autoAlpha: 0 });
-gsap.set(asobuyouni, { autoAlpha: 0, scale: 0.8 });
-gsap.set(sigotowosuru, { autoAlpha: 0, scale: 0.8 });
-gsap.set(logo, { autoAlpha: 0 });
 
-// ページ読み込み完了時にアニメーションを開始
 document.addEventListener('DOMContentLoaded', function (event) {
 
-  // js-textというクラスを取得し、elementsという変数を宣言
   let elements = document.getElementsByClassName('title-text');
-  // animateTextという関数を、elementsの文字数の回数繰り返す
   for (var i = 0; i < elements.length; i++) {
     animateText(elements[i]);
   }
 
 function animateText(element) {
-  // elementの文字情報のみをtextという変数に代入
   let text = element.innerText;
   element.innerText = '';
 
-  // textの一文字ずつをspanタグで囲う
   for (var i = 0; i < text.length; i++) {
     var span = document.createElement('span');
     span.innerText = text[i];
@@ -45,7 +32,23 @@ const tl = gsap.timeline();
 const titleLeft = document.querySelector('.kv-title--left')
 const titleRight = document.querySelector('.kv-title--right')
 
-tl.to(
+if (window.matchMedia('(max-width: 767px)').matches) {
+  // ウィンドウサイズ768px以下のときの処理
+  tl.to(
+  title, {
+  delay: 0.5,
+  duration: 1.33,
+  autoAlpha: 1,
+  })
+  .to(
+  girl, {
+  delay: 0,
+  duration: 1,
+  autoAlpha: 1,
+  });
+} else {
+  // それ以外の処理
+  tl.to(
   titleLeft, {
 }).add(() => {
     titleLeft.classList.add('is-active');
@@ -70,59 +73,8 @@ tl.to(
   autoAlpha: 1,
 }
 );
+}
 
-  // GSAPタイムラインを作成
-  // const tl = gsap.timeline();
-
-  // tl.to(
-  //   title, // titleのアニメーションを指定
-  //   {
-  //     autoAlpha: 1, // autoAlphaを1に
-  //     y: 0,
-  //     duration: 1.5, // 1.33秒かけて
-  //     ease: "power2.inOut", // イージングを指定
-  //   }
-  // )
-  // tl.to(
-  //   girl,
-  //   {
-  //     autoAlpha: 1,
-  //     duration: 1.33,
-  //     ease: "power2.inOut",
-  //   },
-  //   "+=1"
-  //   )
-  //   .to(
-  //     asobuyouni,
-  //     {
-  //       autoAlpha: 1,
-  //       scale: 1,
-  //       duration: 0.6,
-  //       ease: "bounce.out",
-  //     }
-  //   )
-  //   .to(
-  //     sigotowosuru,
-  //     {
-  //       autoAlpha: 1,
-  //       scale: 1,
-  //       duration: 0.6,
-  //       ease: "bounce.out",
-  //     },
-  //   "+=0.33"
-  //   )
-  //   .to(
-  //     header,
-  //     {
-  //       y: 0,
-  //     }
-  //   )
-  //   .to(
-  //     cta,
-  //     {
-  //       autoAlpha: 1,
-  //     }
-  //   )
 });
 
 document.addEventListener('DOMContentLoaded', function() {
