@@ -1,27 +1,4 @@
 /* ===============================
-  cloud
-================================ */
-.cloud {
-  background-image: url(../images/small-cloud--orange.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-}
-
-.cloud--blue {
-  filter: brightness(0) saturate(100%) invert(35%) sepia(91%) saturate(2815%) hue-rotate(203deg) brightness(102%) contrast(105%);
-}
-
-.cloud--white {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-}
-
-.cloud--right {
-  transform: rotate(180deg);
-}
-
-/* ===============================
   hero
 ================================ */
 #hero {

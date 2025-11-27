@@ -1,6 +1,13 @@
 <?php get_header(); ?>
   <main>
     <section class="kv">
+      <span class="cloud cloud--midium cloud--white"></span>
+      <span class="cloud cloud--large cloud--orange"></span>
+      <span class="cloud cloud--small cloud--yellow"></span>
+      <span class="cloud cloud--small cloud--orange cloud--right"></span>
+      <span class="cloud cloud--large cloud--yellow cloud--right"></span>
+      <span class="cloud cloud--midium cloud--white cloud--right"></span>
+      <span class="flower--right"></span>
       <div class="kv__inner">
         <h1 class="kv__title">話そ?就活のこと、仕事のこと</h1>
         <div class="kv__speech-bubble">
@@ -14,9 +21,32 @@
     </section>
 
     <section class="what-can-do">
+      <span class="cloud cloud--midium cloud--yellow cloud--right"></span>
+      <span class="cloud cloud--large"></span>
+      <span class="cloud cloud--small cloud--blue cloud--right"></span>
+      <span class="cloud cloud--small"></span>
+      <span class="cloud cloud--large cloud--blue cloud--right"></span>
+      <span class="cloud cloud--midium cloud--yellow"></span>
+      <span class="cloud cloud--midium"></span>
+      <span class="flower--right"></span>
+      <span class="flower--left"></span>
+      <span class="ufo"></span>
+      <span class="heart heart--pink"></span>
+      <span class="heart heart--green"></span>
+      <span class="heart heart--red"></span>
+      <span class="heart heart--yellow"></span>
+      <span class="eye eye--green"></span>
+      <span class="eye eye--blue"></span>
+      <span class="eye eye--red"></span>
+      <span class="eye eye--yellow"></span>
+      <span class="octopus"></span>
+
       <div class="what-can-do__inner">
         <h2 class="section-title">
-          <span class="section-title__main">何ができる</span><span class="section-title__q">?</span>
+          <span class="apple"></span>
+          <span class="flower--left"></span>
+          <span class="section-title__main">何ができる</span>
+          <span class="section-title__q">?</span>
         </h2>
         <ul class="what-can-do__list">
           <li>就活の悩みや日常のつぶやきを<span>チャット形式で投稿</span></li>
@@ -56,10 +86,21 @@
             <p>質問も雑談も大歓迎。<br>匿名で気軽に使えるから安心</p>
           </div>
         </div>
+        <img class="flower flower--skyblue" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--skyblue.png" alt="">
+        <img class="flower flower--red" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--red.png" alt="">
+        <img class="flower flower--purple" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--purple.png" alt="">
+        <img class="flower flower--white" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--white.png" alt="">
+        <img class="flower flower--blue" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--blue.png" alt="">
+        <img class="flower flower--green" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--green.png" alt="">
       </div>
     </section>
 
     <section class="flow">
+      <img class="flower flower--red" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--red.png" alt="">
+      <img class="flower flower--pastel-purple" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-purple.png" alt="">
+      <img class="flower flower--pastel-orange" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-orange.png" alt="">
+      <img class="flower flower--pastel-pink" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-pink.png" alt="">
+      <img class="flower flower--pastel-green" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-green.png" alt="">
       <img class="tiger" src="<?php echo get_template_directory_uri(); ?>/images/flow-tiger.png" alt="">
       <div class="flow__inner">
         <h2 class="section-title section-title--white">ご利用の流れ</h2>

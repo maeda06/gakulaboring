@@ -38,16 +38,22 @@ body {
   color: var(--color-black);
 }
 
-/* ===============================
-  cloud
-================================ */
-.cloud {
-	background-image: url(../images/small-cloud--orange.png);
+.flower--right {
+  background-image: url(../images/flower--white02.png);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	position: absolute;
 }
+
+.flower--left {
+  background-image: url(../images/flower--white01.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
 
 
 /* ===============================
@@ -63,6 +69,64 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  .cloud {
+		&:nth-child(1) {
+			top: 10%;
+			left: 14.44vw;
+		}
+
+		&:nth-child(2) {
+			top: 50%;
+			left: 2.8472vw;
+			transform: translateY(-50%);
+		}
+
+		&:nth-child(3) {
+			bottom: 10%;
+			left: 30.625vw;
+		}
+
+		&:nth-child(4) {
+			top: 10%;
+			right: 14.42vw;
+		}
+
+		&:nth-child(5) {
+			top: 50%;
+			right: 2.8472vw;
+			transform: translateY(-50%);
+		}
+
+		&:nth-child(6) {
+			bottom: 10%;
+			right: 18.9583vw;
+		}
+	}
+
+	.cloud--small {
+		width: 6.77vw;
+		height: 4.986vw;
+	}
+
+	.cloud--midium {
+		width: 10.416vw;
+		height: 6.94vw;
+	}
+
+	.cloud--large {
+		width: 13.194vw;
+		height: 9.72vw;
+	}
+
+  .flower--right {
+    width: 13.611vw;
+    height: 14.93055vw;
+    bottom: -15%;
+    left: 40%;
+    z-index: 1;
+    transform: rotate(30deg);
+  }
 }
 
 .kv__inner {
@@ -161,7 +225,7 @@ body {
   background-position: top left;
   background-size: cover;
   background-attachment: fixed;
-  padding: 460px 0 calc(170px + 10vh);
+  padding: 28vw 0 50vh;
   position: relative;
 
   .section-title {
@@ -209,9 +273,168 @@ body {
     background-repeat: no-repeat;
   }
 
-  span {
+  .section-title__main {
     position: relative;
     z-index: 1;
+  }
+
+  .cloud {
+    &:nth-child(1) {
+      top: 15%;
+      left: 10%;
+    }
+
+    &:nth-child(2) {
+      top: 30%;
+      left: -5%;
+    }
+
+    &:nth-child(3) {
+      top: 50%;
+      left: 20%;
+    }
+
+    &:nth-child(4) {
+      top: 18%;
+      right: 18%;
+    }
+
+    &:nth-child(5) {
+      top: 25%;
+      right: -5%;
+    }
+
+    &:nth-child(6) {
+      top: 45%;
+      right: 15%;
+    }
+
+    &:nth-child(7) {
+      bottom: 10%;
+      right: 25%;
+    }
+
+    &.cloud--small {
+      width: 6.77vw;
+      height: 4.986vw;
+    }
+
+    &.cloud--midium {
+      width: 13.1944vw;
+      height: 9.722vw;
+    }
+
+    &.cloud--large {
+      width: 22.01388vw;
+      height: 15.90277vw;
+    }
+  }
+
+  .flower--right {
+    width: 13.611vw;
+    height: 14.93055vw;
+    bottom: 33%;
+    right: 18%;
+  }
+
+  .flower--left {
+    width: 10.277vw;
+    height: 10.76388vw;
+    bottom: 0;
+    right: 50%;
+    z-index: 1;
+    transform: scale(-1,1);
+  }
+
+  .ufo {
+    background-image: url(../images/ufo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 21.5277vw;
+    height: 18vw;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    z-index: 1;
+  }
+
+  .heart {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 2.15277vw;
+    height: 2.15277vw;
+  }
+
+  .heart--pink {
+    background-image: url(../images/preview__point-heart--pink.png);
+    top: 30%;
+    right: 20%;
+    transform: rotate(45deg);
+  }
+
+  .heart--green {
+    background-image: url(../images/preview__point-heart--green.png);
+    top: 45%;
+    right: 23%;
+    transform: rotate(30deg);
+  }
+
+  .heart--red {
+    background-image: url(../images/heart--red.png);
+    top: 40%;
+    left: 23%;
+  }
+
+  .heart--yellow {
+    background-image: url(../images/preview__point-heart--yellow.png);
+    bottom: 10%;
+    left: 49%;
+    transform: rotate(45deg);
+  }
+
+  .eye {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 2.77vw;
+    height: 2.77vw;
+
+    &.eye--green {
+      background-image: url(../images/eye--green.png);
+      top: 43%;
+      left: 27%;
+      z-index: 1;
+    }
+
+    &.eye--blue {
+      background-image: url(../images/eye--blue.png);
+      top: 48%;
+      right: 42%;
+      z-index: 1;
+    }
+
+    &.eye--red {
+      background-image: url(../images/eye--red.png);
+      top: 65%;
+      right: 23%;
+      z-index: 1;
+    }
+
+    &.eye--yellow {
+      background-image: url(../images/eye--yellow.png);
+      bottom: 2%;
+      right: 58%;
+      z-index: 1;
+    }
+  }
+
+  .octopus {
+    width: 5.34722vw;
+    height: 4.375vw;
   }
 }
 
@@ -219,6 +442,37 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+
+  .flower--left {
+    width: 10.277vw;
+    height: 10.76388vw;
+    top: -250%;
+    left: 20%;
+    transform: scale(1,1);
+  }
+
+  .section-title {
+    width: fit-content;
+    margin: auto;
+    padding-right: 3.5vw;
+    position: relative;
+      .apple {
+      background-image: url(../images/apple.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 6.8055vw;
+      height: 12.29166vw;
+      position: absolute;
+      right: 15%;
+      bottom: -280%;
+    }
+
+    .section-title__q {
+      position: absolute;
+      transform: rotate(20deg);
+    }
+  }
 }
 
 .what-can-do__list {
@@ -263,7 +517,7 @@ body {
 ================================ */
 .points {
   background-color: var(--color-yellow);
-  padding: 200px 0 300px;
+  padding: 200px 0 500px;
   position: relative;
 
   &::after {
@@ -284,12 +538,84 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 
   .section-title {
     width: fit-content;
     margin: auto;
     padding: 10px;
     background-color: var(--color-orange);
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 10vw;
+      height: 4vw;
+      background-image: url(../images/page-chat__point-title-flower.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      transform: translateX(-100%) translateY(-50%);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 10vw;
+      height: 4vw;
+      background-image: url(../images/page-chat__point-title-flower.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      right: -5%;
+      transform: translateX(100%) translateY(-50%) rotate(180deg);
+    }
+  }
+
+  .flower {
+    position: absolute;
+
+    &.flower--skyblue {
+      top: -5%;
+      left: -5%;
+      width: 9.270833vw;
+    }
+
+    &.flower--red {
+      top: 45%;
+      left: -8%;
+      width: 7.5vw;
+    }
+
+    &.flower--purple {
+      bottom: -50%;
+      left: 8%;
+      width: 9.0277vw;
+    }
+
+    &.flower--white {
+      top: 5%;
+      right: -10%;
+      width: 12.3611vw;
+    }
+
+    &.flower--blue {
+      bottom: -5%;
+      right: -10%;
+      width: 7.29166vw;
+    }
+
+    &.flower--green {
+      bottom: -60%;
+      right: 8%;
+      width: 7.722vw;
+    }
   }
 }
 
@@ -344,6 +670,42 @@ body {
   background-color: var(--color-orange);
   position: relative;
   padding-top: 130px;
+
+  .flower {
+    position: absolute;
+    z-index: 3;
+
+    &.flower--red {
+      top: 0%;
+      left: 40%;
+      width: 12vw;
+      transform: rotate(15deg);
+    }
+
+    &.flower--pastel-purple {
+      top: -3%;
+      right: 20%;
+      width: 10vw;
+    }
+
+    &.flower--pastel-orange {
+      top: 20%;
+      left: 10%;
+      width: 10vw;
+    }
+
+    &.flower--pastel-pink {
+      top: 15%;
+      left: 38%;
+      width: 10vw;
+    }
+
+    &.flower--pastel-green {
+      top: 12%;
+      left: 55%;
+      width: 10vw;
+    }
+  }
 
   .tiger {
     width: 80%;
