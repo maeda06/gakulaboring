@@ -3,7 +3,8 @@
   <!-- メインビジュアル -->
   <section id="hero">
 		<img class="cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
-		<img class="cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/large-cloud--orange.png" alt="">
+		<img class="cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
+		<img class="cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
 		<div class="hero__text">
 			<h1>作品で<span class="orange">未来</span>を<span class="blue">引き寄せろ！</span><br><span class="blue">スカウト</span>が届く、<span class="orange">次世代の就活サイト</span></h1>
 			<p><span>自己PRよりポートフォリオ</span>あなたらしさで未来を引き寄せよう</p>
@@ -31,12 +32,22 @@
 				</li>
 			</ul>
 		</div>
-		<img class="target cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/large-cloud--orange.png" alt="">
-		<img class="target cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/large-cloud--orange.png" alt="">
+		<img class="target cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
+		<img class="target cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
 		<img class="target cloud cloud--orange-frame" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange-frame.png" alt="">
   </section>
 
   <section id="howto">
+		<span class="cloud cloud--blue"></span>
+		<span class="cloud cloud--yellow"></span>
+		<span class="cloud cloud--yellow cloud--right"></span>
+		<span class="cloud cloud--blue cloud--right"></span>
+		<span class="cloud cloud--yellow cloud--right"></span>
+		<img class="balloon balloon--yellow" src="<?php echo get_template_directory_uri() ?>/images/balloon--yellow.png" alt="">
+		<img class="balloon balloon--blue" src="<?php echo get_template_directory_uri() ?>/images/balloon--blue.png" alt="">
+		<img class="balloon balloon--green" src="<?php echo get_template_directory_uri() ?>/images/balloon--green.png" alt="">
+		<img class="balloon balloon--orange" src="<?php echo get_template_directory_uri() ?>/images/balloon--orange.png" alt="">
+		<img class="balloon balloon--pink" src="<?php echo get_template_directory_uri() ?>/images/balloon--pink.png" alt="">
 		<!-- 使い方3ステップ -->
 		<div class="three-step">
 			<div class="three-step__title"><h2>使い方3ステップ</h2></div>
@@ -65,7 +76,18 @@
 		</div>
 		<!-- アップしてみよう -->
 		<div class="upload">
-			<h1><span>1枚アップ	</span>してみよう</h1>
+			<img class="flower flower--white" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--white.png" alt="">
+			<img class="flower flower--skyblue" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--skyblue.png" alt="">
+			<img class="flower flower--blue" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--blue.png" alt="">
+			<img class="flower flower--red-small" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--red.png" alt="">
+			<img class="flower flower--green" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--green.png" alt="">
+			<img class="flower flower--purple" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--purple.png" alt="">
+			<img class="flower flower--pastel-pink" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-pink.png" alt="">
+			<img class="flower flower--red-large" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--red.png" alt="">
+			<img class="flower flower--pastel-green" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-green.png" alt="">
+			<img class="flower flower--pastel-orange" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-orange.png" alt="">
+			<img class="flower flower--pastel-purple" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-purple.png" alt="">
+			<h1><span>1 枚アップ	</span>してみよう</h1>
 			<div class="upload-btn">
 				<div class="btn btn--orange"><a href="#"><span>今すぐアップロード</span></a></div>
 				<div class="btn btn--blue"><a href="#"><span>下書きから作る</span></a></div>

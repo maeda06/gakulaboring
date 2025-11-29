@@ -61,23 +61,30 @@ h2 {
     display: block;
     margin: auto;
     width: 85%;
+    z-index: 1;
   }
 
   .cloud {
-    display: inline-block;
     position: absolute;
-  }
 
-  .cloud--small {
-    top: 10%;
-    left: 3%;
-    width: 13vw;
+    &:nth-child(1) {
+      top: 10%;
+      left: 3%;
+      width: 13vw;
+    }
+
+    &:nth-child(2) {
+      top: 60%;
+      left: 25%;
+      width: 13vw;
+    }
   }
 
   .cloud--large {
     top: 45%;
     right: 3%;
     width: 18vw;
+    transform: scale(-1,1);
   }
 }
 
@@ -136,6 +143,7 @@ h2 {
   .cloud {
     filter: brightness(0) saturate(100%) invert(87%) sepia(47%) saturate(0%) hue-rotate(277deg) brightness(106%) contrast(101%);
 		opacity: 0;
+    background-image: none;
   }
 
   .cloud--small {
@@ -159,6 +167,7 @@ h2 {
     right: -3%;
     width: 25.9vw;
     filter: none;
+    z-index: 1;
   }
 }
 
@@ -167,13 +176,15 @@ h2 {
 ================================ */
 
 #howto {
-  padding-top: 400px;
+  padding-top: 29.51388vw;
+  position: relative;
 
   .three-step {
     text-align: center;
     border: 2px solid var(--blue);
     width: 80%;
-    margin: 0 auto 200px;
+    margin: 0 auto 13.68055vw;
+    padding-bottom: 50px;
 
     .three-step__title {
       display: inline-block;
@@ -300,6 +311,8 @@ h2 {
 
     .gallery-content h3 {
       color: var(--blue);
+      width: fit-content;
+      margin: auto;
       font-size: 36px;
       text-align: center;
       font-weight: normal;
@@ -309,7 +322,7 @@ h2 {
       &::before {
         position: absolute;
         top: -20%;
-        left: -3%;
+        left: -8%;
         content: "";
         width: 35px;
         height: 46px;
@@ -322,7 +335,7 @@ h2 {
       &::after {
         position: absolute;
         top: -20%;
-        right: -2%;
+        right: -8%;
         transform: rotate(90deg);
         content: "";
         width: 35px;
@@ -338,6 +351,7 @@ h2 {
   .btn {
     position: relative;
     z-index: 1;
+    width: 28vw;
 
     a {
       font-family: "Noto Sans JP", sans-serif;
@@ -363,14 +377,17 @@ h2 {
 
   .upload {
     background-color: #FFE529;
-    padding-top: 250px;
-    padding-bottom: 300px;
+    padding-top: 20.0833vw;
+    padding-bottom: 29.3055vw;
+    position: relative;
 
     h1 {
+      font-family: "Dela Gothic One", sans-serif;
       font-size: 64px;
       text-align: center;
       position: relative;
       margin-bottom: 70px;
+      color: var(--black);
 
       span {
         color: var(--orange);
@@ -384,8 +401,7 @@ h2 {
           transform: translateY(-100%);
           content: "まずは";
           font-size: 64px;
-          color: #000;
-          font-family: "Mochiy Pop One", sans-serif;
+          color: var(--black);
         }
       }
     }
@@ -393,10 +409,94 @@ h2 {
     .upload-btn {
       display: flex;
       justify-content: center;
-      gap: 80px;
+      width: 65%;
+      margin: auto;
 
       .btn {
-        width: 35%;
+        width: 40%;
+
+        a {
+          font-size: 2vw;
+        }
+      }
+    }
+
+    .flower {
+      position: absolute;
+
+      &.flower--white {
+        top: 0%;
+        left: 30%;
+        transform: rotate(70deg);
+        width: 12.01388vw;
+      }
+
+      &.flower--skyblue {
+        top: -10%;
+        right: 15%;
+        transform: scale(-1,1);
+        width: 9.270833vw;
+      }
+
+      &.flower--blue {
+        top: 15%;
+        left: 5%;
+        transform: scale(-1,1);
+        width: 7.29166vw;
+      }
+
+      &.flower--red-small {
+        top: 10%;
+        right: 25%;
+        transform: scale(-1,1);
+        width: 9.5vw;
+      }
+
+      &.flower--green {
+        top: 20%;
+        right: 35%;
+        transform: rotate(-150deg) scale(-1,1);
+        width: 7.90277vw;
+      }
+
+      &.flower--purple {
+        top: 28%;
+        right: 5%;
+        transform: scale(-1,1);
+        width: 11.66vw;
+      }
+
+      &.flower--pastel-pink {
+        top: 30%;
+        left: 10%;
+        transform: scale(-1,1);
+        width: 6.5277vw;
+      }
+
+      &.flower--red-large {
+        top: 50%;
+        left: 7%;
+        width: 14.0277vw;
+      }
+
+      &.flower--pastel-green {
+        top: 58%;
+        left: 48%;
+        width: 7.65625vw;
+        transform: scale(-1,1);
+      }
+
+      &.flower--pastel-orange {
+        top: 60%;
+        right: 20%;
+        width: 12.20833vw;
+        transform: scale(-1,1);
+      }
+
+      &.flower--pastel-purple {
+        top: 70%;
+        left: 25%;
+        width: 8.73611vw;
       }
     }
   }
@@ -411,6 +511,70 @@ h2 {
       box-shadow: 5px 5px var(--orange);
     }
   }
+
+  .cloud {
+    width: 15.1201388vw;
+    height: 10.8979166vw;
+
+    &:nth-child(1) {
+      top: 3%;
+      left: 3%;
+      width: 22.70833vw;
+      height: 16.7159722vw;
+    }
+
+    &:nth-child(2) {
+      top: 30% ;
+      left: 2%;
+    }
+
+    &:nth-child(3) {
+      top: 8%;
+      right: 20%;
+    }
+
+    &:nth-child(4) {
+      top: 12%;
+      right: 2%;
+    }
+
+    &:nth-child(5) {
+      top: 35%;
+      right: 15%;
+    }
+  }
+
+  .balloon {
+    position: absolute;
+    width: 5.625vw;
+
+    &.balloon--yellow {
+      top: -3%;
+      right: 20%;
+      z-index: 0;
+    }
+
+    &.balloon--blue {
+      top: 5%;
+      left: 30%;
+    }
+
+    &.balloon--green {
+      top: 10%;
+      left: 10%;
+    }
+
+    &.balloon--orange {
+      top: 20%;
+      right: 5%;
+    }
+
+    &.balloon--pink {
+      top: 30%;
+      left: 30%;
+    }
+  }
+
 }
 
 /* ===============================
@@ -421,9 +585,10 @@ h2 {
   background-image: url(../images/for-campanies-bg.png);
   background-color: #FFE529;
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   padding-bottom: 300px;
+  color: var(--black);
 
   h2 {
     font-family: "Dela Gothic One", sans-serif;
@@ -448,7 +613,7 @@ h2 {
     margin: 0 auto 75px;
 
     li {
-      font-size: 36px;
+      font-size: 2.2vw;
       font-weight: bold;
       margin-bottom: 20px;
       display: flex;
