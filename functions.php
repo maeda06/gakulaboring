@@ -28,6 +28,10 @@ function my_styles() {
       wp_enqueue_style( 'review', get_template_directory_uri() . '/css/page-review.css', array() );
     }elseif( is_page('chat') ) {
       wp_enqueue_style( 'chat', get_template_directory_uri() . '/css/page-chat.css', array() );
+    }elseif( is_page('contact-company') ) {
+      wp_enqueue_style( 'contact-company', get_template_directory_uri() . '/css/contact-company.css', array() );
+    }elseif( is_page('contact-worker') ) {
+      wp_enqueue_style( 'contact-worker', get_template_directory_uri() . '/css/contact-worker.css', array() );
     }
 }
 add_action( 'wp_enqueue_scripts', 'my_styles' );
