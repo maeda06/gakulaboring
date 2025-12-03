@@ -16,8 +16,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input type="text" class="form-control"
-						placeholder="例：テキストテキストテキスト">
+					<input name="name" type="text" class="form-control" placeholder="例：テキストテキストテキスト">
 				</div>
 			</div>
 			<!-- 読み仮名（カナ） -->
@@ -27,8 +26,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input type="text" class="form-control"
-						placeholder="例：テキストテキストテキスト">
+					<input name="kana" type="text" class="form-control" placeholder="例：テキストテキストテキスト">
 				</div>
 			</div>
 			<!-- メールアドレス -->
@@ -38,8 +36,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input type="email" class="form-control"
-						placeholder="例：テキストテキストテキスト">
+					<input name="email" type="email" class="form-control" placeholder="例：テキストテキストテキスト">
 				</div>
 			</div>
 			<!-- 電話番号 -->
@@ -48,8 +45,7 @@
 					電話番号（ハイフン無し）
 				</div>
 				<div class="form-field">
-					<input type="tel" class="form-control"
-						placeholder="例：テキストテキストテキスト">
+					<input name="tell" type="tel" class="form-control" placeholder="例：テキストテキストテキスト">
 				</div>
 			</div>
 			<!-- 住所 -->
@@ -58,8 +54,7 @@
 					住所
 				</div>
 				<div class="form-field">
-					<input type="text" class="form-control"
-						placeholder="例：テキストテキストテキスト">
+					<input name="address" type="text" class="form-control" placeholder="例：テキストテキストテキスト">
 				</div>
 			</div>
 			<!-- お問い合わせ内容 -->
@@ -69,8 +64,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<textarea class="form-control"
-						placeholder="例：テキストテキストテキスト"></textarea>
+					<textarea name="detail" class="form-control" placeholder="例：テキストテキストテキスト"></textarea>
 				</div>
 			</div>
 			<div class="submit-wrapper">
