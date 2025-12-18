@@ -1,0 +1,433 @@
+main {
+  color: #fff;
+}
+main #hero {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+main #hero::after {
+  content: "";
+  width: 100%;
+  height: 160vh;
+  background-image: url(../images/page-skillup__hero-bg.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+main #hero h1 {
+  font-size: 5.1388vw;
+  line-height: 1;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 45px;
+}
+main #hero h1:first-child {
+  font-size: 4.44vw;
+  margin-bottom: 0;
+  position: relative;
+}
+main #hero h1:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 5vw;
+  height: 3vw;
+  background-image: url(../images/eyecon.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  transform: translateX(100%) translateY(-50%);
+}
+main #hero .sub {
+  font-size: 2.22vw;
+  font-family: "Mochiy Pop One", sans-serif;
+  background-color: var(--blue);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 45px;
+  padding: 10px 23px;
+}
+main #hero .sub span {
+  color: #04ff00;
+}
+main #hero .kv__cta .kv__cta-text {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: var(--font-noto);
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--color-white);
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+}
+main #hero .kv__cta .kv__cta-text::before, main #hero .kv__cta .kv__cta-text::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/portfolio-head-decoration.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(0%) hue-rotate(266deg) brightness(105%) contrast(103%);
+}
+main #hero .kv__cta .kv__cta-text::before {
+  top: -60%;
+  left: -8%;
+  width: 30px;
+  height: 41px;
+}
+main #hero .kv__cta .kv__cta-text::after {
+  top: -60%;
+  right: -5%;
+  width: 26px;
+  height: 35px;
+  transform: rotate(90deg);
+}
+main #hero .kv__cta .kv__cta-text img {
+  width: 12%;
+  padding-left: 10px;
+}
+main #hero .kv__cta .kv__button {
+  display: inline-block;
+  width: 40%;
+  font-family: var(--font-noto);
+  font-weight: 900;
+  font-size: 2.22vw;
+  color: var(--yellow);
+  background-color: var(--black);
+  border: 6px solid #fff;
+  border-radius: 150px;
+  padding: 20px 65px;
+  text-decoration: none;
+  box-shadow: 5px 5px 0px 0px #fff;
+}
+main #what {
+  display: flex;
+  color: var(--black);
+  justify-content: center;
+  align-items: center;
+  gap: 37px;
+  position: relative;
+  padding-top: 18vw;
+}
+main #what::before {
+  content: "";
+  width: 100vw;
+  height: 150vh;
+  background-image: url(../images/page-skillup__what-bg.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+main #what h2 {
+  writing-mode: vertical-rl;
+  font-size: 6.66vw;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #fff;
+}
+main #what h2::after {
+  content: "?";
+  display: inline-block;
+  transform: rotate(-70deg);
+  margin-top: 12px;
+}
+main #what ul {
+  background-color: #fff;
+  padding: 35px 16px;
+}
+main #what ul li {
+  font-size: 1.66vw;
+  font-weight: bold;
+  margin-bottom: 2.22vw;
+  position: relative;
+  padding-left: 20px;
+}
+main #what ul li::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background-color: var(--black);
+  position: absolute;
+  top: 1rem;
+  left: 0;
+}
+main #what ul li span {
+  color: #fff;
+  background-color: var(--orange);
+  padding: 5px;
+}
+main #point {
+  background-color: var(--yellow);
+  position: relative;
+  margin-top: 30vw;
+  padding-bottom: 20vw;
+}
+main #point::before {
+  content: "";
+  width: 100vw;
+  height: 25.55vw;
+  background-image: url(../images/page-skillup__point-bg--top.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-80%);
+}
+main #point::after {
+  content: "";
+  width: 100vw;
+  height: 25.55vw;
+  background-image: url(../images/page-skillup__point-bg--bottom.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  transform: translateY(100%);
+}
+main #point .section-title {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 60px;
+  padding: 10px;
+  background-color: var(--blue);
+  position: relative;
+  font-size: 3.33vw;
+  font-weight: normal;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+main #point .section-title::before {
+  content: "";
+  display: block;
+  width: 10vw;
+  height: 4vw;
+  background-image: url(../images/page-chat__point-title-flower.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateX(-100%) translateY(-50%);
+  filter: brightness(0) saturate(100%) invert(33%) sepia(73%) saturate(2853%) hue-rotate(204deg) brightness(104%) contrast(101%);
+}
+main #point .section-title::after {
+  content: "";
+  display: block;
+  width: 10vw;
+  height: 4vw;
+  background-image: url(../images/page-chat__point-title-flower.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translateX(100%) translateY(-50%) rotate(180deg);
+  filter: brightness(0) saturate(100%) invert(33%) sepia(73%) saturate(2853%) hue-rotate(204deg) brightness(104%) contrast(101%);
+}
+main #point ul {
+  margin-bottom: 60px;
+}
+main #point ul li {
+  font-size: 1.38888889vw;
+  font-weight: bold;
+  background-color: var(--blue);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 27px;
+  padding: 26px 47px;
+  position: relative;
+  z-index: 0;
+}
+main #point ul li:nth-child(odd) {
+  border-radius: 100vw 0 0 100vw;
+}
+main #point ul li:nth-child(odd)::before {
+  right: 0;
+  transform: translateX(100%);
+}
+main #point ul li:nth-child(even) {
+  border-radius: 0 100vw 100vw 0;
+}
+main #point ul li:nth-child(even)::before {
+  left: 0;
+  transform: translateX(-100%);
+}
+main #point ul li::before {
+  content: "";
+  display: inline-block;
+  width: 50vw;
+  height: 100%;
+  background-color: var(--blue);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+main #point .tako {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 31.38888889vw;
+  margin: auto;
+  z-index: 1;
+}
+main #flow {
+  background-image: url(../images/preview-what-bg.png);
+  background-color: var(--black);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main #flow .flow__inner {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 36vw 50px 0;
+  background-color: var(--color-blue);
+  border-radius: 100% 100% 0 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px -50px 0px 0px var(--color-white);
+}
+main #flow .flow__inner .section-title {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin: auto;
+  font-size: 3.33vw;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+main #flow .flow__inner .section-title::before {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: -10px;
+  transform: translate(-100%, -50%);
+  width: 4.72222222vw;
+  height: 1.52777778vw;
+  content: "";
+  background-image: url(../images/preview__flow-head-decoration.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(17%) saturate(0%) hue-rotate(61deg) brightness(104%) contrast(102%);
+}
+main #flow .flow__inner .section-title::after {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  right: -10px;
+  transform: translate(100%, -50%) rotate(180deg);
+  width: 4.72222222vw;
+  height: 1.52777778vw;
+  content: "";
+  background-image: url(../images/preview__flow-head-decoration.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(17%) saturate(0%) hue-rotate(61deg) brightness(104%) contrast(102%);
+}
+main #flow .flow__inner .flow__list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 130px;
+  padding-bottom: 130px;
+}
+main #flow .flow__inner .flow__list .flow-item {
+  width: 20%;
+  background-color: var(--yellow);
+  border-radius: 30px;
+  padding: 18px;
+  position: relative;
+}
+main #flow .flow__inner .flow__list .flow-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  background-color: var(--color-black);
+}
+main #flow .flow__inner .flow__list .flow-item .flow-item:nth-child(1) .flow-item__content::before {
+  width: 16.6vw;
+  background-image: url(../images/flow-icon-01.png);
+}
+main #flow .flow__inner .flow__list .flow-item .flow-item:nth-child(2) .flow-item__content::before {
+  width: 12.5vw;
+  background-image: url(../images/flow-icon-02.png);
+}
+main #flow .flow__inner .flow__list .flow-item .flow-item:nth-child(3) .flow-item__content::before {
+  width: 9.65vw;
+  background-image: url(../images/flow-icon-03.png);
+}
+main #flow .flow__inner .flow__list .flow-item .flow-item:nth-child(4) .flow-item__content::before {
+  width: 11.18vw;
+  background-image: url(../images/flow-icon-04.png);
+}
+main #flow .flow__inner .flow__list .flow-item .flow-item .flow-item__content {
+  background-color: #83D9FF;
+  border-radius: 30px;
+  position: relative;
+  border: 3px solid var(--color-yellow);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  height: 100%;
+}
+main #flow .flow__inner .flow__list .flow-item .flow-item .flow-item__content::before {
+  content: "";
+  width: 180px;
+  height: 180px;
+  margin: 100px auto 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main #flow .flow__inner .flow__list .flow-item .flow-item .flow-item__content p {
+  font-family: var(--font-noto);
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--color-black);
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 2px solid var(--color-black);
+  margin: 0 20px;
+}
+main #flow .flow__inner .flow__list .flow-item .flow-item .flow-item__number {
+  font-family: var(--font-dela);
+  font-size: 74px;
+  color: var(--color-yellow);
+  position: absolute;
+  top: -16%;
+  left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=page-skillup.css.map */
