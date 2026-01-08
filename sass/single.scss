@@ -27,6 +27,14 @@ main {
 		left: 0;
 	}
 }
+
+@media (max-width: 767px) {
+	main {
+		&::before {
+			height: 15vh;
+		}
+	}
+}
 /* ===============================
   head
 ================================ */
@@ -149,6 +157,7 @@ main {
 @media (max-width: 767px) {
 	#contents {
 		width: 90%;
+		margin-bottom: 30vh;
 
 		.title {
 			font-size: 20px;
