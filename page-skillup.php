@@ -4,12 +4,12 @@
 		<img class="flower flower--yellow" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--yellow.png" alt="">
 		<img class="flower flower--blue" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--blue.png" alt="">
 		<img class="flower flowwer--orange flower--reverse" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
-		<h1 class="row1">見れば見るほど</h1>
-		<h1>じぶんが好きになる</er--orange" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
 		<img class="flower flower--yellow" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--yellow.png" alt="">
-		<img class="flower flower--orange flower--reverse" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
+		<img class="flower flower--orange" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
 		<img class="flower flower--blue flower--reverse" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--blue.png" alt="">
-		<img class="flower floh1>
+		<img class="flower flower--orange flower--reverse" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
+		<h1 class="row1">見れば見るほど</h1>
+		<h1>じぶんが好きになる</h1>
 		<p class="sub">知らなかった<span>可能性</span>、ここにある</p>
 		<div class="kv__cta">
       <p class="kv__cta-text">無料登録して、動画講座見てみてみよ！</p>
