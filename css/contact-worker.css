@@ -46,13 +46,14 @@ main .form-wrapper .form-row:last-of-type {
   margin-bottom: 32px;
 }
 main .form-wrapper .form-row .form-label {
-  width: 250px;
+  width: 335px;
   padding-top: 10px;
   font-weight: 600;
   white-space: nowrap;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 main .form-wrapper .form-row .form-label .required-badge {
   display: inline-block;
@@ -119,9 +120,16 @@ main .form-wrapper .submit-wrapper .btn-submit:active {
     width: auto;
     padding-top: 0;
     margin-bottom: 6px;
+    font-size: 16px;
+  }
+  main .form-wrapper .form-row .form-label .required-badge {
+    font-size: 16px;
   }
   main .form-wrapper .form-row .form-field {
     width: 100%;
+  }
+  main .form-wrapper .form-row .form-field .form-note {
+    font-size: 14px;
   }
   main .footer-top {
     flex-direction: column;

@@ -53,13 +53,14 @@ main {
 			}
 
 			.form-label {
-				width: 250px;
+				width: 335px;
 				padding-top: 10px;
 				font-weight: 600;
 				white-space: nowrap;
 				font-weight: bold;
 				display: flex;
 				justify-content: space-between;
+				align-items: center;
 
 				.required-badge {
 					display: inline-block;
@@ -136,10 +137,19 @@ main {
 					width: auto;
 					padding-top: 0;
 					margin-bottom: 6px;
+					font-size: 16px;
+
+					.required-badge {
+						font-size: 16px;
+					}
 				}
 
 				.form-field {
 					width: 100%;
+
+					.form-note {
+						font-size: 14px;
+					}
 				}
 			}
 		}
