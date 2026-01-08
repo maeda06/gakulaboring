@@ -748,7 +748,7 @@ body {
 }
 
 .flow__list .flow-item:nth-child(1) .flow-item__content::before {
-  width: 16.6vw;
+  width: 15vw;
   background-image: url(../images/flow-icon-01.png);
 }
 .flow__list .flow-item:nth-child(2) .flow-item__content::before {

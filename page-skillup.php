@@ -1,7 +1,14 @@
 <?php get_header(); ?>
 <main>
 	<section id="hero">
-		<h1>見れば見るほど</h1>
+		<img class="flower flower--yellow" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--yellow.png" alt="">
+		<img class="flower flower--blue" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--blue.png" alt="">
+		<img class="flower flower--orange" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
+		<img class="flower flower--yellow" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--yellow.png" alt="">
+		<img class="flower flower--orange flower--reverse" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
+		<img class="flower flower--blue flower--reverse" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--blue.png" alt="">
+		<img class="flower flower--orange flower--reverse" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
+		<h1 class="row1">見れば見るほど</h1>
 		<h1>じぶんが好きになる</h1>
 		<p class="sub">知らなかった<span>可能性</span>、ここにある</p>
 		<div class="kv__cta">
@@ -10,6 +17,23 @@
     </div>
 	</section>
 	<section id="what">
+		<img class="flower flower--flat flower--flat-orange" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--flat-orange.png" alt="">
+		<img class="flower flower--blue" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--blue.png" alt="">
+		<img class="flower flower--yellow" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--yellow.png" alt="">
+		<img class="flower flower--flat flower--flat-green" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--flat-green.png" alt="">
+		<img class="flower flower--orange" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--orange.png" alt="">
+		<img class="flower flower--flat flower--flat-yellow" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--flat-yellow.png" alt="">
+		<img class="flower flower--flat flower--flat-blue" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--flat-blue.png" alt="">
+		<img class="flower flower--yellow" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--yellow.png" alt="">
+		<img class="flower flower--flat flower--flat-pink" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--flat-pink.png" alt="">
+		<img class="flower flower--blue" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__flower--blue.png" alt="">
+		<div class="kingyo-wrap">
+			<img class="kingyo" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__kingyo04.png" alt="">
+			<img class="kingyo" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__kingyo01.png" alt="">
+			<img class="kingyo" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__kingyo02.png" alt="">
+			<img class="kingyo" src="<?php echo get_template_directory_uri() ?>/images/page-skillup__kingyo03.png" alt="">
+		</div>
+
 		<h2>何ができる</h2>
 		<ul>
 			<li>初心者向けから上級まで、<span>いろんな動画講座が見放題</span></li>
@@ -27,8 +51,15 @@
 			<li>なんか、周りと差をつけたいかも…！</li>
 			<li>講座ってガチすぎて怖い…もっと気軽に学びたい</li>
 		</ul>
+		<img class="bg--bubble" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__point-bg.png" alt="">
 	</section>
 	<section id="flow">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-fugu.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-phone.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-record.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-apple.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-flower.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-orange.png" alt="">
 		<div class="flow__inner">
         <h2 class="section-title section-title--white">ご利用の流れ</h2>
         <div class="flow__list">
@@ -60,20 +91,27 @@
       </div>
 	</section>
 	<section id="course">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-manta.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-duck.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-shoes.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-chair.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-turtle.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-bread.png" alt="">
+		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-desk.png" alt="">
 		<div class="course__inner">
+			<img class="bg--flower" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__course--flower-white.png" alt="">
         <h2 class="section-title section-title--black">ご利用にはログインが必要です</h2>
         <p>※講座は順次追加予定！「今欲しい！」が見つかるかも。</p>
         <div class="course__content">
           <ul>
-            <li><img src="" alt=""><p>デザインFigma/Canva/Illustrator/Photoshop/STUDIO</p></li>
-            <li><img src="" alt=""><p>動画編集（初級〜上級）</p></li>
-            <li><img src="" alt="">SNSマーケLINE公式運用/Lステップ運用</li>
-            <li><img src="" alt="">ECサイト制作（Shopify）ホームページ制作（WordPress）</li>
-            <li><img src="" alt="">ライティングマーケティング／お金の勉強</li>
-            <li><img src="" alt="">ITパスポート対策 などなど！</li>
+            <li><img src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__course-icon--design.png" alt="">デザイン<br>Figma/Canva/Illustrator<br>Photoshop/STUDIO</li>
+            <li><img src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__course-icon--video.png" alt="">動画編集（初級〜上級）</li>
+            <li><img src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__course-icon--sns.png" alt="">SNSマーケ<br>LINE公式運用/Lステップ運用</li>
+            <li><img src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__course-icon--ecsite.png" alt="">ECサイト制作（Shopify）<br>ホームページ制作（WordPress）</li>
+            <li><img src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__course-icon--marketing.png" alt="">ライティング<br>マーケティング／お金の勉強</li>
+            <li><img src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__course-icon--it.png" alt="">ITパスポート対策 などなど！</li>
           </ul>
         </div>
-        <a href="#" class="login-cta__button"><img src="<?php echo get_template_directory_uri(); ?>/images/cta-btn--sub.png" alt=""></a>
       </div>
 	</section>
 </main>
