@@ -2,10 +2,6 @@
 /********************
 common
 ********************/
-.cta, header .btn, .footer-btn {
-  display: none !important;
-}
-
 .btn a {
   pointer-events: none;
 }

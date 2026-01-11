@@ -11,8 +11,8 @@ h2 {
   hero
 ================================ */
 #hero {
-  padding-top: 15.9vw;
-  padding-bottom: 22.4vw;
+  padding-top: 12vw;
+  padding-bottom: 25vw;
   position: relative;
   box-sizing: border-box;
 }
@@ -20,8 +20,13 @@ h2 {
   text-align: center;
 }
 #hero .hero__text h1 {
-  font-size: 74px;
+  font-family: var(--font-dela);
+  font-size: 5.14vw;
+  line-height: 1;
   margin-bottom: 32px;
+}
+#hero .hero__text h1:first-child {
+  margin-bottom: 0;
 }
 #hero .hero__text h1 .orange {
   color: var(--orange);
@@ -29,10 +34,16 @@ h2 {
 #hero .hero__text h1 .blue {
   color: var(--blue);
 }
+#hero .hero__text h1 br {
+  display: none;
+}
 #hero .hero__text p {
   font-family: "Mochiy Pop One", sans-serif;
   font-size: 32px;
   margin-bottom: 32px;
+}
+#hero .hero__text p br {
+  display: none;
 }
 #hero .hero__text p span {
   color: var(--orange);
@@ -55,7 +66,9 @@ h2 {
   z-index: 1;
 }
 #hero .cloud {
+  background-image: none;
   position: absolute;
+  z-index: -1;
 }
 #hero .cloud:nth-child(1) {
   top: 10%;
@@ -63,17 +76,58 @@ h2 {
   width: 13vw;
 }
 #hero .cloud:nth-child(2) {
-  top: 60%;
-  left: 25%;
+  top: 48%;
+  left: 20%;
   width: 13vw;
 }
 #hero .cloud--large {
-  top: 45%;
+  top: 40%;
   right: 3%;
   width: 18vw;
-  transform: scale(-1, 1);
+  transform: rotate(180deg);
 }
 
+@media (max-width: 767px) {
+  #hero {
+    padding-bottom: 60vw;
+  }
+  #hero .hero__text h1 {
+    font-size: 9.5vw;
+    margin-bottom: 20px;
+  }
+  #hero .hero__text h1 br {
+    display: block;
+  }
+  #hero .hero__text p {
+    font-size: 4vw;
+    margin-bottom: 50px;
+  }
+  #hero .hero__text p br {
+    display: block;
+  }
+  #hero .hero__text img {
+    width: 80%;
+  }
+  #hero .cloud:nth-child(1) {
+    left: -8%;
+    width: 25vw;
+  }
+  #hero .cloud:nth-child(2) {
+    width: 33vw;
+    top: 40%;
+    left: 4%;
+  }
+  #hero .cloud--large {
+    top: 58%;
+    right: -11%;
+    width: 35vw;
+  }
+  #hero .hero-image {
+    width: 170%;
+    max-inline-size: none;
+    bottom: 5%;
+  }
+}
 /* ===============================
   features
 ================================ */
@@ -129,12 +183,12 @@ h2 {
   top: 10%;
   right: 20%;
   width: 13.8vw;
+  transform: scaleX(-1);
 }
 #features .cloud--large {
   position: absolute;
   bottom: 30%;
   left: -8%;
-  transform: rotate(180deg);
   width: 24vw;
 }
 #features .cloud--orange-frame {
@@ -146,6 +200,53 @@ h2 {
   z-index: 1;
 }
 
+@media (max-width: 767px) {
+  #features {
+    padding-top: 16vw;
+    padding-bottom: 26vw;
+  }
+  #features .features__content {
+    width: 90%;
+    text-align: center;
+  }
+  #features .features__content h2 {
+    font-size: 7.4vw;
+    padding: 6px 12px;
+    margin-bottom: 30px;
+  }
+  #features .features__content ul li {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  #features .features__content ul li h3 {
+    font-size: 5.5vw;
+  }
+  #features .features__content ul li h3::before {
+    width: 18px;
+    height: 18px;
+  }
+  #features .features__content ul li p {
+    font-size: 3.5vw;
+    padding: 0 12px 12px;
+    margin-left: 8px;
+  }
+  #features .cloud--small {
+    transform: rotate(180deg) scaleY(-1);
+    width: 28vw;
+    top: 21%;
+    right: 2%;
+  }
+  #features .cloud--large {
+    width: 35vw;
+    bottom: 2%;
+    left: -10%;
+  }
+  #features .cloud--orange-frame {
+    width: 52vw;
+    bottom: -17vw;
+    right: -7%;
+  }
+}
 /* ===============================
   howto
 ================================ */
@@ -245,7 +346,10 @@ h2 {
 #howto .gallery {
   position: relative;
 }
-#howto .gallery .kv {
+#howto .gallery .kv--sp {
+  display: none;
+}
+#howto .gallery .kv--pc {
   width: 90%;
 }
 #howto .gallery .gallery-content {
@@ -261,7 +365,7 @@ h2 {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url(../images/portfolio-gallery-bg.png);
+  background-image: url(../images/portfolio__gallery-cloud--pc.png);
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -489,7 +593,265 @@ h2 {
   top: 30%;
   left: 30%;
 }
+#howto .plane {
+  position: absolute;
+}
+#howto .plane.plane--green {
+  width: 16vw;
+  top: -3%;
+  left: 22%;
+}
+#howto .plane.plane--orange {
+  width: 30vw;
+  top: 5%;
+  right: 5%;
+}
 
+@media (max-width: 767px) {
+  #howto {
+    padding-top: 35vw;
+  }
+  #howto .three-step {
+    width: 100%;
+    border: none;
+    border-top: 2px solid var(--blue);
+  }
+  #howto .three-step .three-step__title {
+    padding: 0 8px;
+    margin-top: -28px;
+  }
+  #howto .three-step .three-step__title h2 {
+    font-size: 8vw;
+  }
+  #howto .three-step .three-step__title h2::before {
+    width: 8vw;
+    height: 8vw;
+    margin-top: 4px;
+  }
+  #howto .three-step ul {
+    flex-direction: column;
+    gap: 70px;
+  }
+  #howto .three-step ul li {
+    gap: 20px;
+  }
+  #howto .three-step ul li p {
+    font-size: 5vw;
+  }
+  #howto .three-step ul li p::before {
+    width: 8vw;
+    height: 8vw;
+  }
+  #howto .three-step ul li img {
+    width: 60%;
+  }
+  #howto .three-step ul li::after {
+    width: 11vw;
+    bottom: -23%;
+    right: 50%;
+    transform: translateY(0%) translateX(50%) rotate(90deg);
+  }
+  #howto .cloud:nth-child(1) {
+    top: 1%;
+    left: 3%;
+    width: 26vw;
+    height: 22vw;
+  }
+  #howto .cloud:nth-child(2) {
+    top: 21%;
+    left: -12%;
+    width: 39vw;
+    height: 32vw;
+    background-image: url(../images/cloud--orange01.png);
+  }
+  #howto .cloud:nth-child(3) {
+    top: 11%;
+    right: -9%;
+    width: 32vw;
+    height: 30vw;
+    transform: rotate(180deg);
+  }
+  #howto .cloud:nth-child(4) {
+    top: 28%;
+    right: -21%;
+    background-image: url(../images/cloud--orange01.png);
+    width: 35vw;
+    height: 30vw;
+    transform: rotate(180deg);
+  }
+  #howto .cloud:nth-child(5) {
+    top: 44%;
+    right: -20%;
+    background-image: url(../images/cloud--orange01.png);
+    width: 44vw;
+    height: 40vw;
+  }
+  #howto .balloon {
+    width: 14vw;
+  }
+  #howto .balloon.balloon--yellow {
+    top: 53%;
+    left: 14%;
+    z-index: 1;
+  }
+  #howto .balloon.balloon--blue {
+    top: 8%;
+    left: auto;
+    right: 5%;
+  }
+  #howto .balloon.balloon--green {
+    top: 12%;
+  }
+  #howto .balloon.balloon--orange {
+    top: 38%;
+  }
+  #howto .balloon.balloon--pink {
+    left: 4%;
+  }
+  #howto .plane.plane--green {
+    width: 30vw;
+    top: -2%;
+    left: 22%;
+  }
+  #howto .plane.plane--orange {
+    width: 45vw;
+    top: 19%;
+    right: 2%;
+    z-index: 1;
+  }
+  #howto .gallery {
+    background-image: url(../images/portfolio__gallery-bg.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+  }
+  #howto .gallery::before {
+    background-image: url(../images/portfolio__gallery-cloud--sp.png);
+    bottom: -1px;
+  }
+  #howto .gallery .kv--pc {
+    display: none;
+  }
+  #howto .gallery .kv--sp {
+    display: block;
+    margin-bottom: -30%;
+  }
+  #howto .gallery .gallery-content {
+    position: static;
+    width: 80%;
+    margin: auto;
+  }
+  #howto .gallery .gallery-content h3 {
+    font-size: 5vw;
+    margin-bottom: 20px;
+  }
+  #howto .gallery .gallery-content h3::before, #howto .gallery .gallery-content h3::after {
+    width: 22px;
+    background-size: contain;
+  }
+  #howto .gallery .gallery-content h3::before {
+    top: -40%;
+    left: -12%;
+  }
+  #howto .gallery .gallery-content h3::after {
+    top: -49%;
+    right: -10%;
+  }
+  #howto .gallery .gallery-content .btn {
+    width: 90%;
+  }
+  #howto .gallery .gallery-content .btn a {
+    font-size: 5vw;
+    padding: 12px 20px;
+  }
+  #howto .upload {
+    padding: 200px 0 200px;
+  }
+  #howto .upload h1 {
+    font-size: 7vw;
+    margin-bottom: 0;
+  }
+  #howto .upload h1 span {
+    font-size: 10vw;
+    position: static;
+  }
+  #howto .upload h1 span::before {
+    font-size: 7vw;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+  }
+  #howto .upload .upload-btn {
+    width: 95%;
+    gap: 20px;
+  }
+  #howto .upload .upload-btn .btn {
+    width: 50%;
+  }
+  #howto .upload .upload-btn .btn a {
+    font-size: 4vw;
+    padding: 10px 0px;
+  }
+  #howto .upload .flower.flower--white {
+    top: 3%;
+    left: 27%;
+    width: 25vw;
+  }
+  #howto .upload .flower.flower--skyblue {
+    top: -18%;
+    right: 3%;
+    width: 14vw;
+  }
+  #howto .upload .flower.flower--blue {
+    top: -15%;
+    left: 0%;
+    width: 16vw;
+  }
+  #howto .upload .flower.flower--red-small {
+    right: 17%;
+    transform: scale(-1, 1);
+    width: 19vw;
+  }
+  #howto .upload .flower.flower--green {
+    top: auto;
+    bottom: 12%;
+    right: 20%;
+    transform: rotate(-80deg) scale(-1, 1);
+    width: 18vw;
+  }
+  #howto .upload .flower.flower--purple {
+    right: 11%;
+    width: 12vw;
+  }
+  #howto .upload .flower.flower--pastel-pink {
+    top: 22%;
+    left: 8%;
+    width: 17vw;
+  }
+  #howto .upload .flower.flower--red-large {
+    top: 60%;
+    left: 13%;
+    width: 19vw;
+  }
+  #howto .upload .flower.flower--pastel-green {
+    bottom: 0%;
+    top: auto;
+    left: 33%;
+    width: 21vw;
+  }
+  #howto .upload .flower.flower--pastel-orange {
+    top: auto;
+    bottom: -9%;
+    right: 3%;
+    width: 20vw;
+  }
+  #howto .upload .flower.flower--pastel-purple {
+    top: auto;
+    bottom: -17%;
+    left: 2%;
+    width: 20vw;
+  }
+}
 /* ===============================
   for-companies
 ================================ */
@@ -546,4 +908,37 @@ h2 {
   width: 390px;
   margin: auto;
   display: block;
+}
+
+@media (max-width: 767px) {
+  #for-companies {
+    margin-bottom: 50px;
+    background-size: 110%;
+    background-position: bottom;
+  }
+  #for-companies h2 {
+    font-size: 8vw;
+    padding: 5px 16px;
+    margin-bottom: 8px;
+  }
+  #for-companies p {
+    font-size: 3vw;
+    margin-bottom: 30px;
+  }
+  #for-companies ul {
+    width: 95%;
+    margin-bottom: 35px;
+  }
+  #for-companies ul li {
+    font-size: 4vw;
+    margin-bottom: 10px;
+  }
+  #for-companies ul li::before {
+    width: 4vw;
+    height: 4vw;
+  }
+  #for-companies .cta {
+    width: 60%;
+    margin-bottom: -90px;
+  }
 }/*# sourceMappingURL=page-portfolio.css.map */

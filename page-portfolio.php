@@ -3,12 +3,13 @@
   <!-- メインビジュアル -->
   <section id="hero">
 		<img class="cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
-		<img class="cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
-		<img class="cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
+		<img class="cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/cloud--orange01.png" alt="">
+		<img class="cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/cloud--orange01.png" alt="">
 		<div class="hero__text">
-			<h1>作品で<span class="orange">未来</span>を<span class="blue">引き寄せろ！</span><br><span class="blue">スカウト</span>が届く、<span class="orange">次世代の就活サイト</span></h1>
-			<p><span>自己PRよりポートフォリオ</span>あなたらしさで未来を引き寄せよう</p>
-			<img src="<?php echo get_template_directory_uri() ;?>/images/cta.png" alt="">
+			<h1>作品で<span class="orange">未来</span>を<br><span class="blue">引き寄せろ！</span></h1>
+			<h1><span class="blue">スカウト</span>が届く、<br><span class="orange">次世代の就活サイト</span></h1>
+			<p><span>自己PRよりポートフォリオ</span><br>あなたらしさで未来を引き寄せよう</p>
+			<img src="<?php echo get_template_directory_uri() ;?>/images/cta-btn--portfolio.png" alt="">
 		</div>
 		<img class="hero-image" src="<?php echo get_template_directory_uri() ;?>/images/portfolio-hero.png" alt="">
   </section>
@@ -32,8 +33,8 @@
 				</li>
 			</ul>
 		</div>
-		<img class="target cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
-		<img class="target cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange.png" alt="">
+		<img class="target cloud cloud--large" src="<?php echo get_template_directory_uri(); ?>/images/cloud--orange01.png" alt="">
+		<img class="target cloud cloud--small" src="<?php echo get_template_directory_uri(); ?>/images/cloud--orange01.png" alt="">
 		<img class="target cloud cloud--orange-frame" src="<?php echo get_template_directory_uri(); ?>/images/small-cloud--orange-frame.png" alt="">
   </section>
 
@@ -48,6 +49,8 @@
 		<img class="balloon balloon--green" src="<?php echo get_template_directory_uri() ?>/images/balloon--green.png" alt="">
 		<img class="balloon balloon--orange" src="<?php echo get_template_directory_uri() ?>/images/balloon--orange.png" alt="">
 		<img class="balloon balloon--pink" src="<?php echo get_template_directory_uri() ?>/images/balloon--pink.png" alt="">
+		<img class="plane plane--green" src="<?php echo get_template_directory_uri() ?>/images/plane--green.png" alt="">
+		<img class="plane plane--orange" src="<?php echo get_template_directory_uri() ?>/images/plane--orange.png" alt="">
 		<!-- 使い方3ステップ -->
 		<div class="three-step">
 			<div class="three-step__title"><h2>使い方3ステップ</h2></div>
@@ -68,7 +71,8 @@
 		</div>
 		<!-- ギャラリー紹介 -->
 		<div class="gallery">
-			<img class="kv" src="<?php echo get_template_directory_uri(); ?>/images/portfolio-girl.png" alt="">
+			<img class="kv--pc" src="<?php echo get_template_directory_uri(); ?>/images/portfolio-girl.png" alt="">
+			<img class="kv--sp" src="<?php echo get_template_directory_uri(); ?>/images/portfolio-girl--sp.png" alt="">
 			<div class="gallery-content">
 				<h3>先輩のポートフォリオを<br>参考にしよう！</h3>
 				<div class="btn btn--orange"><a href="#"><span>作品ギャラリーを見る</span></a></div>
@@ -87,7 +91,7 @@
 			<img class="flower flower--pastel-green" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-green.png" alt="">
 			<img class="flower flower--pastel-orange" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-orange.png" alt="">
 			<img class="flower flower--pastel-purple" src="<?php echo get_template_directory_uri(); ?>/images/page-chat__point-flower--pastel-purple.png" alt="">
-			<h1><span>1 枚アップ	</span>してみよう</h1>
+			<h1><span>1 枚アップ	</span>してみよう!</h1>
 			<div class="upload-btn">
 				<div class="btn btn--orange"><a href="#"><span>今すぐアップロード</span></a></div>
 				<div class="btn btn--blue"><a href="#"><span>下書きから作る</span></a></div>
