@@ -3,8 +3,8 @@
 <main>
 	<section class="header-title">
 		<small>企業の方向け</small>
-		<h1>お問い合わせ</h1>
-		<div class="en">contact</div>
+		<h1>会員登録</h1>
+		<div class="en">join</div>
 	</section>
 
 	<section class="form-wrapper">
@@ -20,7 +20,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input name="companyName" type="text" class="form-control" placeholder="例：テキストテキストテキスト" required>
+					<input name="companyName" type="text" class="form-control" placeholder="例：株式会社〇〇商事" required>
 				</div>
 			</div>
 
@@ -31,7 +31,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input name="companyNameKana" type="text" class="form-control" placeholder="例：テキストテキストテキスト" required>
+					<input name="companyNameKana" type="text" class="form-control" placeholder="例：カブシキガイシャ〇〇ショウジ" required>
 				</div>
 			</div>
 
@@ -42,18 +42,18 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input name="name" type="text" class="form-control" placeholder="例：テキストテキストテキスト" required>
+					<input name="name" type="text" class="form-control" placeholder="例：鈴木花子" required>
 				</div>
 			</div>
 
-			<!-- 担当者名　読み仮名（カナ） -->
+			<!-- 担当者名　読み仮名（かな） -->
 			<div class="form-row">
 				<div class="form-label">
-					担当者名（カナ）
+					担当者名（かな）
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input name="nameKana" type="text" class="form-control" placeholder="例：テキストテキストテキスト" required>
+					<input name="nameKana" type="text" class="form-control" placeholder="例：すずきはなこ" required>
 				</div>
 			</div>
 
@@ -102,7 +102,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input name="zip" type="text" class="form-control" placeholder="例：000-0000" required>
+					<input name="zip" type="text" class="form-control" placeholder="例：123-4567" required>
 				</div>
 			</div>
 
@@ -113,7 +113,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input name="address" type="text" class="form-control" placeholder="例：テキストテキストテキスト" required>
+					<input name="address" type="text" class="form-control" placeholder="例：東京都千代田区霞ヶ関" required>
 				</div>
 			</div>
 
@@ -135,7 +135,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input name="businessSummary" type="text" class="form-control" placeholder="例：テキストテキストテキスト" required>
+					<input name="businessSummary" type="text" class="form-control" placeholder="例：Web制作、デザイン全般、マーケティング事業" required>
 				</div>
 			</div>
 
@@ -168,7 +168,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<input name="representativeName" type="text" class="form-control" placeholder="例：テキストテキストテキスト" required>
+					<input name="representativeName" type="text" class="form-control" placeholder="例：鈴木太郎" required>
 				</div>
 			</div>
 
@@ -201,7 +201,7 @@
 					<span class="required-badge">必須</span>
 				</div>
 				<div class="form-field">
-					<textarea name="idealCandidate" class="form-control" placeholder="例：テキストテキストテキスト" required></textarea>
+					<textarea name="idealCandidate" class="form-control" placeholder="例：明るくて発想力が豊かたな方" required></textarea>
 				</div>
 			</div>
 
@@ -211,7 +211,7 @@
 					その他アピールポイント
 				</div>
 				<div class="form-field">
-					<textarea name="appealPoint" class="form-control" placeholder="例：テキストテキストテキスト"></textarea>
+					<textarea name="appealPoint" class="form-control" placeholder="例：明るい未来をぜひ一緒に作りましょう。"></textarea>
 				</div>
 			</div>
 
@@ -256,6 +256,14 @@
 	  return true;
 	}
 	  
+	function isOnlyNumber(value) {
+	  return /^[0-9]+$/.test(value);
+	}
+	  
+	function isHyphenNumber(value) {
+	  return /^[0-9-]+$/.test(value);
+	}
+	  
 	document.getElementById('enterpriseForm').addEventListener('submit', async function(e) {
 	  e.preventDefault();
 
@@ -263,12 +271,39 @@
 	  const submitBtn = form.querySelector('button[type="submit"]');
 	  const loading = document.getElementById('loadingOverlay');
 		
-	  //  メールバリデーション
+	  // --------------------
+	  // メールバリデーション
+	  // --------------------
 	  if (!isAllowedEmail(form.email.value)) {
 		alert(
 		  '担当者メールアドレスは\n' +
-		  'Googleアカウントのメールアドレスをご入力ください。'
+		  'Googleアカウントのメールアドレスをご入力ください。'
 		);
+		return;
+	  }
+
+	  // --------------------
+	  // 数字のみバリデーション
+	  // --------------------
+
+	  // 郵便番号
+	  if (!isHyphenNumber(form.zip.value)) {
+		alert('郵便番号は数字のみで入力してください。');
+		form.zip.focus();
+		return;
+	  }
+
+	  // 電話番号（任意入力）
+	  if (form.tel.value && !isOnlyNumber(form.tel.value)) {
+		alert('電話番号は数字のみで入力してください。');
+		form.tel.focus();
+		return;
+	  }
+
+	  // 設立日（YYYYMMDD）
+	  if (!isOnlyNumber(form.establishedDate.value)) {
+		alert('設立日は数字のみ（YYYYMMDD）で入力してください。');
+		form.establishedDate.focus();
 		return;
 	  }
 
@@ -296,11 +331,10 @@
 		  employees: form.employees.value,
 		  idealCandidate: form.idealCandidate.value,
 		  appealPoint: form.appealPoint.value,
-		  type: "enterprise"
 		});
 
 		const res = await fetch(
-		  'https://script.google.com/macros/s/AKfycbxYlmS7j4OWyO8NG_iNulDBm7BMbIe8R3zu54kjc7hetgQo_U1qmWfs90HythsEJ-5xaw/exec',
+		  'https://script.google.com/macros/s/AKfycbzIFu9yvfzW1KrS0M34hOFcsvms4A66e9UnZi3653q9bx0IzvRUWV-SZScID7fLx7fV2A/exec',
 		  {
 			method: 'POST',
 			body: params

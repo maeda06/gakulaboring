@@ -3,8 +3,8 @@
 <main>
 	<section class="header-title">
 		<small>求職者向け</small>
-		<h1>お問い合わせ</h1>
-		<div class="en">contact</div>
+		<h1>会員登録</h1>
+		<div class="en">join</div>
 	</section>
 
 	<section class="form-wrapper">
@@ -126,7 +126,7 @@
 					その他アピールポイント
 				</div>
 				<div class="form-field">
-					<textarea name="appealPoint" class="form-control" placeholder="例：テキストテキストテキスト"></textarea>
+					<textarea name="appealPoint" class="form-control" placeholder="例：フリーランスデザイナーとして今後頑張りたいと思っています。やる気あります。"></textarea>
 				</div>
 			</div>
 			<div class="submit-wrapper">
@@ -167,6 +167,14 @@
 	  // それ以外は独自ドメイン（Workspace含む想定）
 	  return true;
 	}
+	  
+	function isOnlyNumber(value) {
+	  return /^[0-9]+$/.test(value);
+	}
+	  
+	function isHyphenNumber(value) {
+	  return /^[0-9-]+$/.test(value);
+	}
 	 
 	  document.getElementById('studentForm').addEventListener('submit', async function(e) {
 	  e.preventDefault();
@@ -175,12 +183,39 @@
 	  const submitBtn = form.querySelector('button[type="submit"]');
 	  const loading = document.getElementById('loadingOverlay');
 
+	  // --------------------
 	  // メールバリデーション
+	  // --------------------
 	  if (!isAllowedEmail(form.email.value)) {
 		alert(
-		  'メールアドレスは\n' +
-		  'Gmail または Google Workspace のメールアドレスをご入力ください。'
+		  '担当者メールアドレスは\n' +
+		  'Googleアカウントのメールアドレスをご入力ください。'
 		);
+		return;
+	  }
+
+	  // --------------------
+	  // 数字のみバリデーション
+	  // --------------------
+
+	  // 郵便番号
+	  if (!isHyphenNumber(form.zip.value)) {
+		alert('郵便番号は数字のみで入力してください。');
+		form.zip.focus();
+		return;
+	  }
+
+	  // 電話番号（任意入力）
+	  if (form.tel.value && !isOnlyNumber(form.tel.value)) {
+		alert('電話番号は数字のみで入力してください。');
+		form.tel.focus();
+		return;
+	  }
+
+	  // 誕生日（YYYYMMDD）
+	  if (!isOnlyNumber(form.birthDate.value)) {
+		alert('誕生日は数字のみ（YYYYMMDD）で入力してください。');
+		form.establishedDate.focus();
 		return;
 	  }
 
@@ -201,11 +236,10 @@
 		  skills: form.skills.value,
 		  portfolio: form.portfolio.value,
 		  appealPoint: form.appealPoint.value,
-		  type: 'student'
 		});
 
 		const res = await fetch(
-		  'https://script.google.com/macros/s/AKfycbzg2fiizF_GsasX5dYTnynV5EUYPxel3wo5hr5IVyosiQV0alxcuXutQuLw1GowBgynkg/exec',
+		  'https://script.google.com/macros/s/AKfycbw40S-gLyzg6lQ7G1qNpThZU70CiMnJ50_Xerik4Py1Qo1AJPEeNRkqRRTdDIIhbQXxPQ/exec',
 		  {
 			method: 'POST',
 			body: params
