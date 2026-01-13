@@ -8,8 +8,8 @@
 		<span class="cloud cloud--small cloud--white cloud--right"></span>
 		<span class="cloud cloud--large cloud--white cloud--right"></span>
 		<span class="cloud cloud--midium cloud--blue cloud--right"></span>
-		<h1>ホンネが見えると、未来が近くなる</h1>
-		<p class="sub-title">ES・口コミ・体験談体験談でつづる・働く未来の<span>ヒント</span></p>
+		<h1>ホンネが見えると、<br>未来が近くなる</h1>
+		<p class="sub-title">ES・口コミ・体験談でつづる・働く未来の<span>ヒント</span></p>
 		<div class="btn-wrapper">
 			<div class="btn btn--orange">
 				<p>リアルなES、見ちゃおう</p>
@@ -39,7 +39,7 @@
 			<li>志望企業の<span>実際のES (エントリーシート)</span>が読める</li>
 			<li>社員の<span>体験談や本音の口コミ</span>をチェックできる</li>
 			<li>選考の流れや面接の雰囲気も、<span>リアルな投稿</span>でわかる</li>
-			<li>あなたもチャット形式で<span>気軽に書き込み</span>できる</li>
+			<li>あなたもチャット形式で<span>気軽に書き込み</span>できる!</li>
 		</ul>
 	</section>
 
@@ -49,7 +49,7 @@
 			<ul>
 				<li>
 					<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/preview-point-01.png" alt=""></div>
-					<p>企業にはない<br>「リアルな声」が満載</p>
+					<p>企業ページにはない<br>「リアルな声」が満載</p>
 				</li>
 				<li>
 					<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/preview-point-02.png" alt=""></div>

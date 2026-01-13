@@ -18,11 +18,14 @@
 #hero h1 {
   font-size: 74px;
 }
+#hero h1 br {
+  display: none;
+}
 #hero p.sub-title {
   font-size: 32px;
   font-weight: bold;
   padding: 10px;
-  background-color: #FFF;
+  background-color: #fff;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 80px;
@@ -30,7 +33,7 @@
 #hero p.sub-title span {
   font-family: "Mochiy Pop One", sans-serif;
   font-size: 36px;
-  color: #FF0000;
+  color: #ff0000;
 }
 #hero .btn-wrapper {
   display: flex;
@@ -77,6 +80,7 @@
 #hero .cloud:nth-child(1) {
   top: 10%;
   left: 14.44vw;
+  background-image: url(../images/large-cloud--orange.png);
 }
 #hero .cloud:nth-child(2) {
   top: 50%;
@@ -95,10 +99,13 @@
   top: 50%;
   right: 2.8472vw;
   transform: translateY(-50%);
+  background-image: url(../images/large-cloud--orange.png);
 }
 #hero .cloud:nth-child(6) {
   bottom: 10%;
   right: 18.9583vw;
+  background-image: url(../images/large-cloud--orange.png);
+  transform: scaleX(1);
 }
 #hero .cloud--small {
   width: 6.77vw;
@@ -112,6 +119,96 @@
   width: 13.194vw;
   height: 9.72vw;
 }
+@media (max-width: 767px) {
+  #hero {
+    height: auto;
+    padding-top: 150px;
+    padding-bottom: 250px;
+    background-size: 215%;
+    background-position: 28% bottom;
+    margin-bottom: -1px;
+  }
+  #hero h1 {
+    font-size: 10.2vw;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  #hero h1 br {
+    display: block;
+  }
+  #hero p.sub-title {
+    font-size: 3.6vw;
+    margin-bottom: 35px;
+  }
+  #hero p.sub-title span {
+    font-size: 3.8vw;
+  }
+  #hero .btn-wrapper {
+    flex-direction: column;
+    gap: 35px;
+  }
+  #hero .btn-wrapper p {
+    font-size: 4vw;
+    font-weight: 900;
+  }
+  #hero .btn-wrapper p::before, #hero .btn-wrapper p::after {
+    background-size: contain;
+  }
+  #hero .btn-wrapper p::before {
+    width: 5.25vw;
+    top: -95%;
+  }
+  #hero .btn-wrapper p::after {
+    width: 3.88vw;
+    top: -70%;
+  }
+  #hero .btn-wrapper .btn {
+    width: 80%;
+    margin: auto;
+  }
+  #hero .btn-wrapper .btn a {
+    padding: 12px 0;
+  }
+  #hero .btn-wrapper .btn span {
+    font-size: 5vw;
+  }
+  #hero .cloud:nth-child(1) {
+    width: 33.7vw;
+    height: 23.05vw;
+    top: 7%;
+    left: -4%;
+  }
+  #hero .cloud:nth-child(2) {
+    width: 29vw;
+    height: 40vw;
+    top: 42%;
+    left: -15%;
+  }
+  #hero .cloud:nth-child(3) {
+    width: 22vw;
+    height: 30vw;
+    bottom: 16%;
+    left: 15%;
+  }
+  #hero .cloud:nth-child(4) {
+    width: 26vw;
+    height: 25vw;
+    top: 7%;
+    right: 8%;
+  }
+  #hero .cloud:nth-child(5) {
+    width: 30vw;
+    height: 30vw;
+    top: 56%;
+    right: -14%;
+  }
+  #hero .cloud:nth-child(6) {
+    width: 30vw;
+    height: 30vw;
+    bottom: 16%;
+    right: -7%;
+  }
+}
 
 /* ===============================
   what
@@ -122,7 +219,7 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  color: #FFF;
+  color: #fff;
   padding-top: 100px;
   padding-bottom: 60px;
   position: relative;
@@ -174,7 +271,7 @@
   content: "";
   width: 11px;
   height: 11px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 #what ul li span {
   background-color: var(--orange);
@@ -187,6 +284,8 @@
 #what .cloud:nth-child(2) {
   top: 36.1vw;
   left: 2.1527vw;
+  background-image: url(../images/large-cloud--orange.png);
+  transform: scale(-1);
 }
 #what .cloud:nth-child(3) {
   top: 22.1527vw;
@@ -238,6 +337,96 @@
   width: 10.06944vw;
 }
 
+@media (max-width: 767px) {
+  #what {
+    background-size: 330%;
+    padding-top: 250px;
+    padding-bottom: 200px;
+    background-position: bottom;
+  }
+  #what h1 {
+    font-size: 13.7vw;
+    padding: 0;
+    margin-bottom: 130px;
+  }
+  #what h1::before {
+    top: 59%;
+    height: 108vw;
+  }
+  #what ul {
+    margin-top: -25px;
+    width: 90%;
+  }
+  #what ul li {
+    font-size: 3.5vw;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+  #what ul li::before {
+    margin-right: 8px;
+  }
+  #what .cloud.cloud--small {
+    width: 23vw;
+    height: 25vw;
+  }
+  #what .cloud.cloud--large {
+    width: 50vw;
+    height: 40vw;
+  }
+  #what .cloud:nth-child(1) {
+    top: 7%;
+    left: 8%;
+  }
+  #what .cloud:nth-child(2) {
+    top: 43%;
+    left: -20%;
+  }
+  #what .cloud:nth-child(3) {
+    top: 19%;
+    right: -10%;
+    width: 29vw;
+    transform: scaleX(-1);
+  }
+  #what .cloud:nth-child(4) {
+    top: 49%;
+    right: 4%;
+    width: 30vw;
+    transform: scale(-1, -1);
+  }
+  #what .bg--duck {
+    top: 21%;
+    left: 18%;
+    width: 17vw;
+  }
+  #what .bg--microphone {
+    top: 38%;
+    left: 25%;
+    width: 16vw;
+    z-index: 1;
+  }
+  #what .bg--hamburger {
+    top: auto;
+    bottom: -11%;
+    left: 6%;
+    width: 23vw;
+  }
+  #what .bg--pudding {
+    top: 30%;
+    right: 1%;
+    width: 30vw;
+  }
+  #what .bg--frying-pan {
+    top: 50%;
+    right: 20%;
+    width: 23vw;
+  }
+  #what .bg--bench {
+    top: auto;
+    bottom: 1%;
+    right: -3%;
+    width: 23vw;
+  }
+}
 /* ===============================
   point
 ================================ */
@@ -255,8 +444,9 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+  font-family: var(--font-mochiy);
   font-size: 48px;
-  color: #FFF;
+  color: #fff;
   padding: 10px 40px;
   margin-bottom: 30px;
   background-color: var(--orange);
@@ -268,7 +458,7 @@
 }
 #point ul li {
   width: 18%;
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -318,7 +508,7 @@
 }
 #point ul li p {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 900;
 }
 #point .cloud {
   top: 0;
@@ -328,6 +518,41 @@
   transform: rotate(180deg);
 }
 
+@media (max-width: 767px) {
+  #point {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: url(../images/review-point-bg--sp.png);
+  }
+  #point .cloud {
+    background-image: url(../images/large-cloud--orange.png);
+    transform: scaleX(1);
+    top: 2%;
+    right: 7%;
+    width: 40vw;
+    height: 30vw;
+  }
+  #point h2 {
+    font-size: 9vw;
+    padding: 5px 40px;
+  }
+  #point ul {
+    flex-direction: column;
+  }
+  #point ul li {
+    width: 70%;
+    margin: auto;
+    padding: 50px 0px;
+  }
+  #point ul li::before, #point ul li::after {
+    width: 13vw;
+    height: 10vw;
+    top: 8px;
+  }
+  #point ul li p {
+    font-size: 18px;
+  }
+}
 /* ===============================
   flow
 ================================ */
@@ -348,6 +573,7 @@
 }
 #flow .title h2 {
   position: relative;
+  font-family: var(--font-mochiy);
 }
 #flow .title h2::before, #flow .title h2::after {
   position: absolute;
@@ -424,7 +650,7 @@
   display: inline-block;
   width: 6.04vw;
   height: 6.04vw;
-  background-color: #83D9FF;
+  background-color: #83d9ff;
   position: absolute;
   top: 0;
   left: 50%;
@@ -442,6 +668,42 @@
   box-sizing: content-box;
 }
 
+@media (max-width: 767px) {
+  #flow .title {
+    top: -8px;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  #flow .title h2 {
+    font-size: 10vw;
+  }
+  #flow .title h2::before, #flow .title h2::after {
+    width: 12vw;
+  }
+  #flow ul {
+    flex-direction: column;
+    gap: 50px;
+  }
+  #flow ul li {
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  #flow ul li::before, #flow ul li:first-child::before {
+    clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0% 95%, 0% 50%, 0% 0%);
+  }
+  #flow ul li span {
+    font-size: 16vw;
+  }
+  #flow ul li .icon::before {
+    width: 21vw;
+    height: 21vw;
+  }
+  #flow ul li p {
+    font-size: 5vw;
+  }
+}
 /* ===============================
   login
 ================================ */
@@ -461,7 +723,8 @@
   width: 90%;
 }
 #login h2 {
-  color: #FFF;
+  color: #fff;
+  font-family: var(--font-mochiy);
   font-size: 48px;
   padding: 16px 20px;
   background-color: var(--black);
@@ -503,10 +766,10 @@
 }
 #login .login-inner p {
   font-size: 29px;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   padding: 10px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   margin-bottom: 48px;
 }
 #login .login-inner ul {
@@ -515,7 +778,7 @@
 #login .login-inner ul li {
   font-size: 36px;
   font-weight: bold;
-  color: #FFF;
+  color: #fff;
   position: relative;
   padding-left: 43px;
 }
@@ -534,4 +797,46 @@
   display: block !important;
   width: 30%;
   margin: auto;
+}
+
+@media (max-width: 767px) {
+  #login {
+    background-image: url(../images/page-review__login-bg--sp.png);
+    background-position: left 50%;
+    padding-bottom: 230px;
+  }
+  #login h2 {
+    font-size: 4.5vw;
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+  #login h2::before, #login h2::after {
+    width: 10.8vw;
+    height: 10.8vw;
+  }
+  #login .login-inner p {
+    font-size: 3vw;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 5px;
+  }
+  #login .login-inner ul {
+    margin: 0 auto 35px;
+  }
+  #login .login-inner ul li {
+    font-size: 3.8vw;
+    font-weight: 900;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #login .login-inner ul li::before {
+    width: 3vw;
+    height: 3vw;
+  }
+  #login .cta {
+    width: 80%;
+  }
 }/*# sourceMappingURL=page-review.css.map */
