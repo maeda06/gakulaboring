@@ -21,8 +21,8 @@
 					<a href="#">ヘルプページ</a>
 				</nav>
 				<div class="footer-btn">
-					<a href="#">ログイン</a>
-					<a href="#">会員登録</a>
+					<a class="worker" href="/contact-worker">会員登録</a>
+					<a class="company" href="/contact-company">企業登録</a>
 				</div>
 			</div>
 		</div>

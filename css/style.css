@@ -430,11 +430,16 @@ footer .footer-inner .footer-btn a {
   text-align: center;
   display: block;
   padding: 1vw 4.5vw;
-  background-color: var(--orange);
   border: 3px solid #FFF;
   border-radius: 100vh;
   margin-bottom: 20px;
   transition: all 0.5s;
+}
+footer .footer-inner .footer-btn a.worker {
+  background-color: var(--blue);
+}
+footer .footer-inner .footer-btn a.company {
+  background-color: var(--orange);
 }
 footer .footer-inner .footer-btn a:hover {
   background-color: #202020;
@@ -574,6 +579,19 @@ section .btn a {
 }
 .btn--black a:hover {
   background-color: var(--orange);
+}
+
+.btn .worker {
+  background-color: var(--blue);
+}
+.btn .worker:hover {
+  background-color: var(--black);
+}
+.btn .company {
+  background-color: var(--orange);
+}
+.btn .company:hover {
+  background-color: var(--black);
 }
 
 .btn a::before {

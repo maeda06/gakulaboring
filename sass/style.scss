@@ -495,11 +495,18 @@ footer {
         text-align: center;
         display: block;
         padding: 1vw 4.5vw;
-        background-color: var(--orange);
         border: 3px solid #FFF;
         border-radius: 100vh;
         margin-bottom: 20px;
         transition: all .5s;
+
+        &.worker {
+          background-color: var(--blue);
+        }
+
+        &.company {
+          background-color: var(--orange);
+        }
 
         &:hover {
           background-color: #202020;
@@ -668,6 +675,21 @@ section .btn a {
 
   &:hover {
     background-color: var(--orange);
+  }
+}
+
+.btn {
+  .worker {
+    background-color: var(--blue);
+    &:hover {
+      background-color: var(--black);
+    }
+  }
+  .company {
+    background-color: var(--orange);
+    &:hover {
+      background-color: var(--black);
+    }
   }
 }
 

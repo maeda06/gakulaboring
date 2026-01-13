@@ -33,8 +33,8 @@
 		</nav>
 		<div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo/logo04.png" alt=""></a></div>
 		<div class="btn btn--black">
-			<a href="#"><span>ログイン</span></a>
-			<a href="#"><span>会員登録</span></a>
+			<a class="worker" href="/contact-worker"><span>会員登録</span></a>
+			<a class="company" href="/contact-company"><span>企業登録</span></a>
 			<button type="button">
 				<span class="line"></span>
 			</button>
@@ -56,8 +56,8 @@
 		</nav>
 		<div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo/logo04.png" alt=""></a></div>
 		<div class="btn btn--black">
-			<a href="#"><span>ログイン</span></a>
-			<a href="#"><span>会員登録</span></a>
+			<a class="worker" href="/contact-worker"><span>会員登録</span></a>
+			<a class="company" href="/contact-company"><span>企業登録</span></a>
 			<button type="button">
 				<span class="line"></span>
 			</button>
