@@ -37,8 +37,8 @@
 		<h2>何ができる</h2>
 		<ul>
 			<li>初心者向けから上級まで、<span>いろんな動画講座が見放題</span></li>
-			<li><span>「Figma」「Canva」「動画編集」「SNSマーケ」「お金の勉強」</span></li>
-			<li>現場で役立つ知識だけギュッと凝縮！<span>10分からサクッと学べるから続けやすい◎</span></li>
+			<li><span>「Figma」「Canva」「動画編集」「SNSマーケ」「お金の勉強」</span><br>まで、超実用的ラインナップ</li>
+			<li>現場で役立つ知識だけギュッと凝縮！<br><span>10分からサクッと学べるから続けやすい◎</span></li>
 		</ul>
 	</section>
 	<section id="point">
@@ -51,7 +51,8 @@
 			<li>なんか、周りと差をつけたいかも…！</li>
 			<li>講座ってガチすぎて怖い…もっと気軽に学びたい</li>
 		</ul>
-		<img class="bg--bubble" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__point-bg.png" alt="">
+		<img class="bg--bubble pc" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__point-bg.png" alt="">
+		<img class="bg--bubble sp" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__point-bg--sp.png" alt="">
 	</section>
 	<section id="flow">
 		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-fugu.png" alt="">
@@ -66,25 +67,25 @@
           <div class="flow-item">
             <span class="flow-item__number">1</span>
             <div class="flow-item__content">
-              <p>学生・フリーランスとして登録（無料）</p>
+              <p>学生・フリーランスとして無料登録<br>（1分で完了！）</p>
             </div>
           </div>
           <div class="flow-item">
             <span class="flow-item__number">2</span>
             <div class="flow-item__content">
-              <p>「しゃべり場」にログインして、タイムラインをチェック</p>
+              <p>ログイン後、動画講座のページへGO</p>
             </div>
           </div>
           <div class="flow-item">
             <span class="flow-item__number">3</span>
             <div class="flow-item__content">
-              <p>「これ気になる」<br>「わかる！」と思ったら反応してみよう</p>
+              <p>興味のある講座をクリック→すぐに再生OK！</p>
             </div>
           </div>
           <div class="flow-item">
             <span class="flow-item__number">4</span>
             <div class="flow-item__content">
-              <p>自分の悩みや就活エピソードも気軽に投稿！</p>
+              <p>気に入ったら「お気に入り」に保存して、あとから見直しもできるよ</p>
             </div>
           </div>
         </div>
@@ -100,7 +101,7 @@
 		<img class="bg" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__flow--bg-desk.png" alt="">
 		<div class="course__inner">
 			<img class="bg--flower" src="<?php echo get_template_directory_uri(); ?>/images/page-skillup__course--flower-white.png" alt="">
-        <h2 class="section-title section-title--black">ご利用にはログインが必要です</h2>
+        <h2 class="section-title section-title--black">講座ラインナップ一部紹介</h2>
         <p>※講座は順次追加予定！「今欲しい！」が見つかるかも。</p>
         <div class="course__content">
           <ul>

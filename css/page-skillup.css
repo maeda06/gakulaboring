@@ -15,7 +15,7 @@ main #hero::after {
   height: 160vh;
   background-image: url(../images/page-skillup__hero-bg.png);
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
@@ -149,6 +149,55 @@ main #hero .flower:nth-child(7) {
 main #hero .flower--blue {
   width: 7.5vw;
 }
+@media (max-width: 767px) {
+  main #hero {
+    background-image: url(../images/page-skillup__hero-bg--sp.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    padding-top: 130px;
+    padding-bottom: 70vw;
+  }
+  main #hero .flower {
+    display: none;
+  }
+  main #hero::after {
+    display: none;
+  }
+  main #hero h1 {
+    font-size: 9.8vw;
+    margin-bottom: 30px;
+  }
+  main #hero h1.row1 {
+    font-size: 8.4vw;
+  }
+  main #hero h1.row1::after {
+    width: 11vw;
+    height: 8vw;
+  }
+  main #hero .sub {
+    font-size: 5vw;
+  }
+  main #hero .kv__cta .kv__cta-text {
+    font-size: 4.1vw;
+  }
+  main #hero .kv__cta .kv__cta-text::before {
+    width: 5.4vw;
+    height: 7.3vw;
+  }
+  main #hero .kv__cta .kv__cta-text::after {
+    width: 5vw;
+    height: 5vw;
+  }
+  main #hero .kv__cta .kv__button {
+    font-size: 5.7vw;
+    padding: 10px 0;
+    width: 90%;
+    border: 4px solid #fff;
+    box-shadow: 3px 3px 0px 0px #fff;
+  }
+}
 main #what {
   display: flex;
   color: var(--black);
@@ -167,7 +216,7 @@ main #what::before {
   background-position: top;
   background-repeat: no-repeat;
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   z-index: -2;
 }
@@ -208,6 +257,9 @@ main #what ul li span {
   color: #fff;
   background-color: var(--orange);
   padding: 5px;
+}
+main #what ul li br {
+  display: none;
 }
 main #what .flower {
   position: absolute;
@@ -286,6 +338,118 @@ main #what .kingyo-wrap .kingyo:nth-child(4) {
   bottom: -20%;
   left: 25%;
   z-index: 1;
+}
+@media (max-width: 767px) {
+  main #what {
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 60px;
+    margin-top: 30px;
+    gap: 0;
+  }
+  main #what::before {
+    background-size: 250%;
+    background-position: 48% -38%;
+  }
+  main #what h2 {
+    font-size: 14vw;
+    -webkit-text-stroke-width: 0;
+    margin-bottom: 50px;
+  }
+  main #what ul {
+    width: 100%;
+    padding: 10px 16px;
+  }
+  main #what ul li {
+    font-size: 2.9vw;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-weight: 900;
+    padding-left: 16px;
+  }
+  main #what ul li::before {
+    width: 8px;
+    height: 8px;
+  }
+  main #what ul li span {
+    padding: 3px;
+  }
+  main #what ul li br {
+    display: block;
+  }
+  main #what .flower.flower--flat {
+    width: 15vw;
+  }
+  main #what .flower:nth-child(1) {
+    top: -22%;
+  }
+  main #what .flower:nth-child(2) {
+    top: 13%;
+    left: 18%;
+    width: 23vw;
+  }
+  main #what .flower:nth-child(3) {
+    top: 95%;
+    left: 65%;
+    width: 14vw;
+  }
+  main #what .flower:nth-child(4) {
+    top: 33%;
+    left: 3%;
+    width: 20vw;
+  }
+  main #what .flower:nth-child(5) {
+    top: 92%;
+    left: 3%;
+    width: 18vw;
+  }
+  main #what .flower:nth-child(6) {
+    top: 107%;
+    left: 24%;
+    width: 23vw;
+  }
+  main #what .flower:nth-child(7) {
+    top: 52%;
+    left: 51%;
+    width: 17vw;
+  }
+  main #what .flower:nth-child(8) {
+    top: 103%;
+    right: 1%;
+    width: 16vw;
+    z-index: 1;
+  }
+  main #what .flower:nth-child(9) {
+    top: 80%;
+    right: 3%;
+    width: 20vw;
+  }
+  main #what .flower:nth-child(10) {
+    top: 106%;
+    right: 25%;
+    width: 20vw;
+    z-index: 1;
+  }
+  main #what .kingyo-wrap .kingyo:nth-child(1) {
+    width: 33vw;
+    top: 27%;
+    right: 2%;
+  }
+  main #what .kingyo-wrap .kingyo:nth-child(2) {
+    width: 17vw;
+    top: 45%;
+    left: 14%;
+  }
+  main #what .kingyo-wrap .kingyo:nth-child(3) {
+    width: 22vw;
+    bottom: -5%;
+    left: 40%;
+  }
+  main #what .kingyo-wrap .kingyo:nth-child(4) {
+    width: 23vw;
+    bottom: -13%;
+    left: 7%;
+  }
 }
 main #point {
   background-color: var(--yellow);
@@ -418,6 +582,65 @@ main #point .bg--bubble {
   -o-object-fit: contain;
      object-fit: contain;
 }
+main #point .bg--bubble.sp {
+  display: none;
+}
+@media (max-width: 767px) {
+  main #point {
+    padding-top: 15vw;
+    padding-bottom: 72vw;
+  }
+  main #point::before {
+    background-image: url(../images/page-skillup__point-bg--top--sp.png);
+  }
+  main #point::after {
+    background-size: 335%;
+    background-position: 52% bottom;
+  }
+  main #point .section-title {
+    font-size: 6.6vw;
+    padding: 4px;
+  }
+  main #point .section-title::before, main #point .section-title::after {
+    width: 20vw;
+    height: 20vw;
+  }
+  main #point ul {
+    position: relative;
+  }
+  main #point ul li {
+    font-size: 3.65vw;
+    padding: 20px 40px;
+    margin-bottom: 16px;
+  }
+  main #point ul li:nth-child(odd) {
+    padding-right: 0;
+  }
+  main #point ul li:nth-child(odd)::before {
+    right: 1px;
+  }
+  main #point ul li:nth-child(even)::before {
+    left: 1px;
+  }
+  main #point ul li:nth-child(3), main #point ul li:nth-child(4), main #point ul li:nth-child(5) {
+    z-index: 2;
+  }
+  main #point .bg--bubble {
+    z-index: 1;
+    top: 4%;
+  }
+  main #point .bg--bubble.pc {
+    display: none;
+  }
+  main #point .bg--bubble.sp {
+    display: block;
+  }
+  main #point .tako {
+    bottom: -8%;
+    width: 80vw;
+    left: 56%;
+  }
+}
 main #flow {
   background-image: url(../images/preview-what-bg.png);
   background-color: var(--black);
@@ -515,7 +738,7 @@ main #flow .flow__inner .flow__list .flow-item:nth-child(3) .flow-item__content:
 }
 main #flow .flow__inner .flow__list .flow-item:nth-child(4) .flow-item__content::before {
   width: 11.18vw;
-  background-image: url(../images/flow-icon-04.png);
+  background-image: url(../images/preview__flow-icon--nice.png);
 }
 main #flow .flow__inner .flow__list .flow-item .flow-item__content {
   background-color: #83d9ff;
@@ -526,6 +749,7 @@ main #flow .flow__inner .flow__list .flow-item .flow-item__content {
   flex-direction: column;
   gap: 100px;
   height: 100%;
+  border: 2px solid var(--blue);
 }
 main #flow .flow__inner .flow__list .flow-item .flow-item__content::before {
   content: "";
@@ -590,6 +814,86 @@ main #flow .bg:nth-child(6) {
   width: 7vw;
   top: 67%;
   right: 22%;
+}
+@media (max-width: 767px) {
+  main #flow {
+    background-image: url(../images/preview-what-bg--sp.png);
+    background-size: contain;
+    background-position: bottom;
+    padding-top: 65px;
+    padding-bottom: 500px;
+  }
+  main #flow .flow__inner .section-title {
+    font-size: 9.5vw;
+  }
+  main #flow .flow__inner .section-title::before, main #flow .flow__inner .section-title::after {
+    width: 13vw;
+    height: 5vw;
+  }
+  main #flow .flow__inner .section-title::before {
+    left: -5px;
+  }
+  main #flow .flow__inner .section-title::after {
+    right: -5px;
+  }
+  main #flow .flow__inner .flow__list {
+    flex-direction: column;
+  }
+  main #flow .flow__inner .flow__list .flow-item {
+    width: 100%;
+    margin-bottom: 133px;
+  }
+  main #flow .flow__inner .flow__list .flow-item:last-child {
+    margin-bottom: 0;
+  }
+  main #flow .flow__inner .flow__list .flow-item .flow-item__number {
+    font-size: 18vw;
+  }
+  main #flow .flow__inner .flow__list .flow-item .flow-item__content p {
+    font-size: 16px;
+  }
+  main #flow .flow__inner .flow__list .flow-item:nth-child(1) .flow-item__content::before {
+    width: 90%;
+  }
+  main #flow .flow__inner .flow__list .flow-item:nth-child(2) .flow-item__content::before {
+    width: 100%;
+  }
+  main #flow .flow__inner .flow__list .flow-item:nth-child(3) .flow-item__content::before {
+    width: 60%;
+  }
+  main #flow .flow__inner .flow__list .flow-item:nth-child(4) .flow-item__content::before {
+    width: 55%;
+  }
+  main #flow .bg:nth-child(1) {
+    width: 26vw;
+    top: 26%;
+    left: 0%;
+  }
+  main #flow .bg:nth-child(2) {
+    width: 35vw;
+    top: 45%;
+    left: -2%;
+  }
+  main #flow .bg:nth-child(3) {
+    width: 38vw;
+    top: 68%;
+    left: 1%;
+  }
+  main #flow .bg:nth-child(4) {
+    width: 25vw;
+    top: 73%;
+    left: 6%;
+  }
+  main #flow .bg:nth-child(5) {
+    width: 38vw;
+    top: 31%;
+    right: -3%;
+  }
+  main #flow .bg:nth-child(6) {
+    width: 25vw;
+    top: 53%;
+    right: 2%;
+  }
 }
 main #course {
   background-image: url(../images/page-skillup__course-bg.png);
@@ -824,4 +1128,130 @@ main #course .bg:nth-child(7) {
   width: 10vw;
   top: 29%;
   right: 24%;
+}
+@media (max-width: 767px) {
+  main #course {
+    background-image: url(../images/page-skillup__course-bg--sp.png);
+    background-size: contain;
+    padding-bottom: 290px;
+  }
+  main #course .section-title {
+    font-size: 5vw;
+    padding: 5px 11px;
+    margin-bottom: 25px;
+  }
+  main #course .section-title::before, main #course .section-title::after {
+    width: 11vw;
+    height: 20vw;
+  }
+  main #course .section-title::before {
+    left: -8px;
+  }
+  main #course .section-title::after {
+    right: -8px;
+  }
+  main #course .course__inner > p {
+    font-size: 3.4vw;
+    font-weight: normal;
+    padding: 5px 10px;
+    margin-bottom: 140px;
+  }
+  main #course .course__inner .course__content {
+    width: 85%;
+  }
+  main #course .course__inner .course__content ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  main #course .course__inner .course__content ul li {
+    border-radius: 3vw;
+    font-size: 4vw;
+  }
+  main #course .course__inner .course__content ul li:nth-child(1)::before {
+    width: 69vw;
+    height: 33vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  main #course .course__inner .course__content ul li:nth-child(1)::after {
+    width: 16vw;
+    height: 30vw;
+    right: -1%;
+  }
+  main #course .course__inner .course__content ul li:nth-child(1) img {
+    width: 34vw;
+    margin-bottom: 15px;
+  }
+  main #course .course__inner .course__content ul li:nth-child(2) img {
+    width: 57vw;
+  }
+  main #course .course__inner .course__content ul li:nth-child(3) img {
+    width: 36vw;
+  }
+  main #course .course__inner .course__content ul li:nth-child(3)::after {
+    background-image: url(../images/page-skillup__course-site-clover.png);
+    width: 26vw;
+    height: 30vw;
+    transform: scale(-1, -1) rotate(-20deg);
+    right: auto;
+    left: -10%;
+    bottom: -4%;
+  }
+  main #course .course__inner .course__content ul li:nth-child(4) img {
+    width: 45vw;
+  }
+  main #course .course__inner .course__content ul li:nth-child(4)::after {
+    background-image: url(../images/page-skillup__course-sns-flower.png);
+    width: 23vw;
+    height: 40vw;
+    left: auto;
+    top: auto;
+    right: -8%;
+    bottom: -7%;
+  }
+  main #course .course__inner .course__content ul li:nth-child(5) img {
+    width: 48vw;
+  }
+  main #course .course__inner .course__content ul li:nth-child(6) img {
+    width: 35vw;
+  }
+  main #course .course__inner .course__content ul li:nth-child(6)::after {
+    width: 23vw;
+    height: 35vw;
+  }
+  main #course .bg:nth-child(1) {
+    width: 57vw;
+    top: -6%;
+    left: 2%;
+  }
+  main #course .bg:nth-child(2) {
+    width: 20vw;
+    top: -13%;
+    left: 7%;
+  }
+  main #course .bg:nth-child(3) {
+    width: 27vw;
+    top: -39%;
+    right: 3%;
+  }
+  main #course .bg:nth-child(4) {
+    width: 38vw;
+    top: -18%;
+    right: -5%;
+  }
+  main #course .bg:nth-child(5) {
+    width: 53vw;
+    top: -11%;
+    right: -1%;
+  }
+  main #course .bg:nth-child(6) {
+    width: 20vw;
+    top: -8%;
+    right: 61%;
+  }
+  main #course .bg:nth-child(7) {
+    width: 29vw;
+    top: 1%;
+    right: 7%;
+  }
 }/*# sourceMappingURL=page-skillup.css.map */
