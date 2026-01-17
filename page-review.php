@@ -88,7 +88,7 @@
 				</li>
 				<li>
 					<span>4</span>
-					<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/preview__flow-icon-- nice.png" alt=""></div>
+					<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/images/preview__flow-icon--nice.png" alt=""></div>
 					<p>気になる投稿を読んで、参考になったら「いいね」</p>
 				</li>
 				<li>

@@ -716,15 +716,14 @@
 	ul {
 		display: flex;
 		justify-content: center;
-		padding: 60px 45px 30px;
+		padding: 4.16vw 45px 30px;
 
 		li {
-			// background-color: var(--black);
 			width: 20%;
 			color: var(--yellow);
 			font-size: 20px;
 			font-weight: bold;
-			padding-top: 125px;
+			padding-top: 8.68vw;
 			display: flex;
 			flex-direction: column;
 			justify-content: end;
@@ -788,7 +787,7 @@
 				margin: 0 20px;
 				text-align: center;
 				border-top: 2px solid var(--yellow);
-				margin-top: 75px;
+				margin-top: 8.33vw;
 				min-height: 46px;
 				box-sizing: content-box;
 			}
