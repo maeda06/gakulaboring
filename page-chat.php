@@ -7,9 +7,14 @@
       <span class="cloud cloud--small cloud--orange cloud--right"></span>
       <span class="cloud cloud--large cloud--yellow cloud--right"></span>
       <span class="cloud cloud--midium cloud--white cloud--right"></span>
-      <span class="flower--right"></span>
+      <span class="flower--large flower--right"></span>
+      <div class="flower">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/flower--white01.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/flower--white01.png" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/flower--white02.png" alt="">
+      </div>
       <div class="kv__inner">
-        <h1 class="kv__title">話そ?就活のこと、仕事のこと</h1>
+        <h1 class="kv__title">話そ?<br>就活のこと、<br>仕事のこと</h1>
         <div class="kv__speech-bubble">
           <p>モヤモヤ、不安、ちょっとした気づき。<br>つぶやくだけで、きっと誰かとつながれる。</p>
         </div>
@@ -42,12 +47,12 @@
       <span class="octopus"></span>
 
       <div class="what-can-do__inner">
-        <h2 class="section-title">
+        <div class="section-title">
           <span class="apple"></span>
           <span class="flower--left"></span>
-          <span class="section-title__main">何ができる</span>
-          <span class="section-title__q">?</span>
-        </h2>
+          <span class="tako"></span>
+          <h2>何ができる</h2>
+        </div>
         <ul class="what-can-do__list">
           <li>就活の悩みや日常のつぶやきを<span>チャット形式で投稿</span></li>
           <li><span>「こんなときどうする？」</span>の相談もOK</li>
