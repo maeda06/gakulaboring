@@ -300,3 +300,297 @@ gsap.fromTo('#features .cloud',
     }
   }
 )
+
+// カテゴリナビゲーション切り替え機能
+document.addEventListener('DOMContentLoaded', function() {
+  const categoryItems = document.querySelectorAll('.category-nav__item');
+  const archiveSection = document.getElementById('archive-section');
+  const mainSections = document.querySelectorAll('.company, .howto, .career, .labor, .recruit, .money, .skillup');
+  
+  // セクションとカテゴリのマッピング（インデックス）
+  const sectionToCategoryMap = {
+    'company': 0,    // 将来性・企業・業界動向・研究
+    'howto': 1,      // 就活準備・就活進め方・エントリーシート・選考対策
+    'career': 2,     // キャリア・自己分析
+    'labor': 3,      // 労働市場・待遇・福利厚生
+    'recruit': 4,    // 若者に人気の求人・募集情報
+    'money': 5,      // お金の勉強・保険・若者向けの資産運用
+    'skillup': 6     // 今後将来必要なスキルアップ
+  };
+
+  // archiveセクションを表示する共通関数
+  function showArchiveSection(e, categoryIndex) {
+    if (e) {
+      e.preventDefault();
+    }
+    
+    // すべてのカテゴリからアクティブクラスを削除
+    categoryItems.forEach(function(cat) {
+      cat.classList.remove('category-nav__item--active');
+    });
+    
+    // 対応するカテゴリにアクティブクラスを追加
+    if (categoryIndex !== undefined && categoryItems[categoryIndex]) {
+      categoryItems[categoryIndex].classList.add('category-nav__item--active');
+    }
+    
+    // archiveセクションを表示、他のセクションを非表示
+    if (archiveSection) {
+      archiveSection.style.display = 'block';
+    }
+    mainSections.forEach(function(section) {
+      section.style.display = 'none';
+    });
+
+    // ページトップにスムーススクロール
+    window.scrollTo({
+      top: archiveSection ? archiveSection.offsetTop - 100 : 0,
+      behavior: 'smooth'
+    });
+  }
+
+  // カテゴリアイテムのクリックイベント
+  categoryItems.forEach(function(item, index) {
+    item.addEventListener('click', function() {
+      showArchiveSection(null, index);
+    });
+  });
+
+  // VIEW ALL POSTSボタンのクリックイベント
+  // company__button
+  const companyBtn = document.querySelector('.company__button');
+  if (companyBtn) {
+    companyBtn.addEventListener('click', function(e) {
+      showArchiveSection(e, sectionToCategoryMap['company']);
+    });
+  }
+
+  // howto__button
+  const howtoBtn = document.querySelector('.howto__button');
+  if (howtoBtn) {
+    howtoBtn.addEventListener('click', function(e) {
+      showArchiveSection(e, sectionToCategoryMap['howto']);
+    });
+  }
+
+  // career__button
+  const careerBtn = document.querySelector('.career__button');
+  if (careerBtn) {
+    careerBtn.addEventListener('click', function(e) {
+      showArchiveSection(e, sectionToCategoryMap['career']);
+    });
+  }
+
+  // labor__button
+  const laborBtn = document.querySelector('.labor__button');
+  if (laborBtn) {
+    laborBtn.addEventListener('click', function(e) {
+      showArchiveSection(e, sectionToCategoryMap['labor']);
+    });
+  }
+
+  // recruit__button
+  const recruitBtn = document.querySelector('.recruit__button');
+  if (recruitBtn) {
+    recruitBtn.addEventListener('click', function(e) {
+      showArchiveSection(e, sectionToCategoryMap['recruit']);
+    });
+  }
+
+  // money__button
+  const moneyBtn = document.querySelector('.money__button');
+  if (moneyBtn) {
+    moneyBtn.addEventListener('click', function(e) {
+      showArchiveSection(e, sectionToCategoryMap['money']);
+    });
+  }
+
+  // skillup__button
+  const skillupBtn = document.querySelector('.skillup__button');
+  if (skillupBtn) {
+    skillupBtn.addEventListener('click', function(e) {
+      showArchiveSection(e, sectionToCategoryMap['skillup']);
+    });
+  }
+});
+
+// Labor セクション スライダー機能
+document.addEventListener('DOMContentLoaded', function() {
+  const laborSlider = document.querySelector('.labor__cards');
+  const laborPrevBtn = document.querySelector('.labor__nav-btn--prev');
+  const laborNextBtn = document.querySelector('.labor__nav-btn--next');
+  
+  if (laborSlider && laborPrevBtn && laborNextBtn) {
+    const cardWidth = 280;
+    const gap = 24;
+    const scrollAmount = cardWidth + gap;
+    let currentPosition = 0;
+    let currentIndex = 0; // SP用: 現在表示中のカードインデックス
+    
+    // カードの総数を取得
+    const cards = laborSlider.querySelectorAll('.labor__card');
+    const totalCards = cards.length;
+    const visibleCards = 3; // PC: 一度に表示するカード数
+    const maxPosition = Math.max(0, (totalCards - visibleCards) * scrollAmount);
+    
+    // SP判定
+    function isSP() {
+      return window.matchMedia('(max-width: 768px)').matches;
+    }
+    
+    // SP用: カードの表示を更新
+    function updateCardVisibility() {
+      cards.forEach(function(card, index) {
+        if (index === currentIndex) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    
+    // 次へボタン
+    laborNextBtn.addEventListener('click', function() {
+      if (isSP()) {
+        // SP: カードを1枚ずつ切り替え
+        if (currentIndex < totalCards - 1) {
+          currentIndex++;
+          updateCardVisibility();
+        }
+      } else {
+        // PC: transformでスライド
+        if (currentPosition < maxPosition) {
+          currentPosition += scrollAmount;
+          if (currentPosition > maxPosition) {
+            currentPosition = maxPosition;
+          }
+          laborSlider.style.transform = 'translateX(-' + currentPosition + 'px)';
+          laborSlider.style.transition = 'transform 0.3s ease';
+        }
+      }
+    });
+    
+    // 前へボタン
+    laborPrevBtn.addEventListener('click', function() {
+      if (isSP()) {
+        // SP: カードを1枚ずつ切り替え
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCardVisibility();
+        }
+      } else {
+        // PC: transformでスライド
+        if (currentPosition > 0) {
+          currentPosition -= scrollAmount;
+          if (currentPosition < 0) {
+            currentPosition = 0;
+          }
+          laborSlider.style.transform = 'translateX(-' + currentPosition + 'px)';
+          laborSlider.style.transition = 'transform 0.3s ease';
+        }
+      }
+    });
+    
+    // リサイズ時にリセット
+    window.addEventListener('resize', function() {
+      if (isSP()) {
+        laborSlider.style.transform = '';
+        currentPosition = 0;
+        updateCardVisibility();
+      } else {
+        // PCに戻った時は全カード表示
+        cards.forEach(function(card) {
+          card.style.display = '';
+        });
+        currentIndex = 0;
+      }
+    });
+  }
+});
+
+// ========================================
+// カテゴリナビゲーション
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+  const categoryItems = document.querySelectorAll('.category-nav__item');
+  const archiveSection = document.getElementById('archive-section');
+  const archiveList = archiveSection ? archiveSection.querySelector('.archive__list') : null;
+  const archivePagination = archiveSection ? archiveSection.querySelector('.archive__pagination') : null;
+  const mainSections = document.querySelectorAll('.company, .howto, .career, .labor, .recruit, .money, .skillup');
+  
+  let currentCatId = null;
+  
+  if (!categoryItems.length || !archiveSection) return;
+  
+  // カテゴリアイテムクリック処理
+  categoryItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      const catId = this.getAttribute('data-cat');
+      
+      // アクティブ状態を切り替え
+      categoryItems.forEach(function(i) {
+        i.classList.remove('is-active');
+      });
+      this.classList.add('is-active');
+      
+      // 他のセクションを非表示にしてarchiveセクションを表示
+      mainSections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+      archiveSection.style.display = 'block';
+      
+      // 記事を読み込み
+      currentCatId = catId;
+      loadCategoryPosts(catId, 1);
+    });
+  });
+  
+  // AJAX で記事を読み込む
+  function loadCategoryPosts(catId, page) {
+    if (!archiveList) return;
+    
+    // ローディング表示
+    archiveList.innerHTML = '<div class="archive__loading">読み込み中...</div>';
+    
+    const formData = new FormData();
+    formData.append('action', 'load_category_posts');
+    formData.append('cat_id', catId);
+    formData.append('paged', page);
+    
+    fetch(ajax_object.ajax_url, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        archiveList.innerHTML = data.data.html;
+        if (archivePagination) {
+          archivePagination.innerHTML = data.data.pagination;
+          // ページネーションにイベントを追加
+          bindPaginationEvents();
+        }
+        // archiveセクションにスクロール
+        archiveSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      archiveList.innerHTML = '<p class="archive__error">記事の読み込みに失敗しました。</p>';
+    });
+  }
+  
+  // ページネーションのイベントバインド
+  function bindPaginationEvents() {
+    const paginationLinks = archivePagination.querySelectorAll('.archive__pagination-link');
+    paginationLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const page = this.getAttribute('data-page');
+        if (currentCatId && page) {
+          loadCategoryPosts(currentCatId, page);
+        }
+      });
+    });
+  }
+});

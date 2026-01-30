@@ -1,0 +1,2927 @@
+@charset "UTF-8";
+/* CSS変数の定義（style.cssで定義されているが、念のため） */
+:root {
+  --black: #202020;
+  --orange: #FF5824;
+  --blue: #127DFF;
+  --yellow: #FFE529;
+  --font-dela: "Dela Gothic One", sans-serif;
+  --font-mochiy: "Mochiy Pop One", sans-serif;
+  --font-noto: "Noto Sans JP", sans-serif;
+}
+
+/* ===============================
+  page-media ページ全体の背景色
+================================ */
+body.page-template-page-media main,
+body.page-template-page-media,
+main:has(.company) {
+  background-color: #FFFAEC;
+  min-height: 100vh;
+}
+
+/* ===============================
+  category-nav
+================================ */
+.category-nav {
+  position: relative;
+  padding-top: 115px;
+  padding-bottom: 0;
+}
+
+.category-nav__inner {
+  width: 100%;
+  height: 126px;
+  border-top: 1px solid #202020;
+  border-bottom: 1px solid #202020;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.category-nav__row {
+  display: flex;
+  flex: 1;
+  height: 50%;
+}
+.category-nav__row--top {
+  border-bottom: 1px solid #202020;
+}
+
+.category-nav__item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.category-nav__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60%;
+  background-color: #202020;
+}
+.category-nav__item:hover .category-nav__text {
+  color: #FF5824;
+}
+.category-nav__item.is-active .category-nav__text, .category-nav__item--active .category-nav__text {
+  background-color: #FF5824;
+  color: #FFFFFF;
+  padding: 10px 20px;
+}
+.category-nav__item.is-active:hover .category-nav__text, .category-nav__item--active:hover .category-nav__text {
+  color: #FFFFFF;
+}
+
+.category-nav__text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #202020;
+  padding: 4px 8px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-nav__divider {
+  height: 1px;
+  width: 100%;
+}
+
+/* ===============================
+  hero
+================================ */
+#hero {
+  background-color: #127DFF;
+  background-image: url(../images/kv-bg.svg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+#hero .cloud {
+  position: absolute;
+}
+#hero .cloud:nth-child(1) {
+  top: 10%;
+  left: 14.44vw;
+}
+#hero .cloud:nth-child(2) {
+  top: 50%;
+  left: 2.8472vw;
+  transform: translateY(-50%);
+}
+#hero .cloud:nth-child(3) {
+  bottom: 10%;
+  left: 30.625vw;
+}
+#hero .cloud:nth-child(4) {
+  top: 10%;
+  right: 14.42vw;
+}
+#hero .cloud:nth-child(5) {
+  top: 50%;
+  right: 2.8472vw;
+  transform: translateY(-50%);
+}
+#hero .cloud:nth-child(6) {
+  bottom: 10%;
+  right: 18.9583vw;
+}
+#hero .cloud--small {
+  width: 6.77vw;
+  height: 4.986vw;
+}
+#hero .cloud--midium {
+  width: 10.416vw;
+  height: 6.94vw;
+}
+#hero .cloud--large {
+  width: 13.194vw;
+  height: 9.72vw;
+}
+
+.hero__inner {
+  padding-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__title {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 74px;
+  font-weight: normal;
+  color: #FFF;
+  margin: 0 0 20px;
+}
+@media (max-width: 767px) {
+  .hero__title {
+    font-size: 10vw;
+  }
+}
+
+.hero__subtitle {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 32px;
+  color: #FFF;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .hero__subtitle {
+    font-size: 5vw;
+  }
+}
+
+/* ===============================
+  content
+================================ */
+#content {
+  background-color: #FFF;
+  padding: 100px 0;
+  position: relative;
+}
+
+.content__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: "Dela Gothic One", sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 50px;
+  color: #202020;
+}
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .category-nav {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .category-nav__inner {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+  .category-nav__row {
+    flex-direction: column;
+    height: auto;
+  }
+  .category-nav__row--top {
+    border-bottom: 1px solid #202020;
+  }
+  .category-nav__item {
+    border-right: none;
+    border-bottom: 1px solid #202020;
+    padding: 15px 10px;
+    min-height: 50px;
+  }
+  .category-nav__item:last-child {
+    border-bottom: none;
+  }
+  .category-nav__item:not(:last-child)::after {
+    display: none;
+  }
+  .category-nav__text {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  #hero {
+    height: auto;
+    padding: 150px 0 100px;
+  }
+  #hero .cloud:nth-child(1) {
+    width: 33.7vw;
+    height: 23.05vw;
+    top: 7%;
+    left: -4%;
+  }
+  #hero .cloud:nth-child(2) {
+    width: 29vw;
+    height: 40vw;
+    top: 42%;
+    left: -15%;
+  }
+  #hero .cloud:nth-child(3) {
+    width: 22vw;
+    height: 30vw;
+    bottom: 16%;
+    left: 15%;
+  }
+  #hero .cloud:nth-child(4) {
+    width: 26vw;
+    height: 25vw;
+    top: 7%;
+    right: 8%;
+  }
+  #hero .cloud:nth-child(5) {
+    width: 30vw;
+    height: 30vw;
+    top: 56%;
+    right: -14%;
+  }
+  #hero .cloud:nth-child(6) {
+    width: 30vw;
+    height: 30vw;
+    bottom: 16%;
+    right: -7%;
+  }
+  #content {
+    padding: 50px 0;
+  }
+}
+/* ===============================
+  archive（カテゴリ選択時の記事一覧）
+================================ */
+.archive {
+  max-width: 1334px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  background-color: #FFFAEC;
+}
+
+.archive__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.archive__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid #202020;
+}
+.archive__item:first-child {
+  padding-top: 0;
+}
+@media (max-width: 767px) {
+  .archive__item {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.archive__item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.archive__item-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #7F7F7F;
+  margin: 0;
+}
+
+.archive__item-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+  gap: 50px;
+  padding-left: 50px;
+}
+@media (max-width: 768px) {
+  .archive__item-title-wrapper {
+    padding-left: 0;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+}
+
+.archive__item-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 150%;
+  color: #000000;
+  margin: 0;
+}
+.archive__item-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.archive__item-title a:hover {
+  color: #FF5824;
+}
+
+.archive__item-arrow {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+.archive__item-arrow img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.archive__item-image {
+  width: 420px;
+  height: 271px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.archive__item-image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .archive__item-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+}
+
+.archive__item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.archive__item-img[src*=no_image] {
+  filter: grayscale(100%);
+}
+
+.archive__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+.archive__pagination-link {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: #202020;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+.archive__pagination-link:hover {
+  color: #FF5824;
+}
+.archive__pagination-link--active {
+  color: #202020;
+  font-weight: 700;
+  position: relative;
+}
+.archive__pagination-link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #FF5824;
+}
+
+.archive__loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  color: #7F7F7F;
+}
+
+.archive__error,
+.archive__no-posts {
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  color: #7F7F7F;
+}
+
+/* ===============================
+  company
+================================ */
+.company {
+  width: 979px;
+  min-height: 1011px;
+  margin: 20px auto 0px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 1023px) {
+  .company {
+    width: clamp(320px, 90vw, 979px);
+  }
+}
+@media (max-width: 768px) {
+  .company {
+    width: 100%;
+    padding: 40px 20px;
+    min-height: auto;
+    margin: 40px auto 50px;
+  }
+}
+
+.company__title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  vertical-align: middle;
+  color: #202020;
+  background-color: #FFFAEC;
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .company__title {
+    font-size: clamp(18px, 5vw, 32px);
+    margin-bottom: 30px;
+    padding-left: 0px;
+  }
+}
+
+.company__layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  height: 920px;
+}
+@media (max-width: 1023px) {
+  .company__layout {
+    gap: clamp(20px, 3vw, 40px);
+  }
+}
+@media (max-width: 768px) {
+  .company__layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    height: auto;
+  }
+}
+
+.company__columns-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  height: 929px;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .company__columns-right {
+    height: auto;
+    justify-content: flex-start;
+  }
+}
+
+.company__columns-inner {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .company__columns-inner {
+    flex-direction: column;
+  }
+}
+.company__columns-inner.company__columns-scroll {
+  height: 852px;
+  max-height: 822px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  margin-right: -8px;
+  /* カスタムスクロールバーのスタイル */
+  /* Firefox用のスクロールバースタイル */
+  scrollbar-width: thin;
+  scrollbar-color: #FF5824 #F0F0F0;
+}
+.company__columns-inner.company__columns-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.company__columns-inner.company__columns-scroll::-webkit-scrollbar-track {
+  background: #FF5824;
+  border-radius: 4px;
+}
+.company__columns-inner.company__columns-scroll::-webkit-scrollbar-thumb {
+  background: #FF5824;
+  border: 5px solid #FF5824;
+  border-radius: 4px;
+}
+.company__columns-inner.company__columns-scroll::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+@media (max-width: 768px) {
+  .company__columns-inner.company__columns-scroll {
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+
+.company__column {
+  display: flex;
+  flex-direction: column;
+}
+.company__column--left {
+  width: 385px;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .company__column--left {
+    width: 100%;
+  }
+}
+.company__column--middle {
+  width: 258px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .company__column--middle {
+    width: 100%;
+  }
+}
+.company__column--right {
+  width: 258px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .company__column--right {
+    width: 100%;
+  }
+}
+.company__column--right-2 {
+  width: 258px;
+  height: 267.1748352051px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .company__column--right-2 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.company__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .company__card-wrapper {
+    margin-bottom: 0;
+  }
+}
+.company__card-wrapper:last-child {
+  margin-bottom: 0;
+}
+.company__card-wrapper.company__column--col-3 {
+  width: 258px;
+  height: 267.1748352051px;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .company__card-wrapper.company__column--col-3 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.company__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.company__cards-scroll {
+  height: 822px;
+  max-height: 822px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  margin-right: -8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  /* カスタムスクロールバーのスタイル */
+  /* Firefox用のスクロールバースタイル */
+  scrollbar-width: thin;
+  scrollbar-color: #FF5824 #F0F0F0;
+}
+.company__cards-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.company__cards-scroll::-webkit-scrollbar-track {
+  background: #FF5824;
+  border-radius: 4px;
+}
+.company__cards-scroll::-webkit-scrollbar-thumb {
+  background: #FF5824;
+  border: 5px solid #FF5824;
+  border-radius: 4px;
+}
+.company__cards-scroll::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+@media (max-width: 768px) {
+  .company__cards-scroll {
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+
+.company__bar {
+  height: 10px;
+  background: #202020;
+  margin-bottom: 10px;
+}
+.company__bar--left {
+  width: 385px;
+}
+@media (max-width: 768px) {
+  .company__bar--left {
+    width: 100%;
+  }
+}
+.company__bar--right {
+  width: 258px;
+}
+@media (max-width: 768px) {
+  .company__bar--right {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .company__bar {
+    width: 100%;
+  }
+}
+
+.company__card {
+  background-color: #FFFAEC;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.company__card--large {
+  width: 385px;
+  height: 909px;
+  position: relative;
+  padding: 0;
+}
+.company__card--large .company__card-image {
+  width: 100%;
+  height: 909px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.company__card--large .company__card-image img {
+  width: 100%;
+  height: 909px;
+  object-fit: cover;
+}
+.company__card--large .company__card-title,
+.company__card--large .company__card-meta {
+  position: relative;
+  z-index: 2;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.company__card--large .company__card-title {
+  margin-top: 650px;
+  padding-top: 20px;
+}
+.company__card--large .company__card-title a {
+  color: #000000;
+}
+.company__card--large .company__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  margin-top: 30px;
+  color: #FFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .company__card--large {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  .company__card--large .company__card-image {
+    order: 1;
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  .company__card--large .company__card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .company__card--large .company__card-title {
+    order: 2;
+    position: static;
+    z-index: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .company__card--large .company__card-title a {
+    color: #000000;
+    text-shadow: none;
+  }
+  .company__card--large .company__card-meta {
+    order: 3;
+    position: static;
+    z-index: auto;
+    margin-left: 0;
+    margin-right: 0;
+    color: #7F7F7F;
+    text-shadow: none;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  .company__card--large .company__card-excerpt {
+    order: 4;
+  }
+}
+.company__card--small {
+  width: 100%;
+  min-height: 382px;
+}
+@media (max-width: 768px) {
+  .company__card--small {
+    width: 100%;
+    min-height: auto;
+  }
+}
+.company__card--small-col-1 {
+  width: 100%;
+  min-height: 382px;
+}
+@media (max-width: 768px) {
+  .company__card--small-col-1 {
+    width: 100%;
+    min-height: auto;
+  }
+}
+.company__card--small-col-2 {
+  width: 100%;
+  min-height: 382px;
+}
+@media (max-width: 768px) {
+  .company__card--small-col-2 {
+    width: 100%;
+    min-height: auto;
+  }
+}
+.company__card--small-col-3 {
+  width: 258px;
+  height: 267px;
+}
+@media (max-width: 768px) {
+  .company__card--small-col-3 {
+    width: 100%;
+    height: auto;
+  }
+}
+.company__card--small-right {
+  width: 258px;
+  height: 267px;
+}
+@media (max-width: 768px) {
+  .company__card--small-right {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .company__card {
+    width: 100% !important;
+  }
+}
+
+.company__card-image {
+  width: 100%;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.company__card-image a {
+  display: block;
+  width: 100%;
+}
+.company__card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.company__card-image img[src*=no_image] {
+  filter: grayscale(100%);
+}
+.company__card--small .company__card-image {
+  width: 258px;
+  height: 258px;
+}
+.company__card--small .company__card-image img {
+  width: 258px;
+  height: 258px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .company__card--small .company__card-image {
+    width: 100%;
+    height: auto;
+  }
+  .company__card--small .company__card-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+.company__card--small-col-1 .company__card-image {
+  width: 258px;
+  height: 258px;
+}
+.company__card--small-col-1 .company__card-image img {
+  width: 258px;
+  height: 258px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .company__card--small-col-1 .company__card-image {
+    width: 100%;
+    height: auto;
+  }
+  .company__card--small-col-1 .company__card-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+.company__card--small-col-2 .company__card-image {
+  width: 258px;
+  height: 258px;
+}
+.company__card--small-col-2 .company__card-image img {
+  width: 258px;
+  height: 258px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .company__card--small-col-2 .company__card-image {
+    width: 100%;
+    height: auto;
+  }
+  .company__card--small-col-2 .company__card-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+.company__card--small-col-3 .company__card-image {
+  width: 258px;
+  height: 146px;
+}
+.company__card--small-col-3 .company__card-image img {
+  width: 258px;
+  height: 146px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .company__card--small-col-3 .company__card-image {
+    width: 100%;
+    height: auto;
+  }
+  .company__card--small-col-3 .company__card-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.company__card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.company__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0 0 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.company__card-title a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.company__card-title a:hover {
+  color: #FF5824;
+}
+@media (max-width: 768px) {
+  .company__card-title {
+    font-size: clamp(14px, 4vw, 20px);
+  }
+}
+
+.company__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #7F7F7F;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .company__card-meta {
+    font-size: clamp(12px, 3.5vw, 16px);
+  }
+}
+
+.company__button {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FF5824;
+  background: transparent;
+  border: 2px solid #FF5824;
+  padding: 14px 146px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 535px;
+  height: 87px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  gap: 10px;
+  align-self: flex-start;
+}
+.company__button:hover {
+  background: #FF5824;
+  color: #FFF;
+}
+@media (max-width: 768px) {
+  .company__button {
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 315px;
+    height: auto;
+    padding: 14px 40px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+}
+
+/* ===============================
+  howto セクション
+================================ */
+.howto {
+  width: 100%;
+  max-width: 1440px;
+  margin: 80px auto 0px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .howto {
+    margin: 60px auto 0px;
+  }
+}
+
+.howto__bg {
+  width: 100%;
+  height: 419px;
+  background: #202020;
+  padding: clamp(20px, 3vw, 40px);
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .howto__bg {
+    height: auto;
+    padding: 30px 20px;
+  }
+}
+
+.howto__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 80px;
+}
+@media (max-width: 767px) {
+  .howto__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-left: 15px;
+  }
+}
+
+.howto__header-left {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 767px) {
+  .howto__header-left {
+    gap: 0px;
+    padding-left: 0px;
+  }
+}
+
+.howto__bar {
+  width: 100%;
+  height: 10px;
+  background-color: #FFFFFF;
+}
+
+.howto__title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #FFFFFF;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .howto__title {
+    font-size: clamp(18px, 5vw, 32px);
+  }
+}
+
+.howto__button {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+  background: #FF5824;
+  border: 2px solid #FFFAEC;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 275px;
+  height: 87px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.howto__button:hover {
+  background: #FFFAEC;
+  color: #FF5824;
+  border-color: #FF5824;
+}
+@media (max-width: 768px) {
+  .howto__button {
+    width: 100%;
+    max-width: 315px;
+    height: auto;
+    padding: 14px 40px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+}
+
+.howto__cards {
+  display: flex;
+  gap: 20px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 40px);
+  margin-top: -280px;
+}
+@media (max-width: 767px) {
+  .howto__cards {
+    margin-top: 0;
+    flex-direction: column;
+    overflow-x: visible;
+    padding: 20px;
+  }
+}
+
+.howto__card {
+  position: relative;
+  flex-shrink: 0;
+  width: 400px;
+  height: 500px;
+}
+@media (max-width: 767px) {
+  .howto__card {
+    width: 100%;
+    height: 430px;
+  }
+}
+
+.howto__card-image {
+  width: 100%;
+  height: 359px;
+}
+.howto__card-image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .howto__card-image {
+    height: auto;
+    aspect-ratio: 400/359;
+  }
+}
+
+.howto__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+.howto__card-img[src*=no_image] {
+  filter: grayscale(100%);
+}
+
+.howto__card-meta {
+  position: absolute;
+  top: 279px;
+  left: 0;
+  width: 335.51px;
+  height: 178.65px;
+  background: #FFFFFF;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 11.37px;
+}
+@media (max-width: 767px) {
+  .howto__card-meta {
+    width: 90%;
+    height: auto;
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.howto__card-source {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #7F7F7F;
+  margin: 0;
+  margin-top: auto;
+}
+
+.howto__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.howto__card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.howto__card-title a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+  career（キャリア・自己分析）
+================================ */
+.career {
+  max-width: 960px;
+  margin: 80px auto 0;
+  padding: 0 clamp(20px, 3vw, 40px);
+}
+@media (max-width: 768px) {
+  .career {
+    margin-top: 60px;
+    padding: 0 20px;
+  }
+}
+
+.career__header {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .career__header {
+    padding-left: 0px;
+  }
+}
+
+.career__bar {
+  width: 100%;
+  height: 10px;
+  background-color: #202020;
+}
+
+.career__title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #202020;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .career__title {
+    font-size: clamp(18px, 5vw, 32px);
+  }
+}
+
+.career__separator {
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #202020;
+  margin: 18px 0;
+}
+
+/* 最上部の大きいカード */
+.career__card--large {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+  min-height: 276px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+.career__card--large:hover {
+  opacity: 0.8;
+}
+.career__card--large .career__card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.career__card--large .career__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+}
+.career__card--large .career__card-excerpt {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.5;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+  max-height: 4.5em;
+}
+.career__card--large .career__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #7F7F7F;
+  margin: 0;
+  margin-top: auto;
+}
+.career__card--large .career__card-image {
+  width: 276px;
+  height: 276px;
+  flex-shrink: 0;
+}
+.career__card--large .career__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.career__card--large .career__card-img[src*=no_image] {
+  filter: grayscale(100%);
+}
+@media (max-width: 768px) {
+  .career__card--large {
+    align-items: center;
+    gap: 15px;
+    min-height: auto;
+    padding: 10px 0;
+  }
+  .career__card--large .career__card-content {
+    gap: 8px;
+  }
+  .career__card--large .career__card-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #000000;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .career__card--large .career__card-excerpt {
+    display: none;
+  }
+  .career__card--large .career__card-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* 2列の小さいカード群 */
+.career__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 60px;
+}
+@media (max-width: 768px) {
+  .career__cards {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.career__card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 小さいカード */
+.career__card--small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 129px;
+  text-decoration: none;
+  color: inherit;
+  padding: 15px 0;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+.career__card--small:hover {
+  opacity: 0.8;
+}
+.career__card--small .career__card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.career__card--small .career__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.career__card--small .career__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #7F7F7F;
+  margin: 0;
+}
+.career__card--small .career__card-image {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .career__card--small .career__card-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+.career__card--small .career__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.career__card--small .career__card-image img[src*=no_image] {
+  filter: grayscale(100%);
+}
+.career__card--small .career__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.career__card--small .career__card-img[src*=no_image] {
+  filter: grayscale(100%);
+}
+@media (max-width: 768px) {
+  .career__card--small {
+    min-height: auto;
+    padding: 10px 0;
+  }
+}
+
+/* カードごとの区切り線 */
+.career__card-line {
+  width: 100%;
+  max-width: 450px;
+  height: 0;
+  border-bottom: 1px solid #202020;
+}
+@media (max-width: 768px) {
+  .career__card-line {
+    max-width: 100%;
+  }
+}
+
+/* VIEW ALL POSTSボタン */
+.career__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 535px;
+  height: 87px;
+  margin: 40px auto 0;
+  padding: 14px 146px;
+  border: 2px solid #FF5824;
+  background: transparent;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #FF5824;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  gap: 10px;
+}
+.career__button:hover {
+  background: #FF5824;
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .career__button {
+    width: 100%;
+    max-width: 315px;
+    height: auto;
+    padding: 14px 40px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+}
+
+/* ===============================
+  labor（労働市場・待遇・福利厚生）
+================================ */
+.labor {
+  width: 100%;
+  max-width: 1440px;
+  margin: 80px auto 0;
+  position: relative;
+}
+
+.labor__bg {
+  width: 100%;
+  background: #202020;
+  padding: 40px 120px 60px;
+  box-sizing: border-box;
+}
+@media (max-width: 1023px) {
+  .labor__bg {
+    padding: 30px 40px 50px;
+  }
+}
+@media (max-width: 767px) {
+  .labor__bg {
+    padding: 30px 20px 40px;
+  }
+}
+
+.labor__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .labor__header {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .labor__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.labor__header-left {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.labor__bar {
+  width: 100%;
+  height: 10px;
+  background-color: #FFFFFF;
+}
+
+.labor__title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #FFFFFF;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .labor__title {
+    font-size: clamp(18px, 5vw, 32px);
+  }
+}
+
+.labor__nav {
+  display: flex;
+  gap: 0;
+  width: 81px;
+  height: 36px;
+  background: #FFFFFF;
+  border-radius: 45px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .labor__nav {
+    align-self: flex-end;
+  }
+}
+
+.labor__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+.labor__nav-btn:hover {
+  background-color: rgba(255, 88, 36, 0.1);
+}
+.labor__nav-btn--prev {
+  border-right: 1px solid #E0E0E0;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+}
+.labor__nav-btn--next {
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
+}
+
+.labor__nav-arrow {
+  display: block;
+  width: 8px;
+  height: 16px;
+  position: relative;
+}
+.labor__nav-arrow::before, .labor__nav-arrow::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  background-color: #FF5824;
+  border-radius: 2px;
+  left: 0;
+}
+.labor__nav-btn--prev .labor__nav-arrow::before {
+  top: 3px;
+  transform: rotate(-45deg);
+}
+.labor__nav-btn--prev .labor__nav-arrow::after {
+  bottom: 3px;
+  transform: rotate(45deg);
+}
+.labor__nav-btn--next .labor__nav-arrow::before {
+  top: 3px;
+  transform: rotate(45deg);
+}
+.labor__nav-btn--next .labor__nav-arrow::after {
+  bottom: 3px;
+  transform: rotate(-45deg);
+}
+
+.labor__slider {
+  margin-top: 30px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .labor__slider {
+    margin-top: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .labor__slider::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.labor__cards {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .labor__cards {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .labor__cards .labor__card:not(:first-child) {
+    display: none;
+  }
+}
+
+.labor__card {
+  flex: none;
+  width: 280px;
+  background: #FFFFFF;
+  border: 1px solid #202020;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .labor__card {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    gap: 0;
+  }
+}
+
+.labor__card-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.labor__card-image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .labor__card-image {
+    aspect-ratio: auto;
+    margin-bottom: 16px;
+  }
+}
+
+.labor__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+.labor__card-img[src*=no_image] {
+  filter: grayscale(100%);
+}
+
+.labor__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.labor__card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.labor__card-title a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .labor__card-title {
+    font-size: clamp(14px, 4vw, 20px);
+    margin-bottom: 12px;
+  }
+}
+
+.labor__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #7F7F7F;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .labor__card-meta {
+    font-size: clamp(12px, 3.5vw, 16px);
+  }
+}
+
+.labor__button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.labor__button {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #FFFFFF;
+  background: #FF5824;
+  border: 2px solid #FFFAEC;
+  padding: 14px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 275px;
+  height: 87px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.labor__button:hover {
+  background: #FFFAEC;
+  color: #FF5824;
+  border-color: #FF5824;
+}
+@media (max-width: 768px) {
+  .labor__button {
+    width: 100%;
+    max-width: 315px;
+    height: auto;
+    padding: 14px 40px;
+    font-size: clamp(14px, 4vw, 20px);
+    min-width: auto;
+  }
+}
+
+/* ===============================
+  recruit（若者に人気の求人・募集情報）
+  ※ companyセクションと同じレイアウト
+================================ */
+.recruit {
+  width: 979px;
+  min-height: 1011px;
+  margin: 80px auto 0px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 1023px) {
+  .recruit {
+    width: clamp(320px, 90vw, 979px);
+  }
+}
+@media (max-width: 768px) {
+  .recruit {
+    width: 100%;
+    padding: 40px 20px;
+    min-height: auto;
+    margin: 40px auto 50px;
+  }
+}
+
+.recruit__title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  vertical-align: middle;
+  color: #202020;
+  background-color: #FFFAEC;
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .recruit__title {
+    font-size: clamp(18px, 5vw, 32px);
+    margin-bottom: 30px;
+    padding-left: 0px;
+  }
+}
+
+.recruit__layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  height: 920px;
+}
+@media (max-width: 1023px) {
+  .recruit__layout {
+    gap: clamp(20px, 3vw, 40px);
+  }
+}
+@media (max-width: 768px) {
+  .recruit__layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    height: auto;
+  }
+}
+
+.recruit__columns-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  height: 929px;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .recruit__columns-right {
+    height: auto;
+    justify-content: flex-start;
+  }
+}
+
+.recruit__columns-inner {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .recruit__columns-inner {
+    flex-direction: column;
+  }
+}
+.recruit__columns-inner.recruit__columns-scroll {
+  height: 852px;
+  max-height: 822px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 8px;
+  margin-right: -8px;
+  scrollbar-width: thin;
+  scrollbar-color: #FF5824 #F0F0F0;
+}
+.recruit__columns-inner.recruit__columns-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.recruit__columns-inner.recruit__columns-scroll::-webkit-scrollbar-track {
+  background: #FF5824;
+  border-radius: 4px;
+}
+.recruit__columns-inner.recruit__columns-scroll::-webkit-scrollbar-thumb {
+  background: #FF5824;
+  border: 5px solid #FF5824;
+  border-radius: 4px;
+}
+.recruit__columns-inner.recruit__columns-scroll::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+@media (max-width: 768px) {
+  .recruit__columns-inner.recruit__columns-scroll {
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+
+.recruit__column {
+  display: flex;
+  flex-direction: column;
+}
+.recruit__column--left {
+  width: 385px;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .recruit__column--left {
+    width: 100%;
+  }
+}
+.recruit__column--middle {
+  width: 258px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .recruit__column--middle {
+    width: 100%;
+  }
+}
+.recruit__column--right {
+  width: 258px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .recruit__column--right {
+    width: 100%;
+  }
+}
+
+.recruit__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .recruit__card-wrapper {
+    margin-bottom: 0;
+  }
+}
+.recruit__card-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.recruit__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.recruit__bar {
+  height: 10px;
+  background: #202020;
+  margin-bottom: 10px;
+}
+.recruit__bar--left {
+  width: 385px;
+}
+@media (max-width: 768px) {
+  .recruit__bar--left {
+    width: 100%;
+  }
+}
+.recruit__bar--right {
+  width: 258px;
+}
+@media (max-width: 768px) {
+  .recruit__bar--right {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .recruit__bar {
+    width: 100%;
+  }
+}
+
+.recruit__card {
+  background-color: #FFFAEC;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.recruit__card--large {
+  width: 385px;
+  height: 909px;
+  position: relative;
+  padding: 0;
+}
+.recruit__card--large .recruit__card-image {
+  width: 100%;
+  height: 909px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.recruit__card--large .recruit__card-image img {
+  width: 100%;
+  height: 909px;
+  object-fit: cover;
+}
+.recruit__card--large .recruit__card-title,
+.recruit__card--large .recruit__card-meta {
+  position: relative;
+  z-index: 2;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.recruit__card--large .recruit__card-title {
+  margin-top: 650px;
+  padding-top: 20px;
+}
+.recruit__card--large .recruit__card-title a {
+  color: #000000;
+}
+.recruit__card--large .recruit__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin-top: 30px;
+  color: #FFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .recruit__card--large {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  .recruit__card--large .recruit__card-image {
+    order: 1;
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  .recruit__card--large .recruit__card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .recruit__card--large .recruit__card-title {
+    order: 2;
+    position: static;
+    z-index: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .recruit__card--large .recruit__card-title a {
+    color: #000000;
+    text-shadow: none;
+  }
+  .recruit__card--large .recruit__card-meta {
+    order: 3;
+    position: static;
+    z-index: auto;
+    margin-left: 0;
+    margin-right: 0;
+    color: #7F7F7F;
+    text-shadow: none;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  .recruit__card--large .recruit__card-excerpt {
+    order: 4;
+  }
+}
+.recruit__card--small-col-2, .recruit__card--small-col-3 {
+  width: 100%;
+  min-height: 382px;
+}
+@media (max-width: 768px) {
+  .recruit__card--small-col-2, .recruit__card--small-col-3 {
+    width: 100%;
+    min-height: auto;
+  }
+}
+.recruit__card--small-col-3 {
+  width: 258px;
+  height: 267px;
+}
+@media (max-width: 768px) {
+  .recruit__card--small-col-3 {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .recruit__card {
+    width: 100% !important;
+  }
+}
+
+.recruit__card-image {
+  width: 100%;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.recruit__card-image a {
+  display: block;
+  width: 100%;
+}
+.recruit__card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.recruit__card-image img[src*=no_image] {
+  filter: grayscale(100%);
+}
+.recruit__card--small-col-2 .recruit__card-image, .recruit__card--small-col-3 .recruit__card-image {
+  width: 258px;
+  height: 258px;
+}
+.recruit__card--small-col-2 .recruit__card-image img, .recruit__card--small-col-3 .recruit__card-image img {
+  width: 258px;
+  height: 258px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .recruit__card--small-col-2 .recruit__card-image, .recruit__card--small-col-3 .recruit__card-image {
+    width: 100%;
+    height: auto;
+  }
+  .recruit__card--small-col-2 .recruit__card-image img, .recruit__card--small-col-3 .recruit__card-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+.recruit__card--small-col-3 .recruit__card-image {
+  height: 146px;
+}
+.recruit__card--small-col-3 .recruit__card-image img {
+  height: 146px;
+}
+@media (max-width: 768px) {
+  .recruit__card--small-col-3 .recruit__card-image {
+    height: auto;
+  }
+  .recruit__card--small-col-3 .recruit__card-image img {
+    height: auto;
+  }
+}
+
+.recruit__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0 0 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.recruit__card-title a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.recruit__card-title a:hover {
+  color: #FF5824;
+}
+@media (max-width: 768px) {
+  .recruit__card-title {
+    font-size: clamp(14px, 4vw, 20px);
+  }
+}
+
+.recruit__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #7F7F7F;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .recruit__card-meta {
+    font-size: clamp(12px, 3.5vw, 16px);
+  }
+}
+
+.recruit__button {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FF5824;
+  background: transparent;
+  border: 2px solid #FF5824;
+  padding: 14px 146px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 535px;
+  height: 87px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  gap: 10px;
+  align-self: flex-start;
+}
+.recruit__button:hover {
+  background: #FF5824;
+  color: #FFF;
+}
+@media (max-width: 768px) {
+  .recruit__button {
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 315px;
+    height: auto;
+    padding: 14px 40px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+}
+
+/* ===============================
+  money（お金の勉強・保険・若者向けの資産運用）
+  ※ howtoセクションと同じレイアウト
+================================ */
+.money {
+  width: 100%;
+  max-width: 1440px;
+  margin: 80px auto 0px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .money {
+    margin: 60px auto 0px;
+  }
+}
+
+.money__bg {
+  width: 100%;
+  height: 419px;
+  background: #202020;
+  padding: clamp(20px, 3vw, 40px);
+  box-sizing: border-box;
+}
+@media (max-width: 767px) {
+  .money__bg {
+    height: auto;
+    padding: 30px 20px;
+  }
+}
+
+.money__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 80px;
+}
+@media (max-width: 767px) {
+  .money__header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-left: 0;
+  }
+}
+
+.money__header-left {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.money__bar {
+  width: 100%;
+  height: 10px;
+  background-color: #FFFFFF;
+}
+
+.money__title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #FFFFFF;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .money__title {
+    font-size: clamp(18px, 5vw, 32px);
+  }
+}
+
+.money__button {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #FFFFFF;
+  background: #FF5824;
+  border: 2px solid #FFFAEC;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 275px;
+  height: 87px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.money__button:hover {
+  background: #FFFAEC;
+  color: #FF5824;
+  border-color: #FF5824;
+}
+@media (max-width: 768px) {
+  .money__button {
+    width: 100%;
+    max-width: 315px;
+    height: auto;
+    padding: 14px 40px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+}
+
+.money__cards {
+  display: flex;
+  gap: 20px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 3vw, 40px);
+  margin-top: -280px;
+}
+@media (max-width: 767px) {
+  .money__cards {
+    margin-top: 0;
+    flex-direction: column;
+    overflow-x: visible;
+    padding: 20px;
+  }
+}
+
+.money__card {
+  position: relative;
+  flex-shrink: 0;
+  width: 400px;
+  height: 500px;
+}
+@media (max-width: 767px) {
+  .money__card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.money__card-image {
+  width: 100%;
+  height: 359px;
+}
+.money__card-image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .money__card-image {
+    height: auto;
+    aspect-ratio: 400/359;
+  }
+}
+
+.money__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+.money__card-img[src*=no_image] {
+  filter: grayscale(100%);
+}
+
+.money__card-meta {
+  position: absolute;
+  top: 279px;
+  left: 0;
+  width: 335.51px;
+  height: 178.65px;
+  background: #FFFFFF;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 11.37px;
+}
+@media (max-width: 767px) {
+  .money__card-meta {
+    width: 90%;
+    height: auto;
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.money__card-source {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 150%;
+  color: #7F7F7F;
+  margin: 0;
+  margin-top: auto;
+}
+
+.money__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 150%;
+  color: #000000;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.money__card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.money__card-title a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+  skillup（今後将来必要なスキルアップ）
+  ※ careerセクションと同じレイアウト
+================================ */
+.skillup {
+  max-width: 960px;
+  margin: 80px auto 0;
+  padding: 0 clamp(20px, 3vw, 40px);
+}
+@media (max-width: 768px) {
+  .skillup {
+    margin-top: 60px;
+    padding: 0 20px;
+  }
+}
+
+.skillup__header {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .skillup__header {
+    padding-left: 0px;
+  }
+}
+
+.skillup__bar {
+  width: 100%;
+  height: 10px;
+  background-color: #202020;
+}
+
+.skillup__title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #202020;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .skillup__title {
+    font-size: clamp(18px, 5vw, 32px);
+  }
+}
+
+.skillup__separator {
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #202020;
+  margin: 18px 0;
+}
+
+.skillup__card--large {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+  min-height: 276px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+.skillup__card--large:hover {
+  opacity: 0.8;
+}
+.skillup__card--large .skillup__card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skillup__card--large .skillup__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+}
+.skillup__card--large .skillup__card-excerpt {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.5;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+  max-height: 4.5em;
+}
+.skillup__card--large .skillup__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #7F7F7F;
+  margin: 0;
+  margin-top: auto;
+}
+.skillup__card--large .skillup__card-image {
+  width: 276px;
+  height: 276px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.skillup__card--large .skillup__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.skillup__card--large .skillup__card-image img[src*=no_image] {
+  filter: grayscale(100%);
+}
+@media (max-width: 768px) {
+  .skillup__card--large {
+    align-items: center;
+    gap: 15px;
+    min-height: auto;
+    padding: 10px 0;
+  }
+  .skillup__card--large .skillup__card-content {
+    gap: 8px;
+  }
+  .skillup__card--large .skillup__card-title {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #000000;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .skillup__card--large .skillup__card-excerpt {
+    display: none;
+  }
+  .skillup__card--large .skillup__card-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.skillup__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 60px;
+}
+@media (max-width: 768px) {
+  .skillup__cards {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.skillup__card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillup__card--small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 129px;
+  text-decoration: none;
+  color: inherit;
+  padding: 15px 0;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+.skillup__card--small:hover {
+  opacity: 0.8;
+}
+.skillup__card--small .skillup__card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.skillup__card--small .skillup__card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.skillup__card--small .skillup__card-meta {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #7F7F7F;
+  margin: 0;
+}
+.skillup__card--small .skillup__card-image {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .skillup__card--small .skillup__card-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+.skillup__card--small .skillup__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.skillup__card--small .skillup__card-image img[src*=no_image] {
+  filter: grayscale(100%);
+}
+@media (max-width: 768px) {
+  .skillup__card--small {
+    min-height: auto;
+    padding: 10px 0;
+  }
+}
+
+.skillup__card-line {
+  width: 100%;
+  max-width: 450px;
+  height: 0;
+  border-bottom: 1px solid #202020;
+}
+@media (max-width: 768px) {
+  .skillup__card-line {
+    max-width: 100%;
+  }
+}
+
+.skillup__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 535px;
+  height: 87px;
+  margin: 40px auto 0;
+  padding: 14px 146px;
+  border: 2px solid #FF5824;
+  background: transparent;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #FF5824;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  gap: 10px;
+}
+.skillup__button:hover {
+  background: #FF5824;
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  .skillup__button {
+    width: 100%;
+    max-width: 315px;
+    height: auto;
+    padding: 14px 40px;
+    font-size: clamp(14px, 4vw, 20px);
+  }
+}
+
+/* ===============================
+  ダミーセクション
+================================ */
+.dummy-section {
+  width: 100%;
+  height: 250px;
+}
+
+/*# sourceMappingURL=page-media.css.map */
