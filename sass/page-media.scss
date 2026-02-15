@@ -64,7 +64,7 @@ $section-title-font-size-sp: clamp(18px, 5vw, 32px);
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: stretch;
-    gap: 30px;
+    gap: 10px;
     height: auto;
   }
 }
@@ -133,6 +133,9 @@ $section-title-font-size-sp: clamp(18px, 5vw, 32px);
   height: 0;
   border-bottom: 1px solid #202020;
   margin: 18px 0;
+  @media (max-width: 768px) {
+    margin: 0px;
+  }
 }
 
 // 共通カードラッパー
@@ -744,7 +747,7 @@ main:has(.company) {
 ================================ */
 .archive {
   max-width: 1334px;
-  margin: 40px auto 80px;
+  margin: 40px auto 180px;
   padding: 0 20px;
   background-color: #FFFAEC;
 }
@@ -983,6 +986,7 @@ main:has(.company) {
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 10px;
   }
 
   &.company__columns-scroll {
@@ -1038,6 +1042,7 @@ main:has(.company) {
 
     @media (max-width: 768px) {
       width: 100%;
+      gap: 10px;
     }
   }
 
@@ -1049,6 +1054,7 @@ main:has(.company) {
 
     @media (max-width: 768px) {
       width: 100%;
+      gap: 10px;
     }
   }
 
@@ -1060,6 +1066,7 @@ main:has(.company) {
 
     @media (max-width: 768px) {
       width: 100%;
+      gap: 10px;
     }
   }
 
@@ -1106,6 +1113,10 @@ main:has(.company) {
 
 .company__cards {
   @include cards-list;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 }
 
 .company__cards-scroll {
@@ -1879,6 +1890,7 @@ main:has(.company) {
   max-width: 1440px;
   margin: $secttion-margin-top auto 0;
   position: relative;
+  margin-bottom: 200px;
 }
 
 .labor__bg {
