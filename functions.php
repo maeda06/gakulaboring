@@ -49,18 +49,24 @@ add_action( 'wp_enqueue_scripts', 'my_styles' );
 /* カテゴリナビ用AJAX処理 */
 /*----------------------------------------------------------*/
 function load_category_posts() {
-  $cat_id = isset($_POST['cat_id']) ? intval($_POST['cat_id']) : 0;
+  $cat_id_raw = isset($_POST['cat_id']) ? sanitize_text_field($_POST['cat_id']) : '';
   $paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
   
+  // 単一ID または カンマ区切り複数ID に対応
+  $cat_ids = array_filter(array_map('intval', explode(',', $cat_id_raw)));
   $args = array(
     'post_type' => 'post',
     'posts_per_page' => 7,
     'paged' => $paged,
     'post_status' => 'publish',
-    'cat' => $cat_id,
     'orderby' => 'date',
     'order' => 'DESC'
   );
+  if (count($cat_ids) === 1) {
+    $args['cat'] = $cat_ids[0];
+  } elseif (count($cat_ids) > 1) {
+    $args['category__in'] = $cat_ids;
+  }
   
   $query = new WP_Query($args);
   $html = '';
@@ -68,19 +74,22 @@ function load_category_posts() {
   if ($query->have_posts()) {
     while ($query->have_posts()) {
       $query->the_post();
-      $source = function_exists('get_field') ? (get_field('source') ?: '毎日新聞') : '毎日新聞';
-      $date = get_the_date('m/d(D)');
-      $time_ago = human_time_diff(get_the_time('U'), current_time('timestamp')) . '前';
+      $post_link = get_post_meta(get_the_ID(), 'redirect_url', true);
+      if (empty($post_link)) {
+        $post_link = get_permalink();
+      }
+      $post_link = esc_url($post_link);
+      $datetime = get_the_time('Y/m/d H:i');
       $thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'medium') : get_template_directory_uri() . '/images/no_image.jpg';
       
       $html .= '<article class="archive__item">';
       $html .= '<div class="archive__item-content">';
-      $html .= '<p class="archive__item-meta">' . esc_html($source . '　' . $date . '  ' . $time_ago) . '</p>';
+      $html .= '<p class="archive__item-meta">' . esc_html($datetime) . '</p>';
       $html .= '<div class="archive__item-title-wrapper">';
-      $html .= '<h3 class="archive__item-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
-      $html .= '<span class="archive__item-arrow"><img src="' . get_template_directory_uri() . '/images/arrorw.png" alt="矢印"></span>';
+      $html .= '<h3 class="archive__item-title"><a href="' . $post_link . '">' . get_the_title() . '</a></h3>';
+      $html .= '<span class="archive__item-arrow"><a href="' . $post_link . '"><img src="' . get_template_directory_uri() . '/images/arrorw.png" alt="矢印"></a></span>';
       $html .= '</div></div>';
-      $html .= '<div class="archive__item-image"><a href="' . get_permalink() . '">';
+      $html .= '<div class="archive__item-image"><a href="' . $post_link . '">';
       $html .= '<img src="' . esc_url($thumbnail) . '" alt="記事画像" class="archive__item-img">';
       $html .= '</a></div></article>';
     }
@@ -120,3 +129,26 @@ function enqueue_ajax_scripts() {
   }
 }
 add_action('wp_enqueue_scripts', 'enqueue_ajax_scripts');
+
+// mediaページで ajax_object を wp_footer の先頭で出力（main.js より前に読み込むため）
+function output_ajax_object_for_media() {
+  if (is_page('media')) {
+    echo '<script>var ajax_object = ' . wp_json_encode(array(
+      'ajax_url' => admin_url('admin-ajax.php'),
+      'nonce' => wp_create_nonce('category_nav_nonce')
+    )) . ';</script>' . "\n";
+  }
+}
+add_action('wp_footer', 'output_ajax_object_for_media', 5);
+
+
+add_action( 'init', function() {
+    register_post_meta( '', 'redirect_url', array(
+      'show_in_rest'  => true,
+      'single'        => true,
+      'type'          => 'string',
+      'auth_callback' => function() {
+        return current_user_can( 'edit_posts' );
+      }
+    ) );
+  } );

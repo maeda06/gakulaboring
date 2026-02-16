@@ -305,17 +305,15 @@ gsap.fromTo('#features .cloud',
 document.addEventListener('DOMContentLoaded', function() {
   const categoryItems = document.querySelectorAll('.category-nav__item');
   const archiveSection = document.getElementById('archive-section');
-  const mainSections = document.querySelectorAll('.company, .howto, .career, .labor, .recruit, .money, .skillup');
+  const mainSections = document.querySelectorAll('.company, .howto, .skillup, .money, .labor');
   
-  // セクションとカテゴリのマッピング（インデックス）
+  // セクションとカテゴリナビのマッピング（5セクション・インデックス0-4）
   const sectionToCategoryMap = {
-    'company': 0,    // 将来性・企業・業界動向・研究
-    'howto': 1,      // 就活準備・就活進め方・エントリーシート・選考対策
-    'career': 2,     // キャリア・自己分析
-    'labor': 3,      // 労働市場・待遇・福利厚生
-    'recruit': 4,    // 若者に人気の求人・募集情報
-    'money': 5,      // お金の勉強・保険・若者向けの資産運用
-    'skillup': 6     // 今後将来必要なスキルアップ
+    'company': 0,   // 就活情報・市場動向・総合ニュース
+    'howto': 1,     // 就活・フリーランス情報
+    'skillup': 2,   // スキルアップ情報
+    'money': 3,     // お金の勉強・若者向け資産運用・NISA・iDeCo
+    'labor': 4      // 人生設計・ワークライフ・地域活性情報
   };
 
   // archiveセクションを表示する共通関数
@@ -357,59 +355,47 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // VIEW ALL POSTSボタンのクリックイベント
-  // company__button
+  // 表示を切り替えたうえで、対応するヘッダーカテゴリをプログラムでクリックし、
+  // カテゴリ用の記事読み込み・currentCatId 設定・ページネーションを有効にする
+  function handleViewAllPosts(e, categoryIndex) {
+    showArchiveSection(e, categoryIndex);
+    if (categoryItems[categoryIndex]) {
+      categoryItems[categoryIndex].click();
+    }
+  }
+
   const companyBtn = document.querySelector('.company__button');
   if (companyBtn) {
     companyBtn.addEventListener('click', function(e) {
-      showArchiveSection(e, sectionToCategoryMap['company']);
+      handleViewAllPosts(e, sectionToCategoryMap['company']);
     });
   }
 
-  // howto__button
   const howtoBtn = document.querySelector('.howto__button');
   if (howtoBtn) {
     howtoBtn.addEventListener('click', function(e) {
-      showArchiveSection(e, sectionToCategoryMap['howto']);
+      handleViewAllPosts(e, sectionToCategoryMap['howto']);
     });
   }
 
-  // career__button
-  const careerBtn = document.querySelector('.career__button');
-  if (careerBtn) {
-    careerBtn.addEventListener('click', function(e) {
-      showArchiveSection(e, sectionToCategoryMap['career']);
-    });
-  }
-
-  // labor__button
   const laborBtn = document.querySelector('.labor__button');
   if (laborBtn) {
     laborBtn.addEventListener('click', function(e) {
-      showArchiveSection(e, sectionToCategoryMap['labor']);
+      handleViewAllPosts(e, sectionToCategoryMap['labor']);
     });
   }
 
-  // recruit__button
-  const recruitBtn = document.querySelector('.recruit__button');
-  if (recruitBtn) {
-    recruitBtn.addEventListener('click', function(e) {
-      showArchiveSection(e, sectionToCategoryMap['recruit']);
-    });
-  }
-
-  // money__button
   const moneyBtn = document.querySelector('.money__button');
   if (moneyBtn) {
     moneyBtn.addEventListener('click', function(e) {
-      showArchiveSection(e, sectionToCategoryMap['money']);
+      handleViewAllPosts(e, sectionToCategoryMap['money']);
     });
   }
 
-  // skillup__button
   const skillupBtn = document.querySelector('.skillup__button');
   if (skillupBtn) {
     skillupBtn.addEventListener('click', function(e) {
-      showArchiveSection(e, sectionToCategoryMap['skillup']);
+      handleViewAllPosts(e, sectionToCategoryMap['skillup']);
     });
   }
 });
@@ -516,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const archiveSection = document.getElementById('archive-section');
   const archiveList = archiveSection ? archiveSection.querySelector('.archive__list') : null;
   const archivePagination = archiveSection ? archiveSection.querySelector('.archive__pagination') : null;
-  const mainSections = document.querySelectorAll('.company, .howto, .career, .labor, .recruit, .money, .skillup');
+  const mainSections = document.querySelectorAll('.company, .howto, .skillup, .money, .labor');
   
   let currentCatId = null;
   
@@ -548,6 +534,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // AJAX で記事を読み込む
   function loadCategoryPosts(catId, page) {
     if (!archiveList) return;
+    if (typeof ajax_object === 'undefined' || !ajax_object.ajax_url) {
+      archiveList.innerHTML = '<p class="archive__error">記事の読み込みに失敗しました。</p>';
+      return;
+    }
     
     // ローディング表示
     archiveList.innerHTML = '<div class="archive__loading">読み込み中...</div>';
