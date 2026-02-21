@@ -47,7 +47,8 @@ if (window.matchMedia('(max-width: 767px)').matches) {
   autoAlpha: 1,
   });
 } else {
-  // それ以外の処理
+  // それ以外の処理（要素がないページではスキップ）
+  if (titleLeft && titleRight) {
   tl.to(
   titleLeft, {
 }).add(() => {
@@ -73,6 +74,7 @@ if (window.matchMedia('(max-width: 767px)').matches) {
   autoAlpha: 1,
 }
 );
+  }
 }
 
 });
@@ -400,98 +402,166 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Labor セクション スライダー機能
+// 各記事セクション: 画面幅768px以下（SP）のときは最大5件まで表示に制限
+(function() {
+  const SP_LIMIT = 5;
+  var sections = [
+    { id: 'company-news-section', cardSelector: '.company__card-wrapper', hiddenClass: 'company__card-wrapper--sp-hidden' },
+    { id: 'section-howto', cardSelector: '.howto__card', hiddenClass: 'media-section-card--sp-hidden' },
+    { id: 'section-skillup', cardSelector: '.skillup__card', hiddenClass: 'media-section-card--sp-hidden' },
+    { id: 'section-money', cardSelector: '.money__card', hiddenClass: 'media-section-card--sp-hidden' },
+    { id: 'section-labor', cardSelector: '.labor__card', hiddenClass: 'media-section-card--sp-hidden' }
+  ];
+  function updateSectionCardVisibility() {
+    var isSp = window.matchMedia('(max-width: 768px)').matches;
+    sections.forEach(function(config) {
+      var section = document.getElementById(config.id);
+      if (!section) return;
+      var cards = section.querySelectorAll(config.cardSelector);
+      cards.forEach(function(el, index) {
+        if (isSp && index >= SP_LIMIT) {
+          el.classList.add(config.hiddenClass);
+        } else {
+          el.classList.remove(config.hiddenClass);
+        }
+      });
+    });
+  }
+  function init() {
+    updateSectionCardVisibility();
+    window.addEventListener('resize', updateSectionCardVisibility);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    requestAnimationFrame(init);
+  }
+})();
+
+// Labor セクション スライダー機能（PC: 2行4列=8枚表示、横スライドで次ページ／SP: 1枚ずつ切り替え）
 document.addEventListener('DOMContentLoaded', function() {
+  const laborSliderWrapper = document.querySelector('.labor__slider');
   const laborSlider = document.querySelector('.labor__cards');
   const laborPrevBtn = document.querySelector('.labor__nav-btn--prev');
   const laborNextBtn = document.querySelector('.labor__nav-btn--next');
-  
-  if (laborSlider && laborPrevBtn && laborNextBtn) {
-    const cardWidth = 280;
-    const gap = 24;
-    const scrollAmount = cardWidth + gap;
-    let currentPosition = 0;
-    let currentIndex = 0; // SP用: 現在表示中のカードインデックス
-    
-    // カードの総数を取得
-    const cards = laborSlider.querySelectorAll('.labor__card');
-    const totalCards = cards.length;
-    const visibleCards = 3; // PC: 一度に表示するカード数
-    const maxPosition = Math.max(0, (totalCards - visibleCards) * scrollAmount);
-    
-    // SP判定
-    function isSP() {
-      return window.matchMedia('(max-width: 768px)').matches;
+
+  if (!laborSliderWrapper || !laborSlider || !laborPrevBtn || !laborNextBtn) return;
+
+  const cards = laborSlider.querySelectorAll('.labor__card');
+  const totalCards = cards.length;
+  const CARDS_PER_PAGE = 8; // PC: 2行×4列
+
+  let currentIndex = 0; // SP: 現在表示中のカード
+  let currentPage = 0;   // PC: 現在のページ（0始まり）
+  let pageHeight = 0;  // PC: 2行分の高さ（表示エリア用）
+  let numPages = Math.max(1, Math.ceil(totalCards / CARDS_PER_PAGE));
+  let maxPage = numPages - 1;
+
+  function isSP() {
+    return window.matchMedia('(max-width: 768px)').matches;
+  }
+
+  // PC: 横スライド用にグリッドを「列優先・4列×2行のページを横に並べる」形にし、2行分の高さをセット
+  function setupPCHorizontalSlider() {
+    if (isSP() || totalCards < CARDS_PER_PAGE) {
+      laborSliderWrapper.style.height = '';
+      laborSlider.style.width = '';
+      laborSlider.style.gridTemplateColumns = '';
+      laborSlider.style.gridTemplateRows = '';
+      laborSlider.style.gridAutoFlow = '';
+      laborSlider.style.transform = '';
+      return;
     }
-    
-    // SP用: カードの表示を更新
-    function updateCardVisibility() {
-      cards.forEach(function(card, index) {
-        if (index === currentIndex) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-    
-    // 次へボタン
-    laborNextBtn.addEventListener('click', function() {
-      if (isSP()) {
-        // SP: カードを1枚ずつ切り替え
-        if (currentIndex < totalCards - 1) {
-          currentIndex++;
-          updateCardVisibility();
-        }
-      } else {
-        // PC: transformでスライド
-        if (currentPosition < maxPosition) {
-          currentPosition += scrollAmount;
-          if (currentPosition > maxPosition) {
-            currentPosition = maxPosition;
-          }
-          laborSlider.style.transform = 'translateX(-' + currentPosition + 'px)';
-          laborSlider.style.transition = 'transform 0.3s ease';
-        }
-      }
-    });
-    
-    // 前へボタン
-    laborPrevBtn.addEventListener('click', function() {
-      if (isSP()) {
-        // SP: カードを1枚ずつ切り替え
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateCardVisibility();
-        }
-      } else {
-        // PC: transformでスライド
-        if (currentPosition > 0) {
-          currentPosition -= scrollAmount;
-          if (currentPosition < 0) {
-            currentPosition = 0;
-          }
-          laborSlider.style.transform = 'translateX(-' + currentPosition + 'px)';
-          laborSlider.style.transition = 'transform 0.3s ease';
-        }
-      }
-    });
-    
-    // リサイズ時にリセット
-    window.addEventListener('resize', function() {
-      if (isSP()) {
-        laborSlider.style.transform = '';
-        currentPosition = 0;
-        updateCardVisibility();
-      } else {
-        // PCに戻った時は全カード表示
-        cards.forEach(function(card) {
-          card.style.display = '';
-        });
-        currentIndex = 0;
-      }
+    numPages = Math.max(1, Math.ceil(totalCards / CARDS_PER_PAGE));
+    maxPage = numPages - 1;
+    currentPage = Math.min(currentPage, maxPage);
+
+    // 2行分の高さを計測（8枚目の下端まで）
+    var card8 = cards[CARDS_PER_PAGE - 1];
+    var gridRect = laborSlider.getBoundingClientRect();
+    var card8Rect = card8.getBoundingClientRect();
+    pageHeight = card8Rect.bottom - gridRect.top + 24;
+    laborSliderWrapper.style.height = pageHeight + 'px';
+
+    // 横にページを並べる: 列優先で 4列×2行 × numPages
+    laborSlider.style.gridAutoFlow = 'column';
+    laborSlider.style.gridTemplateRows = 'repeat(2, auto)';
+    laborSlider.style.gridTemplateColumns = 'repeat(' + (4 * numPages) + ', minmax(0, 1fr))';
+    laborSlider.style.width = (numPages * 100) + '%';
+    applyPCTransform();
+  }
+
+  // SP: 表示カードを切り替え
+  function updateCardVisibility() {
+    cards.forEach(function(card, index) {
+      card.style.display = index === currentIndex ? 'flex' : 'none';
     });
   }
+
+  function applyPCTransform() {
+    laborSlider.style.transition = 'transform 0.3s ease';
+    if (numPages <= 1) {
+      laborSlider.style.transform = 'translateX(0)';
+    } else {
+      laborSlider.style.transform = 'translateX(-' + (currentPage / numPages * 100) + '%)';
+    }
+  }
+
+  laborNextBtn.addEventListener('click', function() {
+    if (isSP()) {
+      if (currentIndex < totalCards - 1) {
+        currentIndex++;
+        updateCardVisibility();
+      }
+    } else {
+      if (currentPage < maxPage) {
+        currentPage++;
+        applyPCTransform();
+      }
+    }
+  });
+
+  laborPrevBtn.addEventListener('click', function() {
+    if (isSP()) {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCardVisibility();
+      }
+    } else {
+      if (currentPage > 0) {
+        currentPage--;
+        applyPCTransform();
+      }
+    }
+  });
+
+  function init() {
+    if (isSP()) {
+      laborSliderWrapper.style.height = '';
+      laborSlider.style.width = '';
+      laborSlider.style.gridTemplateColumns = '';
+      laborSlider.style.gridTemplateRows = '';
+      laborSlider.style.gridAutoFlow = '';
+      laborSlider.style.transform = '';
+      cards.forEach(function(card) { card.style.display = ''; });
+      updateCardVisibility();
+    } else {
+      cards.forEach(function(card) { card.style.display = ''; });
+      setupPCHorizontalSlider();
+    }
+  }
+
+  init();
+  window.addEventListener('resize', function() {
+    if (isSP()) {
+      currentIndex = Math.min(currentIndex, totalCards - 1);
+    } else {
+      setupPCHorizontalSlider();
+    }
+  });
+  window.addEventListener('load', function() {
+    if (!isSP() && totalCards >= CARDS_PER_PAGE) setupPCHorizontalSlider();
+  });
 });
 
 // ========================================

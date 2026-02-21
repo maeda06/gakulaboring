@@ -17,7 +17,7 @@
 			<?php
 			$args = array(
 				'post_type' => 'post',
-				'post_per_page' => 4,
+				'posts_per_page' => 4,
 			);
 			$the_query =new WP_Query( $args );
 			if( $the_query->have_posts() ):
@@ -34,23 +34,27 @@
 						<ul>
 							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 							<li>
-								<a href="<?php echo get_permalink(); ?>">
-									<?php
-									if(has_post_thumbnail()):
-										the_post_thumbnail();
-									else:
-									?>
-									<div class="thumbnail"><img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="" /></div>
-									<?php endif; ?>
+								<a href="<?php echo esc_url( get_permalink() ); ?>">
+									<div class="thumbnail">
+										<?php if ( has_post_thumbnail() ) : ?>
+											<?php the_post_thumbnail( 'medium', array( 'class' => 'news-thumb-img' ) ); ?>
+										<?php else : ?>
+											<img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="" />
+										<?php endif; ?>
+									</div>
 									<div class="list-text">
-										<h3><?php echo get_the_title(); ?></h3>
-										<p><?php the_excerpt(); ?></p>
+										<h3><?php echo esc_html( get_the_title() ); ?></h3>
+										<p><?php
+											$excerpt = wp_strip_all_tags( get_the_excerpt() );
+											echo esc_html( mb_strimwidth( $excerpt, 0, 100, '…' ) );
+										?></p>
 									</div>
 								</a>
 							</li>
 							<?php endwhile; ?>
 						</ul>
-						<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+						<?php $media_page = get_page_by_path('media', OBJECT, 'page'); ?>
+						<div class="btn btn--black"><a href="<?php echo esc_url($media_page ? get_permalink($media_page) : home_url('/media/')); ?>"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 					</div>
 				</section>
 				<?php wp_reset_postdata(); endif; ?>

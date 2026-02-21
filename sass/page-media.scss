@@ -938,7 +938,7 @@ main:has(.company) {
   company
 ================================ */
 .company {
-  width: 979px;
+  max-width: 1200px;
   min-height: 1011px;
   margin: $section-margin-nav auto 0px;
   padding: 0 10px;
@@ -1040,6 +1040,10 @@ main:has(.company) {
     width: 385px;
     flex-shrink: 0;
 
+    @media (min-width: 769px) {
+      width: 540px; // PC: 下のセクション幅に合わせてカードを少し大きく
+    }
+
     @media (max-width: 768px) {
       width: 100%;
       gap: 10px;
@@ -1052,6 +1056,10 @@ main:has(.company) {
     display: flex;
     flex-direction: column;
 
+    @media (min-width: 769px) {
+      width: 300px;
+    }
+
     @media (max-width: 768px) {
       width: 100%;
       gap: 10px;
@@ -1063,6 +1071,10 @@ main:has(.company) {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 769px) {
+      width: 300px;
+    }
 
     @media (max-width: 768px) {
       width: 100%;
@@ -1087,6 +1099,13 @@ main:has(.company) {
 .company__card-wrapper {
   @include card-wrapper;
 
+  // SP時はJSで6件目以降に付与。5件まで表示に制限
+  @media (max-width: 768px) {
+    &.company__card-wrapper--sp-hidden {
+      display: none !important;
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -1104,10 +1123,24 @@ main:has(.company) {
     height: 267.1748352050781px;
     flex-shrink: 0;
 
+    @media (min-width: 769px) {
+      width: 300px;
+    }
+
     @media (max-width: 768px) {
       width: 100%;
       height: auto;
     }
+  }
+}
+
+// howto / skillup / money / labor: SP時5件制限用の非表示クラス
+@media (max-width: 768px) {
+  .howto__card.media-section-card--sp-hidden,
+  .skillup__card.media-section-card--sp-hidden,
+  .money__card.media-section-card--sp-hidden,
+  .labor__card.media-section-card--sp-hidden {
+    display: none !important;
   }
 }
 
@@ -1171,6 +1204,10 @@ main:has(.company) {
   &--left {
     width: 385px;
 
+    @media (min-width: 769px) {
+      width: 540px;
+    }
+
     @media (max-width: 768px) {
       width: 100%;
     }
@@ -1178,6 +1215,10 @@ main:has(.company) {
 
   &--right {
     width: 258px;
+
+    @media (min-width: 769px) {
+      width: 300px;
+    }
 
     @media (max-width: 768px) {
       width: 100%;
@@ -1204,6 +1245,11 @@ main:has(.company) {
     position: relative;
     padding: 0;
 
+    @media (min-width: 769px) {
+      width: 540px;
+    
+    }
+
     .company__card-image {
       width: 100%;
       height: 909px;
@@ -1213,10 +1259,18 @@ main:has(.company) {
       left: 0;
       z-index: 1;
 
+      @media (min-width: 769px) {
+        //height: 1040px;
+      }
+
       img {
         width: 100%;
         height: 909px;
         object-fit: cover;
+
+        @media (min-width: 769px) {
+          //height: 1040px;
+        }
       }
     }
 
@@ -1231,6 +1285,10 @@ main:has(.company) {
     .company__card-title {
       margin-top: 650px;
       padding-top: 20px;
+
+      @media (min-width: 769px) {
+        margin-top: 750px;
+      }
       //margin-bottom: 12px;
       
       a {
@@ -1388,10 +1446,20 @@ main:has(.company) {
     width: 258px;
     height: 258px;
 
+    @media (min-width: 769px) {
+      width: 300px;
+      height: 300px;
+    }
+
     img {
       width: 258px;
       height: 258px;
       object-fit: cover;
+
+      @media (min-width: 769px) {
+        width: 300px;
+        height: 300px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1410,10 +1478,20 @@ main:has(.company) {
     width: 258px;
     height: 258px;
 
+    @media (min-width: 769px) {
+      width: 300px;
+      height: 300px;
+    }
+
     img {
       width: 258px;
       height: 258px;
       object-fit: cover;
+
+      @media (min-width: 769px) {
+        width: 300px;
+        height: 300px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1432,10 +1510,20 @@ main:has(.company) {
     width: 258px;
     height: 258px;
 
+    @media (min-width: 769px) {
+      width: 300px;
+      height: 300px;
+    }
+
     img {
       width: 258px;
       height: 258px;
       object-fit: cover;
+
+      @media (min-width: 769px) {
+        width: 300px;
+        height: 300px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1454,10 +1542,20 @@ main:has(.company) {
     width: 258px;
     height: 146px;
 
+    @media (min-width: 769px) {
+      width: 300px;
+      height: 170px;
+    }
+
     img {
       width: 258px;
       height: 146px;
       object-fit: cover;
+
+      @media (min-width: 769px) {
+        width: 300px;
+        height: 170px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1503,12 +1601,32 @@ main:has(.company) {
   }
 }
 
+// PC: absolute にして高さを変えてもカード位置がずれないようにする。スペーサーで1行目の位置を固定。
+.howto__spacer {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    height: 419px;
+    flex-shrink: 0;
+  }
+}
+
 .howto__bg {
   width: 100%;
   height: 419px;
   background: #202020;
   padding: clamp(20px, 3vw, 40px);
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    // 高さは自由に変更可能（2行目まで伸ばすなら 1159px など）
+    height: 1028px;
+  }
 
   @media (max-width: 767px) {
     height: auto;
@@ -1585,21 +1703,17 @@ main:has(.company) {
 
 .howto__cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 clamp(20px, 3vw, 40px);
-  
   margin-top: -280px;
-
-
-
-
- 
 
   @media (max-width: 767px) {
     margin-top: 0;
     flex-direction: column;
+    flex-wrap: nowrap;
     overflow-x: visible;
     padding: 20px;
   }
@@ -1610,6 +1724,12 @@ main:has(.company) {
   flex-shrink: 0;
   width: 400px;
   height: 500px;
+
+  // PC: 2行3列
+  @media (min-width: 768px) {
+    flex: 0 0 calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
+  }
 
   @media (max-width: 767px) {
     width: 100%;
@@ -2028,6 +2148,12 @@ main:has(.company) {
   margin-top: 30px;
   overflow: hidden;
 
+  // PC: 2行4列=8枚表示。高さはJSで2行分に設定し、横スライドで次ページ表示
+  @media (min-width: 769px) {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
   @media (max-width: 767px) {
     margin-top: 20px;
     overflow-x: auto;
@@ -2041,13 +2167,15 @@ main:has(.company) {
 }
 
 .labor__cards {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
   transition: transform 0.3s ease;
 
   @media (max-width: 768px) {
+    display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     gap: 0;
     width: 100%;
 
@@ -2059,8 +2187,7 @@ main:has(.company) {
 }
 
 .labor__card {
-  flex: none;
-  width: 280px;
+  min-width: 0;
   background: #FFFFFF;
   border: 1px solid #202020;
   padding: 12px;
@@ -2068,7 +2195,10 @@ main:has(.company) {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex-shrink: 0;
+
+  @media (min-width: 769px) {
+    width: 100%;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -2580,12 +2710,31 @@ main:has(.company) {
   }
 }
 
+// PC: absolute にして高さを変えてもカード位置がずれないようにする。スペーサーで1行目の位置を固定。
+.money__spacer {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    height: 419px;
+    flex-shrink: 0;
+  }
+}
+
 .money__bg {
   width: 100%;
   height: 419px;
   background: #202020;
   padding: clamp(20px, 3vw, 40px);
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1028px; // 2行目のカード下端まで
+  }
 
   @media (max-width: 767px) {
     height: auto;
@@ -2657,6 +2806,7 @@ main:has(.company) {
 
 .money__cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   max-width: 1260px;
   margin: 0 auto;
@@ -2666,6 +2816,7 @@ main:has(.company) {
   @media (max-width: 767px) {
     margin-top: 0;
     flex-direction: column;
+    flex-wrap: nowrap;
     overflow-x: visible;
     padding: 20px;
   }
@@ -2676,6 +2827,12 @@ main:has(.company) {
   flex-shrink: 0;
   width: 400px;
   height: 500px;
+
+  // PC: 2行3列
+  @media (min-width: 768px) {
+    flex: 0 0 calc((100% - 40px) / 3);
+    width: calc((100% - 40px) / 3);
+  }
 
   @media (max-width: 767px) {
     width: 100%;
@@ -2769,9 +2926,9 @@ main:has(.company) {
   ※ careerセクションと同じレイアウト
 ================================ */
 .skillup {
-  max-width: 960px;
+  max-width: 1200px;
   margin: $secttion-margin-top auto 0;
-  padding: 0 clamp(20px, 3vw, 40px);
+  padding: 0 clamp(10px, 3vw, 25px);
 
   @media (max-width: 768px) {
     margin-top: $secttion-margin-top-sp;
@@ -2919,7 +3076,7 @@ main:has(.company) {
 
 .skillup__card-line {
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   height: 0;
   border-bottom: 1px solid #202020;
 
