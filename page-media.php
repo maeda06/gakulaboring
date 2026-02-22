@@ -96,21 +96,15 @@
     </nav>
   </section>
 
-  <!-- 記事一覧セクション1: 就活情報・市場動向・総合ニュース（PR TIMES / カテゴリID: 11） -->
-  <section class="company">
+  <!-- 記事一覧セクション1: 就活情報・市場動向・総合ニュース（PR TIMES + METI Journal ONLINE） -->
+  <section id="company-news-section" class="company">
     <h2 class="company__title">就活情報・市場動向・総合ニュース</h2>
     <?php
-    // PR TIMES カテゴリの投稿を取得（カテゴリID: 11）・1回だけ取得して重複なく振り分け
-    $args = array(
-      'post_type' => 'post',
-      'posts_per_page' => -1,
-      'post_status' => 'publish',
-      'cat' => 11,
-      'orderby' => 'date',
-      'order' => 'DESC'
-    );
-    $the_query = new WP_Query( $args );
-    $company_posts = $the_query->posts; // 0=最新、1,2,3... の順
+    $company_items = get_company_section_items();
+    if ( wp_is_mobile() ) {
+      $company_items = array_slice( $company_items, 0, 5 );
+    }
+    $no_image_url = get_template_directory_uri() . '/images/no_image.jpg';
     ?>
     <div class="company__layout">
       <!-- 左側カード（最新1件） -->
@@ -118,36 +112,20 @@
         <div class="company__card-wrapper">
           <div class="company__bar company__bar--left"></div>
           <div class="company__card company__card--large">
-          <?php if ( ! empty( $company_posts ) ) : ?>
-            <?php
-              $post = $company_posts[0];
-              setup_postdata( $post );
-              $post_link = get_post_meta( get_the_ID(), 'redirect_url', true );
-              if ( empty( $post_link ) ) { $post_link = get_permalink(); }
-              $post_link = esc_url( $post_link );
-            ?>
+          <?php if ( ! empty( $company_items ) ) : ?>
+            <?php $item = $company_items[0]; ?>
             <h3 class="company__card-title">
-              <a href="<?php echo $post_link; ?>"><?php the_title(); ?></a>
+              <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
             </h3>
-            <p class="company__card-meta">
-              <?php
-                $datetime = get_the_time('Y/m/d H:i');
-                echo esc_html($datetime);
-              ?>
-            </p>
+            <p class="company__card-meta"><?php echo esc_html( $item->date ); ?></p>
             <div class="company__card-image">
-              <a href="<?php echo $post_link; ?>">
-                <?php if ( has_post_thumbnail() ) : ?>
-                  <?php the_post_thumbnail('medium_large', array('class' => 'company__card-img')); ?>
-                <?php else : ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/no_image.jpg" alt="記事画像" class="company__card-img">
-                <?php endif; ?>
+              <a href="<?php echo esc_url( $item->link ); ?>">
+                <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company__card-img">
               </a>
             </div>
-            <?php if ( has_excerpt() ) : ?>
-              <div class="company__card-excerpt"><?php the_excerpt(); ?></div>
+            <?php if ( ! empty( $item->excerpt ) ) : ?>
+              <div class="company__card-excerpt"><?php echo wp_kses_post( $item->excerpt ); ?></div>
             <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
           <?php endif; ?>
           </div>
         </div>
@@ -155,99 +133,57 @@
       
       <!-- 右側エリア（中央列と右側列、ボタン） -->
       <div class="company__columns-right">
-        <!-- 中央列と右側列を横に並べる -->
         <div class="company__columns-inner company__columns-scroll">
-          <!-- 中央列（2番目、5番目、8番目…の記事を順に表示） -->
+          <!-- 中央列（2番目、5番目、8番目…） -->
           <div class="company__column company__column--middle">
             <div class="company__cards">
-              <?php
-              for ( $i = 1; isset( $company_posts[ $i ] ); $i += 3 ) :
-                $post = $company_posts[ $i ];
-                setup_postdata( $post );
-                $post_link = get_post_meta( get_the_ID(), 'redirect_url', true );
-                if ( empty( $post_link ) ) { $post_link = get_permalink(); }
-                $post_link = esc_url( $post_link );
-              ?>
+              <?php for ( $i = 1; isset( $company_items[ $i ] ); $i += 3 ) : $item = $company_items[ $i ]; ?>
                 <div class="company__card-wrapper">
                   <div class="company__bar company__bar--right"></div>
                   <div class="company__card company__card--small-col-2">
                     <div class="company__card-image">
-                      <a href="<?php echo $post_link; ?>">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                          <?php the_post_thumbnail('medium', array('class' => 'company__card-img')); ?>
-                        <?php else : ?>
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/no_image.jpg" alt="記事画像" class="company__card-img">
-                        <?php endif; ?>
+                      <a href="<?php echo esc_url( $item->link ); ?>">
+                        <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company__card-img">
                       </a>
                     </div>
                     <h3 class="company__card-title">
-                      <a href="<?php echo $post_link; ?>"><?php the_title(); ?></a>
+                      <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
                     </h3>
-                    <p class="company__card-meta">
-                      <?php
-                        $datetime = get_the_time('Y/m/d H:i');
-                        echo esc_html($datetime);
-                      ?>
-                    </p>
+                    <p class="company__card-meta"><?php echo esc_html( $item->date ); ?></p>
                   </div>
                 </div>
-              <?php
-                wp_reset_postdata();
-              endfor;
-              ?>
+              <?php endfor; ?>
             </div>
           </div>
-          
-          <!-- 右側列（3番目、6番目、9番目…の記事を順に表示） -->
+          <!-- 右側列（3番目、6番目、9番目…） -->
           <div class="company__column company__column--right">
             <div class="company__cards">
-              <?php
-              for ( $i = 2; isset( $company_posts[ $i ] ); $i += 3 ) :
-                $post = $company_posts[ $i ];
-                setup_postdata( $post );
-                $post_link = get_post_meta( get_the_ID(), 'redirect_url', true );
-                if ( empty( $post_link ) ) { $post_link = get_permalink(); }
-                $post_link = esc_url( $post_link );
-              ?>
+              <?php for ( $i = 2; isset( $company_items[ $i ] ); $i += 3 ) : $item = $company_items[ $i ]; ?>
                 <div class="company__card-wrapper">
                   <div class="company__bar company__bar--right"></div>
                   <div class="company__card company__card--small-col-3">
                     <div class="company__card-image">
-                      <a href="<?php echo $post_link; ?>">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                          <?php the_post_thumbnail('medium', array('class' => 'company__card-img')); ?>
-                        <?php else : ?>
-                          <img src="<?php echo get_template_directory_uri(); ?>/images/no_image.jpg" alt="記事画像" class="company__card-img">
-                        <?php endif; ?>
+                      <a href="<?php echo esc_url( $item->link ); ?>">
+                        <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company__card-img">
                       </a>
                     </div>
                     <h3 class="company__card-title">
-                      <a href="<?php echo $post_link; ?>"><?php the_title(); ?></a>
+                      <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
                     </h3>
-                    <p class="company__card-meta">
-                      <?php
-                        $datetime = get_the_time('Y/m/d H:i');
-                        echo esc_html($datetime);
-                      ?>
-                    </p>
+                    <p class="company__card-meta"><?php echo esc_html( $item->date ); ?></p>
                   </div>
                 </div>
-              <?php
-                wp_reset_postdata();
-              endfor;
-              ?>
+              <?php endfor; ?>
             </div>
           </div>
         </div>
-        
-        <!-- VIEW ALL POSTS ボタン（中央列と右側列を跨ぐ） -->
         <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: get_home_url() . '/blog' ); ?>" class="company__button">VIEW ALL POSTS</a>
       </div>
     </div>
   </section>
 
   <!-- howtoセクション: 就活・フリーランス情報（月曜4/木曜10/土曜8） -->
-  <section class="howto">
+  <section id="section-howto" class="howto">
     <div class="howto__bg">
       <div class="howto__header">
         <div class="howto__header-left">
@@ -257,12 +193,13 @@
         <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: get_home_url() . '/blog' ); ?>" class="howto__button">VIEW ALL POSTS</a>
       </div>
     </div>
+    <div class="howto__spacer" aria-hidden="true"></div>
     <div class="howto__cards">
       <?php
       // 就活/フリーランス(4)・エントリーシート/面接(10)・ビジネススキル/就活準備(8)
       $howto_args = array(
         'post_type' => 'post',
-        'posts_per_page' => 3,
+        'posts_per_page' => 6,
         'post_status' => 'publish',
         'category__in' => array( 4, 10, 8 ),
         'orderby' => 'date',
@@ -305,7 +242,7 @@
   </section>
 
   <!-- skillupセクション: スキルアップ情報（火曜2/水曜3） -->
-  <section class="skillup">
+  <section id="section-skillup" class="skillup">
     <div class="skillup__header">
       <div class="skillup__bar"></div>
       <h2 class="skillup__title">スキルアップ情報</h2>
@@ -393,7 +330,7 @@
   </section>
 
   <!-- moneyセクション: お金の勉強・若者向け資産運用・NISA・iDeCo（日曜 / カテゴリID: 9） -->
-  <section class="money">
+  <section id="section-money" class="money">
     <div class="money__bg">
       <div class="money__header">
         <div class="money__header-left">
@@ -403,12 +340,13 @@
         <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: get_home_url() . '/blog' ); ?>" class="money__button">VIEW ALL POSTS</a>
       </div>
     </div>
+    <div class="money__spacer" aria-hidden="true"></div>
     <div class="money__cards">
       <?php
       // マネー/NISA/地域活性カテゴリの投稿を取得（カテゴリID: 9）
       $money_args = array(
         'post_type' => 'post',
-        'posts_per_page' => 3,
+        'posts_per_page' => 6,
         'post_status' => 'publish',
         'cat' => 9,
         'orderby' => 'date',
@@ -451,7 +389,7 @@
   </section>
 
   <!-- laborセクション: 人生設計・ワークライフ・地域活性情報（金曜 / カテゴリID: 7） -->
-  <section class="labor">
+  <section id="section-labor" class="labor">
     <div class="labor__bg">
       <div class="labor__header">
         <div class="labor__header-left">
@@ -471,10 +409,10 @@
       <div class="labor__slider">
         <div class="labor__cards">
           <?php
-          // キャリア/ワークライフ/地域活性カテゴリの投稿を取得（カテゴリID: 7）
+          // キャリア/ワークライフ/地域活性カテゴリの投稿を取得（カテゴリID: 7）PC時2行4列=8件
           $labor_args = array(
             'post_type' => 'post',
-            'posts_per_page' => 4,
+            'posts_per_page' => 50,
             'post_status' => 'publish',
             'cat' => 7,
             'orderby' => 'date',

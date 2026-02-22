@@ -100,8 +100,7 @@ KV
 }
 #kv .subtitle {
   position: absolute;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 10.8vw;
   height: 45vw;
   bottom: 5%;
@@ -110,8 +109,7 @@ KV
 }
 #kv .kv-girl {
   width: 60vw;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: absolute;
   bottom: 0;
   left: 55%;
@@ -200,44 +198,83 @@ news
   width: 80%;
   margin: auto;
   background-color: #FFF;
-  border: 2px solid #202020;
+  border: 3px solid #202020;
   border-radius: 2rem;
-  padding: 48px 32px;
-  box-shadow: 8px 8px 0 var(--blue);
+  padding: 48px 32px 64px;
+  box-shadow: 8px 8px 0px 0px #127DFF;
   position: relative;
 }
 #news .news-content ul {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
 }
-#news .news-content ul li {
+#news .news-content li {
+  flex: 0 0 25%;
   max-width: 25%;
-  padding: 0 32px;
+  padding: 0 20px;
   border-right: 1px solid #bdbdbd;
 }
-#news .news-content ul li:last-child {
-  border: none;
+#news .news-content li:last-child {
+  border-right: none;
 }
-#news .news-content ul li a:hover h3 {
+#news .news-content li a {
+  display: block;
+}
+#news .news-content li a:hover h3 {
   color: var(--orange);
 }
-#news .news-content ul li a:hover .thumbnail img {
-  transform: scale(1.3);
+#news .news-content li a:hover .thumbnail img {
+  transform: scale(1.05);
 }
-#news .news-content ul li a .thumbnail {
+#news .news-content li .thumbnail {
   width: 100%;
+  height: 0;
+  padding-bottom: 62.5%;
   border-radius: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   overflow: hidden;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  background-color: #f0f0f0;
+}
+#news .news-content li .thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+#news .news-content li .list-text {
   display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-#news .news-content ul li a .thumbnail img {
-  transition: all 0.3s;
+#news .news-content li .list-text h3 {
+  font-size: 1.15vw;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0;
+  transition: color 0.3s;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-#news .news-content ul li a h3 {
-  margin-bottom: 8px;
-  font-size: 1.25vw;
-  transition: all 0.3s;
+#news .news-content li .list-text p {
+  font-size: 0.9vw;
+  line-height: 1.55;
+  margin: 0;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 #news .news-content .btn {
   width: 25%;
@@ -303,21 +340,19 @@ news
     padding-bottom: 20px;
   }
   #news .news-content ul li a {
-    display: flex;
-    gap: 5.4vw;
+    display: block;
   }
   #news .news-content ul li a .thumbnail {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 95px;
-    max-height: 95px;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    margin-bottom: 16px;
   }
-  #news .news-content ul li a .thumbnail img {
-    max-inline-size: none;
-  }
-  #news .news-content ul li a h3 {
+  #news .news-content ul li a .list-text h3 {
     font-size: 3.4vw;
+  }
+  #news .news-content ul li a .list-text p {
+    font-size: 3vw;
   }
   #news .news-content .btn {
     width: 65vw;
@@ -628,7 +663,6 @@ about
   border: 3px solid #202020;
   border-radius: 1vw;
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   background-color: var(--orange);
@@ -977,7 +1011,6 @@ contents
   width: 30%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   position: relative;
-  height: -moz-fit-content;
   height: fit-content;
 }
 #contents .chatroom .chatroom__list > li:nth-child(2) {
@@ -1345,8 +1378,7 @@ help
   top: 0;
   left: 0;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   z-index: -1;
   max-inline-size: none;
   max-block-size: none;
@@ -1621,4 +1653,6 @@ help
   #help .btn {
     margin-top: 75px;
   }
-}/*# sourceMappingURL=front-page.css.map */
+}
+
+/*# sourceMappingURL=front-page.css.map */

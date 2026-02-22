@@ -80,13 +80,27 @@ main::after {
   margin: auto;
   padding: 0 0 31.944vw;
 }
+@media (max-width: 1200px) {
+  #contents {
+    margin-bottom: 130px;
+  }
+}
+@media (max-width: 1100px) {
+  #contents {
+    margin-bottom: 150px;
+  }
+}
+@media (max-width: 1000px) {
+  #contents {
+    margin-bottom: 220px;
+  }
+}
 #contents h1, #contents h2, #contents h3, #contents h4, #contents h5, #contents h6 {
   background-color: var(--orange);
   padding: 10px;
   color: #FFF;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: bold;
-  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 5px;
   margin-top: 65px;
@@ -103,6 +117,9 @@ main::after {
 #contents p {
   font-size: 16px;
   line-height: 180%;
+}
+#contents p + p {
+  margin-top: 1em;
 }
 #contents p strong {
   font-weight: bold;
@@ -143,4 +160,6 @@ main::after {
   #contents .title {
     font-size: 20px;
   }
-}/*# sourceMappingURL=single.css.map */
+}
+
+/*# sourceMappingURL=single.css.map */

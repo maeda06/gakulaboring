@@ -141,6 +141,67 @@ function output_ajax_object_for_media() {
 }
 add_action('wp_footer', 'output_ajax_object_for_media', 5);
 
+/*----------------------------------------------------------*/
+/* 就活情報セクション用: PR TIMES（cat 11）＋ METI Journal RSS をマージして日付順で返す */
+/*----------------------------------------------------------*/
+function get_company_section_items() {
+  $items = array();
+
+  // 1. PR TIMES カテゴリ（ID: 11）の投稿
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 50,
+    'post_status' => 'publish',
+    'cat' => 11,
+    'orderby' => 'date',
+    'order' => 'DESC'
+  );
+  $query = new WP_Query($args);
+  if ($query->have_posts()) {
+    while ($query->have_posts()) {
+      $query->the_post();
+      $img_url = null;
+      if (has_post_thumbnail()) {
+        $img_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
+      }
+      $items[] = (object) array(
+        'title' => get_the_title(),
+        'link' => esc_url(get_post_meta(get_the_ID(), 'redirect_url', true) ?: get_permalink()),
+        'date' => get_the_time('Y/m/d H:i'),
+        'image_url' => $img_url,
+        'excerpt' => get_the_excerpt()
+      );
+    }
+    wp_reset_postdata();
+  }
+
+  // 2. METI Journal ONLINE（経済産業省）RSS
+  if (!function_exists('fetch_feed')) {
+    require_once ABSPATH . WPINC . '/feed.php';
+  }
+  $feed = fetch_feed('https://journal.meti.go.jp/feed/');
+  if (!is_wp_error($feed)) {
+    $max = $feed->get_item_quantity(20);
+    $feed_items = $feed->get_items(0, $max);
+    foreach ($feed_items as $item) {
+      $items[] = (object) array(
+        'title' => $item->get_title(),
+        'link' => esc_url($item->get_permalink()),
+        'date' => $item->get_date('Y/m/d H:i'),
+        'image_url' => null,
+        'excerpt' => ''
+      );
+    }
+  }
+
+  // 日付でソート（新しい順）
+  usort($items, function ($a, $b) {
+    return strtotime($b->date) - strtotime($a->date);
+  });
+
+  return array_slice($items, 0, 50);
+}
+
 
 add_action( 'init', function() {
     register_post_meta( '', 'redirect_url', array(

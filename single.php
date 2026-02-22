@@ -2,7 +2,7 @@
 
 <main>
 	<section id="head">
-		<h1><span>NEWS</span>NEWS</h1>
+		<h1><span>オリジナル特集</span>オリジナル特集</h1>
 	</section>
 
 	<?php if ( have_posts() ) : ?>
