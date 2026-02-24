@@ -335,8 +335,10 @@ header .btn button .line::before {
   transition: all 0.3s;
   transform-origin: center center;
 }
-header .btn button:hover .line::before {
-  top: 40%;
+@media (min-width: 768px) {
+  header .btn button:hover .line::before {
+    top: 40%;
+  }
 }
 header .btn button .line.open::before {
   top: 50%;
@@ -346,8 +348,10 @@ header .btn button .line::after {
   bottom: 35%;
   transition: all 0.3s;
 }
-header .btn button:hover .line::after {
-  bottom: 40%;
+@media (min-width: 768px) {
+  header .btn button:hover .line::after {
+    bottom: 40%;
+  }
 }
 header .btn button .line.open::after {
   bottom: 50%;
@@ -368,6 +372,16 @@ header .btn button .line.open::after {
   }
   header .btn {
     margin-top: 0;
+  }
+  header .btn button .line::before {
+    top: 33%;
+    width: 7vw;
+    height: 0.8vw;
+  }
+  header .btn button .line::after {
+    bottom: 33%;
+    width: 7vw;
+    height: 0.8vw;
   }
   header nav {
     right: 3.1vw;
@@ -614,6 +628,7 @@ section .btn a {
 .btn .company {
   background-color: var(--orange);
   min-height: auto;
+  width: auto;
 }
 .btn .company:hover {
   background-color: var(--black);
