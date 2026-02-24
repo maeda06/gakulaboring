@@ -2,14 +2,6 @@
 /********************
 common
 ********************/
-.cta, header .btn, .footer-btn {
-  display: none !important;
-}
-
-.btn a {
-  pointer-events: none;
-}
-
 /* 遷移させるボタンはクリック可能に */
 #news .news-content .btn a {
   pointer-events: auto;
@@ -281,18 +273,26 @@ header nav ul li::before {
   height: 1.18vw;
   background-color: var(--orange);
   border-radius: 100vw;
+  transition: all 0.3s;
+}
+header nav ul li:hover::before {
+  background-color: var(--blue);
+}
+header nav ul li:hover a {
+  font-size: 1.4vw;
 }
 header nav ul li a {
-  font-size: 1.7vw;
+  font-size: 1.2vw;
   font-weight: bold;
   color: #FFF;
+  transition: all 0.3s;
 }
 
 #fixed-header {
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -368,6 +368,25 @@ header .btn button .line.open::after {
   }
   header .btn {
     margin-top: 0;
+  }
+  header nav {
+    right: 3.1vw;
+    width: 60vw;
+    padding: 40px 15px;
+    border-radius: 15px;
+  }
+  header nav ul li {
+    gap: 8px;
+  }
+  header nav ul li a {
+    font-size: 3.5vw;
+  }
+  header nav ul li::before {
+    width: 3vw;
+    height: 3vw;
+  }
+  header nav ul li:hover a {
+    font-size: 3.8vw;
   }
 }
 /********************
@@ -594,6 +613,7 @@ section .btn a {
 }
 .btn .company {
   background-color: var(--orange);
+  min-height: auto;
 }
 .btn .company:hover {
   background-color: var(--black);

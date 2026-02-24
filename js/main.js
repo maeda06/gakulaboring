@@ -90,14 +90,14 @@ document.addEventListener('DOMContentLoaded', function() {
       if (scrollTop > lastScrollTop) {
           // スクロールダウン時
           if (scrollTop > mainHeader.clientHeight) {
-              fixedHeader.style.transform = 'translateY(0)';
-              fixedHeader.style.opacity = '1';
+            fixedHeader.style.transform = 'translateY(0)';
+            fixedHeader.style.visibility = 'visible';
           }
       } else {
           // スクロールアップ時
           if (scrollTop <= mainHeader.clientHeight) {
-              fixedHeader.style.transform = 'translateY(-100%)';
-              fixedHeader.style.opacity = '0';
+            fixedHeader.style.transform = 'translateY(-100%)';
+            fixedHeader.style.visibility = 'hidden';
           }
       }
       lastScrollTop = scrollTop;
@@ -261,9 +261,14 @@ document.addEventListener("DOMContentLoaded", () => {
 //   });
 // });
 
-$('header button').click(function() {
-  $('header button .line').toggleClass("open");
-  $('header nav').toggleClass("is-open");
+$('#main-header button').click(function() {
+  $('#main-header button .line').toggleClass("open");
+  $('#main-header nav').toggleClass("is-open");
+});
+
+$('#fixed-header button').click(function() {
+  $('#fixed-header button .line').toggleClass("open");
+  $('#fixed-header nav').toggleClass("is-open");
 });
 
 var topBtn=$('.top-btn');

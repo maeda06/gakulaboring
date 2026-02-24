@@ -100,7 +100,8 @@ KV
 }
 #kv .subtitle {
   position: absolute;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 10.8vw;
   height: 45vw;
   bottom: 5%;
@@ -109,7 +110,8 @@ KV
 }
 #kv .kv-girl {
   width: 60vw;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   bottom: 0;
   left: 55%;
@@ -246,7 +248,8 @@ news
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 1;
   transition: transform 0.3s ease;
 }
@@ -663,6 +666,7 @@ about
   border: 3px solid #202020;
   border-radius: 1vw;
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   background-color: var(--orange);
@@ -1011,6 +1015,7 @@ contents
   width: 30%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   position: relative;
+  height: -moz-fit-content;
   height: fit-content;
 }
 #contents .chatroom .chatroom__list > li:nth-child(2) {
@@ -1378,7 +1383,8 @@ help
   top: 0;
   left: 0;
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   z-index: -1;
   max-inline-size: none;
   max-block-size: none;
@@ -1450,6 +1456,9 @@ help
   height: 1px;
   background-color: var(--black);
 }
+.faq-list .cp_actab input[type=checkbox] {
+  display: none;
+}
 .faq-list .cp_actab {
   background-color: #FFF;
   padding: 15px 0;
@@ -1457,9 +1466,6 @@ help
   border-radius: 1em;
   margin-bottom: 10px;
   transition: all 0.3s;
-}
-.faq-list .cp_actab input[type=checkbox] {
-  display: none;
 }
 .faq-list .cp_actab:hover {
   border: 2px solid var(--orange);
@@ -1603,14 +1609,14 @@ help
     width: 4.6vw;
     right: -5.5vw;
   }
-  #help .faq-list {
-    width: 90%;
-  }
   #help .faq-list.faq-list--pc {
     display: none;
   }
   #help .faq-list.faq-list--sp {
     display: block;
+  }
+  #help .faq-list {
+    width: 90%;
   }
   .faq-list h3 {
     display: none;
@@ -1653,6 +1659,4 @@ help
   #help .btn {
     margin-top: 75px;
   }
-}
-
-/*# sourceMappingURL=front-page.css.map */
+}/*# sourceMappingURL=front-page.css.map */
