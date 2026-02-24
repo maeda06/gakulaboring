@@ -19,17 +19,12 @@
 	</div> -->
 	<header id="main-header">
 		<nav>
-			<ul>
-				<li><a href="#">項目1</a></li>
-				<li><a href="#">項目2</a></li>
-				<li><a href="#">項目3</a></li>
-				<li><a href="#">項目4</a></li>
-				<li><a href="#">項目5</a></li>
-				<li><a href="#">項目6</a></li>
-				<li><a href="#">項目7</a></li>
-				<li><a href="#">項目8</a></li>
-				<li><a href="#">項目9</a></li>
-			</ul>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'global',
+				'container'      => false
+			));
+			?>
 		</nav>
 		<div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo/logo04.png" alt=""></a></div>
 		<div class="btn btn--black">
