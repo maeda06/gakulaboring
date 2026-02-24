@@ -279,7 +279,7 @@ header nav ul li:hover::before {
   background-color: var(--blue);
 }
 header nav ul li:hover a {
-  font-size: 1.4vw;
+  font-size: 1.3vw;
 }
 header nav ul li a {
   font-size: 1.2vw;
