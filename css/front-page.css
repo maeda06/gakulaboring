@@ -286,6 +286,12 @@ news
   right: 0;
   z-index: 1;
 }
+#news .news-content .btn a {
+  padding: 13px 30px;
+}
+#news .news-content .btn a span {
+  font-size: 2vw;
+}
 
 @media (max-width: 767px) {
   #news {
@@ -359,10 +365,13 @@ news
   }
   #news .news-content .btn {
     width: 65vw;
-    bottom: -5%;
+    bottom: -3%;
     right: 50%;
     transform: translateX(50%);
     position: absolute;
+  }
+  #news .news-content .btn a span {
+    font-size: 5.5vw;
   }
 }
 /********************
