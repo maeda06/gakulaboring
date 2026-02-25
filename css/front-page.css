@@ -290,7 +290,7 @@ news
   padding: 13px 30px;
 }
 #news .news-content .btn a span {
-  font-size: 2vw;
+  font-size: 1.6vw;
 }
 
 @media (max-width: 767px) {
