@@ -13,12 +13,12 @@
 			</div>
 			<div class="footer-nav">
 				<nav>
-					<a href="#">就職情報</a>
-					<a href="#">社員の口コミ</a>
-					<a href="#">就活支援／企業オファー</a>
-					<a href="#">みんなでスキルアップ</a>
-					<a href="#">チャットルーム</a>
-					<a href="#">ヘルプページ</a>
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'footer',
+						'container'      => false
+					));
+					?>
 				</nav>
 				<div class="footer-btn">
 					<a class="worker" href="/contact-worker">会員登録</a>

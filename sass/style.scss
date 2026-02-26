@@ -4,12 +4,17 @@
 common
 ********************/
 
-.cta, header .btn, .footer-btn {
-  display: none !important;
-}
+// .cta, header .btn, .footer-btn {
+//   display: none !important;
+// }
 
-.btn a {
-  pointer-events: none;
+// .btn a {
+//   pointer-events: none;
+// }
+
+/* 遷移させるボタンはクリック可能に */
+#news .news-content .btn a {
+  pointer-events: auto;
 }
 
 /* 遷移させるボタンはクリック可能に */
@@ -317,12 +322,24 @@ header {
         height: 1.18vw;
         background-color: var(--orange);
         border-radius: 100vw;
+        transition: all .3s;
+      }
+
+      &:hover {
+        &::before{
+          background-color: var(--blue);
+        }
+
+        a {
+          font-size: 1.3vw;
+        }
       }
 
       a {
-        font-size: 1.7vw;
+        font-size: 1.2vw;
         font-weight: bold;
         color: #FFF;
+        transition: all .3s;
       }
     }
   }
@@ -332,7 +349,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -382,8 +399,10 @@ header .btn button {
     }
   }
 
-  &:hover .line::before {
-    top: 40%;
+  @media (min-width: 768px) {
+    &:hover .line::before {
+      top: 40%;
+    }
   }
 
   .line {
@@ -398,8 +417,10 @@ header .btn button {
     }
   }
 
-  &:hover .line::after {
-    bottom: 40%;
+  @media (min-width: 768px) {
+    &:hover .line::after {
+      bottom: 40%;
+    }
   }
 
   .line.open::after {
@@ -424,6 +445,49 @@ header .btn button {
 
     .btn {
       margin-top: 0;
+
+      button {
+        .line {
+          &::before {
+            top: 33%;
+            width: 7vw;
+            height: 0.8vw;
+          }
+          &::after {
+            bottom: 33%;
+            width: 7vw;
+            height: 0.8vw;
+          }
+        }
+      }
+    }
+
+    nav {
+      right: 3.1vw;
+      width: 60vw;
+      padding: 40px 15px;
+      border-radius: 15px;
+
+      ul {
+        li {
+          gap: 8px;
+
+          a {
+            font-size: 3.5vw;
+          }
+
+          &::before {
+            width: 3vw;
+            height: 3vw;
+          }
+
+          &:hover {
+            a {
+              font-size: 3.8vw;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -484,10 +548,15 @@ footer {
     }
 
     .footer-nav nav {
+      width: 60%;
+    }
+
+    .footer-nav nav ul {
       display: grid;
       grid-template-columns: auto auto;
       grid-template-rows: auto;
-      width: 60%;
+      width: 100%;
+      height: 100%;
     }
 
     .footer-btn {
@@ -602,8 +671,14 @@ footer {
 
       .footer-nav nav {
         width: 100%;
+      }
+
+      .footer-nav nav ul {
+        width: 100%;
         row-gap: 25px;
         margin-bottom: 40px;
+        grid-template-columns: 50% 50%;
+
       }
 
       .footer-btn {
@@ -692,6 +767,8 @@ section .btn a {
   }
   .company {
     background-color: var(--orange);
+    min-height: auto;
+    width: auto;
     &:hover {
       background-color: var(--black);
     }
