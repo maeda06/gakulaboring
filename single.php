@@ -15,6 +15,11 @@
 				echo $title;
 			?>
 		</h2>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="single__thumbnail">
+				<?php the_post_thumbnail('large', array('alt' => get_the_title())); ?>
+			</div>
+		<?php endif; ?>
 		<?php the_content(); ?>
 	</section>
 		<?php endwhile; ?>
