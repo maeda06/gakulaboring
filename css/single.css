@@ -102,7 +102,6 @@ main::after {
   color: #FFF;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: bold;
-  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 5px;
   margin-top: 65px;
@@ -144,6 +143,18 @@ main::after {
   padding: 0;
   margin: 0 auto 16px;
 }
+#contents .single__thumbnail {
+  width: 100%;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+#contents .single__thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 #contents ul {
   margin-top: 10px;
   padding-left: 20px;
@@ -162,4 +173,6 @@ main::after {
   #contents .title {
     font-size: 20px;
   }
-}/*# sourceMappingURL=single.css.map */
+}
+
+/*# sourceMappingURL=single.css.map */

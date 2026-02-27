@@ -97,8 +97,8 @@
   </section>
 
   <!-- 記事一覧セクション1: 就活情報・市場動向・総合ニュース（PR TIMES + METI Journal ONLINE） -->
-  <section id="company-news-section" class="company">
-    <h2 class="company__title">就活情報・市場動向・総合ニュース</h2>
+  <section id="company-news-section" class="company-news">
+    <h2 class="company-news__title">就活情報・市場動向・総合ニュース</h2>
     <?php
     $company_items = get_company_section_items();
     if ( wp_is_mobile() ) {
@@ -106,25 +106,25 @@
     }
     $no_image_url = get_template_directory_uri() . '/images/no_image.jpg';
     ?>
-    <div class="company__layout">
+    <div class="company-news__layout">
       <!-- 左側カード（最新1件） -->
-      <div class="company__column company__column--left">
-        <div class="company__card-wrapper">
-          <div class="company__bar company__bar--left"></div>
-          <div class="company__card company__card--large">
+      <div class="company-news__column company-news__column--left">
+        <div class="company-news__card-wrapper">
+          <div class="company-news__bar company-news__bar--left"></div>
+          <div class="company-news__card company-news__card--large">
           <?php if ( ! empty( $company_items ) ) : ?>
             <?php $item = $company_items[0]; ?>
-            <h3 class="company__card-title">
+            <h3 class="company-news__card-title">
               <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
             </h3>
-            <p class="company__card-meta"><?php echo esc_html( $item->date ); ?></p>
-            <div class="company__card-image">
+            <p class="company-news__card-meta"><?php echo esc_html( $item->date ); ?></p>
+            <div class="company-news__card-image">
               <a href="<?php echo esc_url( $item->link ); ?>">
-                <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company__card-img">
+                <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company-news__card-img">
               </a>
             </div>
             <?php if ( ! empty( $item->excerpt ) ) : ?>
-              <div class="company__card-excerpt"><?php echo wp_kses_post( $item->excerpt ); ?></div>
+              <div class="company-news__card-excerpt"><?php echo wp_kses_post( $item->excerpt ); ?></div>
             <?php endif; ?>
           <?php endif; ?>
           </div>
@@ -132,52 +132,52 @@
       </div>
       
       <!-- 右側エリア（中央列と右側列、ボタン） -->
-      <div class="company__columns-right">
-        <div class="company__columns-inner company__columns-scroll">
+      <div class="company-news__columns-right">
+        <div class="company-news__columns-inner company-news__columns-scroll">
           <!-- 中央列（2番目、5番目、8番目…） -->
-          <div class="company__column company__column--middle">
-            <div class="company__cards">
+          <div class="company-news__column company-news__column--middle">
+            <div class="company-news__cards">
               <?php for ( $i = 1; isset( $company_items[ $i ] ); $i += 3 ) : $item = $company_items[ $i ]; ?>
-                <div class="company__card-wrapper">
-                  <div class="company__bar company__bar--right"></div>
-                  <div class="company__card company__card--small-col-2">
-                    <div class="company__card-image">
+                <div class="company-news__card-wrapper">
+                  <div class="company-news__bar company-news__bar--right"></div>
+                  <div class="company-news__card company-news__card--small-col-2">
+                    <div class="company-news__card-image">
                       <a href="<?php echo esc_url( $item->link ); ?>">
-                        <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company__card-img">
+                        <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company-news__card-img">
                       </a>
                     </div>
-                    <h3 class="company__card-title">
+                    <h3 class="company-news__card-title">
                       <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
                     </h3>
-                    <p class="company__card-meta"><?php echo esc_html( $item->date ); ?></p>
+                    <p class="company-news__card-meta"><?php echo esc_html( $item->date ); ?></p>
                   </div>
                 </div>
               <?php endfor; ?>
             </div>
           </div>
           <!-- 右側列（3番目、6番目、9番目…） -->
-          <div class="company__column company__column--right">
-            <div class="company__cards">
+          <div class="company-news__column company-news__column--right">
+            <div class="company-news__cards">
               <?php for ( $i = 2; isset( $company_items[ $i ] ); $i += 3 ) : $item = $company_items[ $i ]; ?>
-                <div class="company__card-wrapper">
-                  <div class="company__bar company__bar--right"></div>
-                  <div class="company__card company__card--small-col-3">
-                    <div class="company__card-image">
+                <div class="company-news__card-wrapper">
+                  <div class="company-news__bar company-news__bar--right"></div>
+                  <div class="company-news__card company-news__card--small-col-3">
+                    <div class="company-news__card-image">
                       <a href="<?php echo esc_url( $item->link ); ?>">
-                        <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company__card-img">
+                        <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company-news__card-img">
                       </a>
                     </div>
-                    <h3 class="company__card-title">
+                    <h3 class="company-news__card-title">
                       <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
                     </h3>
-                    <p class="company__card-meta"><?php echo esc_html( $item->date ); ?></p>
+                    <p class="company-news__card-meta"><?php echo esc_html( $item->date ); ?></p>
                   </div>
                 </div>
               <?php endfor; ?>
             </div>
           </div>
         </div>
-        <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: get_home_url() . '/blog' ); ?>" class="company__button">VIEW ALL POSTS</a>
+        <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: get_home_url() . '/blog' ); ?>" class="company-news__button">VIEW ALL POSTS</a>
       </div>
     </div>
   </section>

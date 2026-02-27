@@ -157,6 +157,20 @@ main {
 		margin: 0 auto 16px;
 	}
 
+	.single__thumbnail {
+		width: 100%;
+		margin-bottom: 40px;
+		overflow: hidden;
+		border-radius: 4px;
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+			object-fit: cover;
+		}
+	}
+
 	ul {
 		margin-top: 10px;
 		padding-left: 20px;

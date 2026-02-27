@@ -17,6 +17,11 @@ common
   pointer-events: auto;
 }
 
+/* 遷移させるボタンはクリック可能に */
+#news .news-content .btn a {
+  pointer-events: auto;
+}
+
 :root {
   --black:#202020;
   --orange:#FF5824;
