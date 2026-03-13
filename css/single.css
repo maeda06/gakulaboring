@@ -115,6 +115,9 @@ main::after {
 #contents h2 {
   font-size: 24px;
 }
+#contents h3 {
+  font-size: 20px;
+}
 #contents p {
   font-size: 16px;
   line-height: 180%;
@@ -169,6 +172,9 @@ main::after {
   #contents {
     width: 90%;
     margin-bottom: 30vh;
+  }
+  #contents h2 {
+    font-size: 20px;
   }
   #contents .title {
     font-size: 20px;
