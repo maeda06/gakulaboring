@@ -170,6 +170,9 @@ main::after {
     width: 90%;
     margin-bottom: 30vh;
   }
+  #contents h2 {
+    font-size: 18px;
+  }
   #contents .title {
     font-size: 20px;
   }
