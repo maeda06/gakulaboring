@@ -107,27 +107,47 @@
     $no_image_url = get_template_directory_uri() . '/images/no_image.jpg';
     ?>
     <div class="company-news__layout">
-      <!-- 左側カード（最新1件） -->
+      <!-- 左側カード（最新2件） -->
       <div class="company-news__column company-news__column--left">
         <div class="company-news__card-wrapper">
           <div class="company-news__bar company-news__bar--left"></div>
-          <div class="company-news__card company-news__card--large">
           <?php if ( ! empty( $company_items ) ) : ?>
-            <?php $item = $company_items[0]; ?>
-            <h3 class="company-news__card-title">
-              <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
-            </h3>
-            <p class="company-news__card-meta"><?php echo esc_html( $item->date ); ?></p>
-            <div class="company-news__card-image">
-              <a href="<?php echo esc_url( $item->link ); ?>">
-                <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company-news__card-img">
-              </a>
-            </div>
-            <?php if ( ! empty( $item->excerpt ) ) : ?>
-              <div class="company-news__card-excerpt"><?php echo wp_kses_post( $item->excerpt ); ?></div>
+            <?php if ( ! empty( $company_items[0] ) ) : ?>
+              <?php $item = $company_items[0]; ?>
+              <div class="company-news__card company-news__card--large-two-up company-news__card--large-two-up-top">
+                <h3 class="company-news__card-title">
+                  <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
+                </h3>
+                <p class="company-news__card-meta"><?php echo esc_html( $item->date ); ?></p>
+                <div class="company-news__card-image">
+                  <a href="<?php echo esc_url( $item->link ); ?>">
+                    <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company-news__card-img">
+                  </a>
+                </div>
+                <?php if ( ! empty( $item->excerpt ) ) : ?>
+                  <div class="company-news__card-excerpt"><?php echo wp_kses_post( $item->excerpt ); ?></div>
+                <?php endif; ?>
+              </div>
+            <?php endif; ?>
+
+            <?php if ( ! empty( $company_items[3] ) ) : ?>
+              <?php $item = $company_items[3]; ?>
+              <div class="company-news__card company-news__card--large-two-up company-news__card--large-two-up-bottom">
+                <h3 class="company-news__card-title">
+                  <a href="<?php echo esc_url( $item->link ); ?>"><?php echo esc_html( $item->title ); ?></a>
+                </h3>
+                <p class="company-news__card-meta"><?php echo esc_html( $item->date ); ?></p>
+                <div class="company-news__card-image">
+                  <a href="<?php echo esc_url( $item->link ); ?>">
+                    <img src="<?php echo $item->image_url ? esc_url( $item->image_url ) : $no_image_url; ?>" alt="記事画像" class="company-news__card-img">
+                  </a>
+                </div>
+                <?php if ( ! empty( $item->excerpt ) ) : ?>
+                  <div class="company-news__card-excerpt"><?php echo wp_kses_post( $item->excerpt ); ?></div>
+                <?php endif; ?>
+              </div>
             <?php endif; ?>
           <?php endif; ?>
-          </div>
         </div>
       </div>
       
