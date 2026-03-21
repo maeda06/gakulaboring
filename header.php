@@ -10,6 +10,15 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@100..900&display=swap&family=Mochiy+Pop+One&display=swap&family=Anton&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
+	<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "がくラボりんぐ",
+    "alternateName": ["がくラボリング", "がくらぼりんぐ", "がくらぼリング", "がくラボ", "がくらぼ"],
+    "url": "https://www.gakulabo.sustainablejpn.com/"
+  }
+  </script>
 </head>
 <body>
 	<!-- <div class="loading" data-opening-animation>
