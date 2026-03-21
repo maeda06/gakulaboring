@@ -54,7 +54,7 @@
 							<?php endwhile; ?>
 						</ul>
 						<?php $media_page = get_page_by_path('media', OBJECT, 'page'); ?>
-						<div class="btn btn--black"><a href="<?php echo esc_url($media_page ? get_permalink($media_page) : home_url('/media/')); ?>"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+						<div class="btn btn--black"><a href="<?php echo esc_url($media_page ? get_permalink($media_page) : home_url('/media/')); ?>"><span>コチラへ！</span></a></div>
 					</div>
 				</section>
 				<?php wp_reset_postdata(); endif; ?>

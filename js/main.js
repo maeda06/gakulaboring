@@ -312,7 +312,7 @@ gsap.fromTo('#features .cloud',
 document.addEventListener('DOMContentLoaded', function() {
   const categoryItems = document.querySelectorAll('.category-nav__item');
   const archiveSection = document.getElementById('archive-section');
-  const mainSections = document.querySelectorAll('.company, .howto, .skillup, .money, .labor');
+  const mainSections = document.querySelectorAll('.company-news, .howto, .skillup, .money, .labor');
   
   // セクションとカテゴリナビのマッピング（5セクション・インデックス0-4）
   const sectionToCategoryMap = {
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  const companyBtn = document.querySelector('.company__button');
+  const companyBtn = document.querySelector('.company-news__button');
   if (companyBtn) {
     companyBtn.addEventListener('click', function(e) {
       handleViewAllPosts(e, sectionToCategoryMap['company']);
@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function() {
 (function() {
   const SP_LIMIT = 5;
   var sections = [
-    { id: 'company-news-section', cardSelector: '.company__card-wrapper', hiddenClass: 'company__card-wrapper--sp-hidden' },
+    { id: 'company-news-section', cardSelector: '.company-news__card-wrapper', hiddenClass: 'company-news__card-wrapper--sp-hidden' },
     { id: 'section-howto', cardSelector: '.howto__card', hiddenClass: 'media-section-card--sp-hidden' },
     { id: 'section-skillup', cardSelector: '.skillup__card', hiddenClass: 'media-section-card--sp-hidden' },
     { id: 'section-money', cardSelector: '.money__card', hiddenClass: 'media-section-card--sp-hidden' },
@@ -577,7 +577,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const archiveSection = document.getElementById('archive-section');
   const archiveList = archiveSection ? archiveSection.querySelector('.archive__list') : null;
   const archivePagination = archiveSection ? archiveSection.querySelector('.archive__pagination') : null;
-  const mainSections = document.querySelectorAll('.company, .howto, .skillup, .money, .labor');
+  const mainSections = document.querySelectorAll('.company-news, .howto, .skillup, .money, .labor');
   
   let currentCatId = null;
   

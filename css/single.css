@@ -5,7 +5,7 @@ main::before {
   content: "";
   display: block;
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   background-image: url(../images/single-bg--bottom.png);
   background-size: cover;
   background-position: top;
@@ -70,6 +70,7 @@ main::after {
   }
   #head h1 span {
     -webkit-text-stroke: 7px #FFF;
+    width: 100%;
   }
 }
 /* ===============================
@@ -101,7 +102,6 @@ main::after {
   color: #FFF;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: bold;
-  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 5px;
   margin-top: 65px;
@@ -114,6 +114,9 @@ main::after {
 }
 #contents h2 {
   font-size: 24px;
+}
+#contents h3 {
+  font-size: 20px;
 }
 #contents p {
   font-size: 16px;
@@ -143,6 +146,18 @@ main::after {
   padding: 0;
   margin: 0 auto 16px;
 }
+#contents .single__thumbnail {
+  width: 100%;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+#contents .single__thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 #contents ul {
   margin-top: 10px;
   padding-left: 20px;
@@ -158,7 +173,12 @@ main::after {
     width: 90%;
     margin-bottom: 30vh;
   }
+  #contents h2 {
+    font-size: 20px;
+  }
   #contents .title {
     font-size: 20px;
   }
-}/*# sourceMappingURL=single.css.map */
+}
+
+/*# sourceMappingURL=single.css.map */

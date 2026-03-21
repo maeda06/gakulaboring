@@ -360,6 +360,14 @@ news
       bottom: -9%;
       right: 0;
       z-index: 1;
+
+      a {
+        padding: 13px 30px;
+
+        span {
+          font-size: 1.6vw;
+        }
+      }
     }
   }
 }
@@ -447,10 +455,16 @@ news
 
       .btn {
         width: 65vw;
-        bottom: -5%;
+        bottom: -3%;
         right: 50%;
         transform: translateX(50%);
         position: absolute;
+
+        a {
+          span {
+            font-size: 5.5vw;
+          }
+        }
       }
     }
   }

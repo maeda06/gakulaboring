@@ -187,7 +187,13 @@ function get_company_section_items() {
   if (!function_exists('fetch_feed')) {
     require_once ABSPATH . WPINC . '/feed.php';
   }
+  // このRSSだけキャッシュを短くして最新を取得しやすくする（30分）
+  $short_ttl = function ($ttl) {
+    return 30 * MINUTE_IN_SECONDS;
+  };
+  add_filter('wp_feed_cache_transient_lifetime', $short_ttl);
   $feed = fetch_feed('https://journal.meti.go.jp/feed/');
+  remove_filter('wp_feed_cache_transient_lifetime', $short_ttl);
   if (!is_wp_error($feed)) {
     $max = $feed->get_item_quantity(20);
     $feed_items = $feed->get_items(0, $max);
