@@ -20,6 +20,14 @@ add_filter( 'excerpt_more', function( $more ){
 }, 999 );
 
 /*----------------------------------------------------------*/
+/* AIOSEOの構造化データ無効化 */
+/*----------------------------------------------------------*/
+function disable_aioseo_schema_globally( $disabled ) {
+    return true;
+}
+add_filter( 'aioseo_schema_disable', 'disable_aioseo_schema_globally' );
+
+/*----------------------------------------------------------*/
 /* テンプレートファイルごとにcssを出しわける */
 /*----------------------------------------------------------*/
 function my_styles() {
