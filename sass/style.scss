@@ -746,7 +746,9 @@ section .btn a {
   font-size: 1.25vw;
   padding: 18px 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 16px;
+  width: max-content;
 }
 
 .btn--black a {
@@ -811,6 +813,8 @@ section .btn a {
   span {
     z-index: 1;
     color: #FFF;
+    // font-size: 1.8rem;
+    width: max-content;
   }
 
   img {
@@ -895,7 +899,7 @@ section .btn a {
 
       img {
         width: 3.9vw;
-        margin-left: 3.6vw;
+        // margin-left: 3.6vw;
       }
     }
   }

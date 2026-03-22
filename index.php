@@ -87,9 +87,9 @@
 							<p><span class="slide-up"><span class="bg-orange">ポートフォリオ</span>の作成</span></p>
 							<p><span class="slide-up">将来の不安を解消！<span class="bg-orange">マネーリテラシー向上支援</span></span></p>
 						</div>
-						<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+						<div class="btn btn--black"><a href="#"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 					</div>
-					<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+					<div class="btn btn--black"><a href="#"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 				</div>
 				<div class="concept-image">
 					<img src="<?php echo get_template_directory_uri() ?>/images/concept-boy.png" alt="">
@@ -149,7 +149,7 @@
 						</div>
 					</li>
 				</ul>
-				<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
+				<div class="btn btn--black"><a href="#"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
 				<img class="chatroom-bg chatroom-bg--tv rellax" data-rellax-speed="2" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/tv.png" alt="">
 				<img class="chatroom-bg chatroom-bg--sakura rellax" data-rellax-speed="1" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/sakura.png" alt="">
 				<img class="chatroom-bg chatroom-bg--bike rellax" data-rellax-speed="2" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/bike.png" alt="">
@@ -187,7 +187,7 @@
 								<p>29卒です！周りがインターンの話をしてて焦ってます💦 みんな、いつ頃から参加し始めてますか...</p>
 							</div>
 						</div>
-						<div class="btn btn--black btn--pc"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+						<div class="btn btn--black btn--pc"><a href="/chat"><span>チャットルームについて</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 						<div class="loop-wrap loop-wrap--left">
 							<ul>
 								<li>HOT CHAT</li>
@@ -212,7 +212,7 @@
 							</div>
 						</div>
 					</li>
-				<div class="btn btn--black btn--sp"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+				<div class="btn btn--black btn--sp"><a href="/chat"><span>チャットルームについて</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 				</ul>
 			</div>
 		</section>
@@ -239,13 +239,13 @@
 				<li class="inview">
 					<div class="item-wrap">
 						<p>全国の大学生と交流したい！</p>
-						<div class="can-list__link"><a href="#">チャットページへ</a></div>
+						<div class="can-list__link"><a href="/chat">チャットページへ</a></div>
 					</div>
 				</li>
 				<li class="inview">
 					<div class="item-wrap">
 						<p>就職情報をいち早くキャッチしたい！</p>
-						<div class="can-list__link"><a href="#">就活情報ページへ</a></div>
+						<div class="can-list__link"><a href="/media">就活情報ページへ</a></div>
 					</div>
 				</li>
 			</ul>

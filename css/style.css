@@ -621,7 +621,10 @@ section .btn a {
   font-size: 1.25vw;
   padding: 18px 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 16px;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .btn--black a {
@@ -682,6 +685,8 @@ section .btn a {
 section .btn a span {
   z-index: 1;
   color: #FFF;
+  width: -moz-max-content;
+  width: max-content;
 }
 section .btn a img {
   width: 1.2vw;
@@ -747,7 +752,6 @@ section .btn a img {
   }
   section .btn a img {
     width: 3.9vw;
-    margin-left: 3.6vw;
   }
   #news .news-content .btn, #concept .btn, #about .btn, #contents .btn, #help .btn {
     width: 65vw;
