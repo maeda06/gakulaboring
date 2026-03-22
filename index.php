@@ -428,7 +428,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="btn  btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 		</section>
 	</main>
 <?php get_footer(); ?>
