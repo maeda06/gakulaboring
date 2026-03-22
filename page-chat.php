@@ -20,7 +20,7 @@
         </div>
         <div class="kv__cta">
           <p class="kv__cta-text">就活のグチ、ここで言ってこ<img src="<?php echo get_template_directory_uri(); ?>/images/subtitle-icon.png" alt=""></p>
-          <a href="#" class="kv__button">みんなの投稿をみてみる</a>
+          <a href="/contact-worker" class="kv__button">みんなの投稿をみてみる</a>
         </div>
       </div>
     </section>
@@ -161,7 +161,7 @@
             <li>マイページから企業フォロー・保存も可能！</li>
           </ul>
         </div>
-        <a href="#" class="login-cta__button"><img src="<?php echo get_template_directory_uri(); ?>/images/cta-btn--sub.png" alt=""></a>
+        <a href="/contact-worker" class="login-cta__button"><img src="<?php echo get_template_directory_uri(); ?>/images/cta-btn--sub.png" alt=""></a>
       </div>
     </section>
   </main>
