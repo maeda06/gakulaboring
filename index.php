@@ -343,7 +343,7 @@
 					<input id="cp_tabfour14" type="checkbox" name="tabs">
 					<label for="cp_tabfour14" class="sp-label"><h4>会員登録について</h4><span></span></label>
 					<div class="cp_actab-content">
-						<label for="cp_tabfour14"><h4>登録したメールアドレスを変更したいです。</h4></label>
+						<label for="cp_tabfour14"><h4>がくラボリングの会員登録は必要ですか？</h4></label>
 						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
 					</div>
 				</div>
@@ -352,79 +352,55 @@
 					<label for="cp_tabfour15" class="sp-label"><h4>ログインについて</h4><span></span></label>
 					<div class="cp_actab-content">
 						<label for="cp_tabfour15"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
+						<p>マイページのプロフィール編集画面から、ご登録のメールアドレスを変更できます。</p>
 					</div>
 				</div>
 				<div class="cp_actab">
 					<input id="cp_tabfour16" type="checkbox" name="tabs">
 					<label for="cp_tabfour16" class="sp-label"><h4>ES体験談クチコミの投稿・閲覧について</h4><span></span></label>
 					<div class="cp_actab-content">
-						<label for="cp_tabfour16"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
-					</div>
-				</div>
-				<div class="cp_actab">
-					<input id="cp_tabfour17" type="checkbox" name="tabs">
-					<label for="cp_tabfour17" class="sp-label"><h4>謝礼について</h4><span></span></label>
-					<div class="cp_actab-content">
-						<label for="cp_tabfour17"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
+						<label for="cp_tabfour16"><h4>ES体験談・クチコミは誰でも閲覧できますか？</h4></label>
+						<p>投稿されたES体験談やクチコミは、会員限定コンテンツとなります。無料会員登録をしていただくことで、すべての情報を閲覧できるようになります。</p>
 					</div>
 				</div>
 				<div class="cp_actab">
 					<input id="cp_tabfour18" type="checkbox" name="tabs">
-					<label for="cp_tabfour18" class="sp-label"><h4>メール・スカウト配信・電話について</h4><span></span></label>
+					<label for="cp_tabfour18" class="sp-label"><h4>メール・スカウト配信について</h4><span></span></label>
 					<div class="cp_actab-content">
-						<label for="cp_tabfour18"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
+						<label for="cp_tabfour18"><h4>スカウトメールの受け取り設定を変更したいです。</h4></label>
+						<p>マイページの「設定」から、スカウトメールの受け取りを「ON」または「OFF」に切り替えることができます。不要な場合は「OFF」にしてください。</p>
 					</div>
 				</div>
 				<div class="cp_actab">
 					<input id="cp_tabfour19" type="checkbox" name="tabs">
-					<label for="cp_tabfour19" class="sp-label"><h4>エントリー・イベントについて</h4><span></span></label>
+					<label for="cp_tabfour19" class="sp-label"><h4>イベントについて</h4><span></span></label>
 					<div class="cp_actab-content">
-						<label for="cp_tabfour19"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
+						<label for="cp_tabfour19"><h4>イベント情報はどこで確認できますか？</h4></label>
+						<p>イベントページでご確認いただけます。会員限定のオンラインセミナーや企業説明会なども随時開催していますので、ぜひチェックしてください。</p>
 					</div>
 				</div>
 				<div class="cp_actab">
 					<input id="cp_tabfour20" type="checkbox" name="tabs">
-					<label for="cp_tabfour20" class="sp-label"><h4>株式会社ワンキャリアの選考について</h4><span></span></label>
+					<label for="cp_tabfour20" class="sp-label"><h4>エントリーについて</h4><span></span></label>
 					<div class="cp_actab-content">
-						<label for="cp_tabfour20"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
-					</div>
-				</div>
-				<div class="cp_actab">
-					<input id="cp_tabfour21" type="checkbox" name="tabs">
-					<label for="cp_tabfour21" class="sp-label"><h4>退会について</h4><span></span></label>
-					<div class="cp_actab-content">
-						<label for="cp_tabfour21"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
-					</div>
-				</div>
-				<div class="cp_actab">
-					<input id="cp_tabfour22" type="checkbox" name="tabs">
-					<label for="cp_tabfour22" class="sp-label"><h4>ワンキャリアIDについて</h4><span></span></label>
-					<div class="cp_actab-content">
-						<label for="cp_tabfour22"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
+						<label for="cp_tabfour20"><h4>サイトから直接企業にエントリーはできますか？</h4></label>
+						<p>はい、可能です。企業ページに掲載されている「エントリー」ボタンをクリックすると、企業の採用サイトに直接移動できます。そこから通常通りエントリーを完了してください。</p>
 					</div>
 				</div>
 				<div class="cp_actab">
 					<input id="cp_tabfour23" type="checkbox" name="tabs">
 					<label for="cp_tabfour23" class="sp-label"><h4>データ利用について</h4><span></span></label>
 					<div class="cp_actab-content">
-						<label for="cp_tabfour23"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
+						<label for="cp_tabfour23"><h4>登録したデータはどのように利用されますか？</h4></label>
+						<p>ご登録いただいた個人情報や、ES体験談、クチコミなどのデータは、サービス改善のために匿名化された上で統計データとして利用されることがあります。特定の個人が識別できる形で利用することはありません。</p>
 					</div>
 				</div>
 				<div class="cp_actab">
 					<input id="cp_tabfour24" type="checkbox" name="tabs">
 					<label for="cp_tabfour24" class="sp-label"><h4>利用規約、プライバシー・ポリシー等</h4><span></span></label>
 					<div class="cp_actab-content">
-						<label for="cp_tabfour24"><h4>登録したメールアドレスを変更したいです。</h4></label>
-						<p>はい、会員限定コンテンツのご利用には会員登録が必要です。無料会員登録だけで、就活お役立ち記事の閲覧、企業クチコミの検索・投稿、チャットルームへの参加など、すべての機能をご利用いただけます。</p>
+						<label for="cp_tabfour24"><h4>利用規約やプライバシーポリシーはどこで確認できますか？</h4></label>
+						<p>サイト下部のフッターメニューよりご確認いただけます。ご不明な点がございましたら、お問い合わせフォームよりご連絡ください。</p>
 					</div>
 				</div>
 			</div>
