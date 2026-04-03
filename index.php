@@ -87,9 +87,9 @@
 							<p><span class="slide-up"><span class="bg-orange">ポートフォリオ</span>の作成</span></p>
 							<p><span class="slide-up">将来の不安を解消！<span class="bg-orange">マネーリテラシー向上支援</span></span></p>
 						</div>
-						<div class="btn btn--black"><a href="#"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+						<div class="btn btn--black"><a href="/contact-worker"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 					</div>
-					<div class="btn btn--black"><a href="#"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+					<div class="btn btn--black"><a href="/contact-worker"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 				</div>
 				<div class="concept-image">
 					<img src="<?php echo get_template_directory_uri() ?>/images/concept-boy.png" alt="">
@@ -149,7 +149,7 @@
 						</div>
 					</li>
 				</ul>
-				<div class="btn btn--black"><a href="#"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
+				<div class="btn btn--black"><a href="/contact-worker"><span>会員登録はコチラ</span><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.png" alt=""></a></div>
 				<img class="chatroom-bg chatroom-bg--tv rellax" data-rellax-speed="2" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/tv.png" alt="">
 				<img class="chatroom-bg chatroom-bg--sakura rellax" data-rellax-speed="1" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/sakura.png" alt="">
 				<img class="chatroom-bg chatroom-bg--bike rellax" data-rellax-speed="2" data-rellax-percentage="0.5" src="<?php echo get_template_directory_uri(); ?>/images/bike.png" alt="">
@@ -361,6 +361,14 @@
 					<div class="cp_actab-content">
 						<label for="cp_tabfour16"><h4>ES体験談・クチコミは誰でも閲覧できますか？</h4></label>
 						<p>投稿されたES体験談やクチコミは、会員限定コンテンツとなります。無料会員登録をしていただくことで、すべての情報を閲覧できるようになります。</p>
+					</div>
+				</div>
+				<div class="cp_actab">
+					<input id="cp_tabfour17" type="checkbox" name="tabs">
+					<label for="cp_tabfour17" class="sp-label"><h4>ポートフォリオ登録について</h4><span></span></label>
+					<div class="cp_actab-content">
+						<label for="cp_tabfour17"><h4>ポートフォリオはどこから登録できますか？</h4></label>
+						<p>マイページのプロフィール編集画面から登録できます。WebサイトのURLやPDFを登録することで、企業から直接オファーが届く可能性が高まります。</p>
 					</div>
 				</div>
 				<div class="cp_actab">
