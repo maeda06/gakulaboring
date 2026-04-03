@@ -624,6 +624,15 @@ footer {
       }
     }
 
+    .site-alias {
+      width: 330px;
+      text-align: center;
+      font-size: 0.8vw;
+      opacity: 0.6;
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+
     .copyright {
       font-size: 1vw;
     }
@@ -706,6 +715,11 @@ footer {
             font-size: 3.63vw;
           }
         }
+      }
+
+      .site-alias {
+        font-size: 2.8vw;
+        margin-bottom: 10px;
       }
 
       .copyright {

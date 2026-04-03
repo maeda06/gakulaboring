@@ -521,6 +521,14 @@ footer .footer-bottom ul li {
 footer .footer-bottom ul li a {
   font-size: 1.1vw;
 }
+footer .footer-bottom .site-alias {
+  width: 330px;
+  text-align: center;
+  font-size: 0.8vw;
+  opacity: 0.6;
+  margin-bottom: 12px;
+  color: var(--black);
+}
 footer .footer-bottom .copyright {
   font-size: 1vw;
 }
@@ -585,6 +593,10 @@ footer .footer-bottom .copyright {
   }
   footer .footer-bottom ul li a {
     font-size: 3.63vw;
+  }
+  footer .footer-bottom .site-alias {
+    font-size: 2.8vw;
+    margin-bottom: 10px;
   }
   footer .footer-bottom .copyright {
     margin-top: 20px;

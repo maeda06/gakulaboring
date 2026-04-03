@@ -32,7 +32,8 @@
 				<li><a href="#">利用規約／免責事項</a></li>
 				<li><a href="#">運営会社</a></li>
 			</ul>
-			<span class="copyright">© 2025 がくラボりんく All Rights Reserved.</span>
+			<p class="site-alias">がくラボりんぐ（がくラボリング / がくらぼりんぐ / がくらぼリング）は「がくラボ」「がくらぼ」の愛称で親しまれています。</p>
+		<span class="copyright">© 2025 がくラボりんぐ All Rights Reserved.</span>
 		</div>
 	</footer>
 
