@@ -121,7 +121,7 @@
 				<li class="members-only"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--book.png" alt=""></div><p>役に立つ情報を<br>学ぶことが出来る</p></li>
 				<li class="members-only"><div class="list-image"><img src="<?php echo get_template_directory_uri() ?>/images/about--hand.png" alt=""></div><p>就職のマッチング<br>ができる</p></li>
 			</ul>
-			<div class="btn btn--black"><a href="#"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
+			<div class="btn btn--black"><a href="/contact-worker"><span>COMING SOON</span><img src="<?php echo get_template_directory_uri() ?>/images/arrow.png" alt=""></a></div>
 		</section>
 		<section id="contents">
 			<div class="contents-list inview">
