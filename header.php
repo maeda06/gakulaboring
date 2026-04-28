@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>がくラボりんぐ</title>
+	<meta name="description" content="がくラボりんぐは大学生・美大生・芸大生の就活・キャリア形成を支援するプラットフォーム。学生起業家・フリーランサー向けのデザイン・生成AI・マーケティングなどのビジネススキル習得や、地域インフルエンサー・地方創生・地域活性の活動を応援。NISA・お金の勉強などマネー知識、広告代理店へのキャリア支援、ワークライフ情報も提供します。">
+	<meta name="keywords" content="がくラボりんぐ,がくラボリング,がくらぼりんぐ,がくらぼリング,がくラボ,がくらぼ,就活,学生起業家,フリーランサー,大学生,美大,芸大,就職活動,デザイン,生成AI,マーケティング,広告代理店,キャリア形成,地域インフルエンサー,地方創生,地域活性,キャリア,ワークライフ,ビジネススキル,マネー,NISA,お金の勉強">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/reset.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">

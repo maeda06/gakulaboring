@@ -529,6 +529,16 @@ footer .footer-bottom .site-alias {
   margin-bottom: 12px;
   color: var(--black);
 }
+footer .footer-bottom .site-keywords {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 footer .footer-bottom .copyright {
   font-size: 1vw;
 }
